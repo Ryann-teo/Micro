@@ -64,7 +64,7 @@ CONCEPTS = [
     ("homogeneity-degree-zero", "Homogeneity of Degree Zero", 1, "S", [
         "Excess demand depends only on relative prices, not on the price level. Scaling every price (and every nominal income) by the same factor leaves all real choices unchanged. This is sometimes called 'no money illusion'.",
     ]),
-    ("numeraire-good", "Numeraire Good", 1, "S", [
+    ("numeraire-good", "Numeraire Good", 1, 2, [
         "Because excess demand is homogeneous of degree zero, only relative prices matter. We can fix the price of one good (the numeraire) at 1 and solve for the remaining n-1 prices. Conventionally we use whichever good simplifies the algebra.",
     ]),
     ("cobb-douglas-demand", "Cobb-Douglas Demand", 1, 2, [
@@ -87,22 +87,22 @@ CONCEPTS = [
         "Two countries, two goods, one factor (labour) with different productivities across countries. Each country specialises in the good in which it has comparative advantage (lower relative labour cost) and trades for the other. The PPF is linear because labour productivity is constant.",
         "Trade lets both countries consume outside their own PPF, generating gains from trade. The terms of trade (world price) sit between the two autarky price ratios.",
     ]),
-    ("autarky", "Autarky", 1, "S", [
+    ("autarky", "Autarky", 1, 1, [
         "Closed-economy equilibrium with no international trade. Used as the baseline against which to measure gains from trade. The autarky price ratio reflects the country's relative scarcity (or productivity) of each good.",
     ]),
-    ("comparative-advantage", "Comparative Advantage", 1, "S", [
+    ("comparative-advantage", "Comparative Advantage", 1, 1, [
         "A country has comparative advantage in the good for which its opportunity cost (the amount of the other good it gives up) is lowest. Trade based on comparative advantage benefits both countries even if one has absolute advantage in every good.",
     ]),
-    ("heckscher-ohlin-model", "Heckscher-Ohlin Model", 1, "S", [
+    ("heckscher-ohlin-model", "Heckscher-Ohlin Model", 1, 2, [
         "A two-good, two-factor model where comparative advantage stems from differences in factor endowments. A country exports the good that intensively uses its abundant factor. Adds Stolper-Samuelson (factor returns) and Rybczynski (factor supply) theorems.",
     ]),
-    ("stolper-samuelson", "Stolper-Samuelson Theorem", 1, "S", [
+    ("stolper-samuelson", "Stolper-Samuelson Theorem", 1, 2, [
         "An increase in the relative price of a good raises the real return to the factor used intensively in producing it, and lowers the real return to the other factor. This is the foundation of distributional arguments about trade: opening to trade hurts a country's scarce factor."]),
     ("rybczynski-theorem", "Rybczynski Theorem", 1, "S", [
         "Holding goods prices constant, an increase in the supply of one factor raises output of the good using it intensively and lowers output of the other good. Together with Stolper-Samuelson, this gives the H-O theorem its bite."]),
-    ("gross-substitutes", "Gross Substitutes", 1, "S", [
+    ("gross-substitutes", "Gross Substitutes", 1, 3, [
         "Two goods are gross substitutes if an increase in the price of one raises (rather than lowers) the demand for the other. When all goods are gross substitutes, the Walrasian equilibrium is unique."]),
-    ("zero-profit-condition", "Zero-Profit Condition", 1, "S", [
+    ("zero-profit-condition", "Zero-Profit Condition", 1, 3, [
         "Under constant returns to scale and free entry, competitive firms earn zero profits in equilibrium: price equals average cost equals marginal cost. This is a constraint, not an assumption, in long-run GE models."]),
     ("uniqueness-of-equilibrium", "Uniqueness of Equilibrium", 1, "S", [
         "Under fairly weak conditions (e.g., gross substitutes, or the WARP at the aggregate level), the Walrasian equilibrium price vector is unique. Without such conditions, multiple equilibria are possible and comparative statics become harder."]),
@@ -130,27 +130,27 @@ CONCEPTS = [
         "Maximises the utility of the worst-off person (the maximin criterion). Cares only about the position of the lowest individual. Requires only ordinal information across people, but at the cost of being insensitive to gains for everyone except the worst-off."]),
     ("kaldor-hicks-compensation", "Kaldor-Hicks Compensation", 2, 3, [
         "A change is judged welfare-improving if the winners could in principle compensate the losers and still be better off, even if no actual compensation is paid. This is the standard tool of cost-benefit analysis. Its weakness is that the 'in principle' compensation is rarely enforced, so real losers stay worse off."]),
-    ("contract-curve", "Contract Curve", 2, "S", [
+    ("contract-curve", "Contract Curve", 2, 1, [
         "Inside an Edgeworth box, the contract curve is the locus of allocations where the two agents' indifference curves are tangent (their MRSs are equal). These are the Pareto efficient allocations: any move off the contract curve makes at least one agent worse off."]),
-    ("utility-possibility-frontier", "Utility Possibility Frontier", 2, "S", [
+    ("utility-possibility-frontier", "Utility Possibility Frontier", 2, 3, [
         "The UPF traces out all combinations of utilities (u_A, u_B) that are achievable by Pareto efficient allocations. Inefficient allocations sit inside the frontier; nothing sits beyond it. Social welfare maximisation picks the point on the UPF where the social indifference curve is tangent."]),
     ("compensating-variation", "Compensating Variation", 2, "S", [
         "After a price change, compensating variation is the amount of money you would need to take from (give to) the consumer to restore them to their original utility level. CV uses the new prices as the reference point."]),
     ("equivalent-variation", "Equivalent Variation", 2, "S", [
         "After a price change, equivalent variation is the amount of money you would give to (or take from) the consumer at the old prices to make them as well off as they would be after the change. EV uses the old prices as the reference point."]),
-    ("consumer-surplus", "Consumer Surplus", 2, "S", [
+    ("consumer-surplus", "Consumer Surplus", 2, 1, [
         "The area under the (Marshallian) demand curve and above the price line. For quasi-linear preferences, consumer surplus equals both CV and EV exactly. For other preferences, ΔCS sits between CV and EV but is the easiest to compute and is the standard CBA approximation."]),
-    ("deadweight-loss", "Deadweight Loss", 2, "S", [
+    ("deadweight-loss", "Deadweight Loss", 2, 2, [
         "The welfare loss caused by a tax or other distortion that drives a wedge between the price paid by consumers and received by producers. Geometrically the Harberger triangle between the demand and supply curves over the lost-trade region."]),
     ("ramsey-taxation", "Ramsey Taxation", 2, "S", [
         "When lump-sum taxes are unavailable, raising a given amount of revenue with minimum deadweight loss requires taxing goods with low demand elasticity more heavily (the inverse elasticity rule). This is the second-best benchmark for indirect taxation."]),
     ("expenditure-function", "Expenditure Function", 2, "S", [
         "$e(p, u)$ is the minimum spending required to reach utility level u at prices p. Its derivatives give the Hicksian (compensated) demands by Shephard's lemma. The expenditure function is the workhorse for computing CV and EV."]),
-    ("marshallian-demand", "Marshallian Demand", 2, "S", [
+    ("marshallian-demand", "Marshallian Demand", 2, 2, [
         "Demand derived from utility maximisation subject to a budget constraint at given prices and income. Shows the total response to a price change, including the income effect."]),
     ("hicksian-demand", "Hicksian Demand", 2, "S", [
         "Compensated demand: how a consumer would respond to a price change if their utility were held constant by an income adjustment. Hicksian demand isolates the substitution effect. Derived from expenditure minimisation."]),
-    ("cost-benefit-analysis", "Cost-Benefit Analysis", 2, "S", [
+    ("cost-benefit-analysis", "Cost-Benefit Analysis", 2, 3, [
         "A systematic comparison of the present value of a project's benefits against its costs, including non-market valuations and a social discount rate. CBA operationalises the Kaldor-Hicks criterion for policy decisions."]),
     ("contingent-valuation", "Contingent Valuation", 2, "S", [
         "A survey-based method for valuing non-market goods (e.g., a clean river) by asking respondents directly how much they would pay or accept. Subject to hypothetical bias because the answers are not enforced by real choices."]),
@@ -170,16 +170,16 @@ CONCEPTS = [
         "Each voter ranks the alternatives; alternatives receive points by rank position (n-1 for top, 0 for bottom). Society's ranking is by total points. Satisfies many desiderata but violates Independence of Irrelevant Alternatives."]),
     ("condorcet-paradox", "Condorcet Paradox", 2, "S", [
         "With three voters and three alternatives, majority rule can produce a cyclic social ranking (x beats y beats z beats x). Shows that aggregating consistent individual preferences into a consistent social preference can fail."]),
-    ("arrow-impossibility", "Arrow's Impossibility Theorem", 2, "S", [
+    ("arrow-impossibility", "Arrow's Impossibility Theorem", 2, 2, [
         "With three or more alternatives, no preference aggregation rule can simultaneously satisfy unrestricted domain, the Pareto principle, non-dictatorship, and independence of irrelevant alternatives while producing a transitive social ordering. Some axiom has to give.",
         "Arrow's theorem is not a counsel of despair; it tells you that any actual rule (majority, Borda, etc.) is making implicit trade-offs between the axioms. Knowing which trade-off your rule is making is the substantive content."]),
-    ("single-peaked-preferences", "Single-Peaked Preferences", 2, "S", [
+    ("single-peaked-preferences", "Single-Peaked Preferences", 2, 3, [
         "Preferences over a one-dimensional alternative space (e.g., tax rate from 0 to 100 percent) are single-peaked if each voter has a unique bliss point and prefers alternatives closer to it. Under single-peakedness, majority rule is transitive."]),
     ("median-voter-theorem", "Median Voter Theorem", 2, "S", [
         "With single-peaked preferences and majority rule on a one-dimensional space, the alternative preferred by the median voter is the Condorcet winner. Office-motivated candidates therefore converge on the median voter's bliss point."]),
     ("gibbard-satterthwaite", "Gibbard-Satterthwaite Theorem", 2, "S", [
         "Any non-dictatorial social choice function with at least three alternatives in its range is manipulable: some voter can do better by misreporting preferences. Strategy-proofness essentially requires dictatorship in the general case."]),
-    ("strategy-proofness", "Strategy-Proofness", 2, "S", [
+    ("strategy-proofness", "Strategy-Proofness", 2, 2, [
         "A social choice rule is strategy-proof (dominant-strategy incentive compatible) if no voter ever benefits from misreporting preferences. The Vickrey auction and the Clarke-Groves mechanism are leading examples."]),
 
     # ===== TOPIC 3: EXTERNALITIES AND PUBLIC GOODS =====
@@ -223,17 +223,17 @@ CONCEPTS = [
     ("weitzman-prices-vs-quantities", "Weitzman Prices vs Quantities", 3, 2, [
         "Under uncertainty about marginal costs (or benefits) of pollution control, taxes (price instruments) and permits (quantity instruments) differ. Weitzman (1974): taxes are preferred when the marginal damage curve is flatter than the marginal cost curve; permits are preferred when the marginal damage curve is steeper.",
         "Intuitively, if a small quantity error is catastrophic (steep damages), fix the quantity. If a small price shock is catastrophic but quantity is forgiving (steep costs, flat damages), fix the price."]),
-    ("club-goods", "Club Goods", 3, "S", [
+    ("club-goods", "Club Goods", 3, 4, [
         "Non-rival but excludable goods (a private highway, a cable TV signal, a swimming club). The Buchanan club theory derives the optimal club size by trading off congestion costs against the cost of capacity."]),
-    ("common-pool-resources", "Common Pool Resources", 3, "S", [
+    ("common-pool-resources", "Common Pool Resources", 3, 4, [
         "Rival but non-excludable: fisheries, groundwater, the atmosphere as a sink. Subject to the tragedy of the commons. Elinor Ostrom's work documents how communities sometimes solve this with informal norms rather than markets or regulation."]),
     ("clarke-tax", "Clarke Tax (Pivotal Mechanism)", 3, "S", [
         "The most prominent Clarke-Groves variant: a pivotal agent (one whose report changes the public-good decision) pays a tax equal to the harm their report imposes on others. Non-pivotal agents pay nothing. Truth-telling is a dominant strategy."]),
     ("vickrey-auction", "Vickrey (Second-Price) Auction", 3, "S", [
         "Single-good special case of the Clarke-Groves mechanism: the highest bidder wins and pays the second-highest bid. Bidding one's true value is a (weakly) dominant strategy. A canonical example of strategy-proof design."]),
-    ("cap-and-trade", "Cap-and-Trade", 3, "S", [
+    ("cap-and-trade", "Cap-and-Trade", 3, 3, [
         "Common name for tradeable emissions permits. The regulator sets a cap on total emissions; permits are auctioned or grandfathered; firms trade them. The EU ETS is the largest operating example. Equivalent to a Pigouvian tax under certainty."]),
-    ("coasean-bargaining", "Coasean Bargaining", 3, "S", [
+    ("coasean-bargaining", "Coasean Bargaining", 3, 2, [
         "The negotiation process by which parties to an externality settle on the efficient quantity once property rights are clearly assigned. The Coase theorem says this works under zero transaction costs; in practice, transaction costs determine whether it does."]),
 
     # ===== TOPIC 4: GAME THEORY =====
@@ -267,13 +267,13 @@ CONCEPTS = [
         "Drawing best-response functions in a two-player game lets you read off pure-strategy NE as intersections. In Cournot, best responses slope downward (strategic substitutes); in differentiated Bertrand they slope upward (strategic complements)."]),
     ("affine-utility-normalisation", "Affine Utility Normalisation", 4, 4, [
         "Replacing the vNM utility u with v = a + b u (where b > 0) leaves preferences over lotteries unchanged. Best responses and Nash equilibria of a game are invariant under this transformation applied independently to each player."]),
-    ("strategic-form-game", "Strategic Form Game", 4, "S", [
+    ("strategic-form-game", "Strategic Form Game", 4, 3, [
         "Specification of a game by (players, strategy sets, payoff functions). The most compact representation, suitable for simultaneous-move games. Sequential games are usually drawn in extensive form."]),
     ("extensive-form-game", "Extensive Form Game", 4, "S", [
         "Specification of a game as a tree of decision nodes, with the moving player and the action labels at each node. Captures the order of moves and what each player knows when moving."]),
     ("information-set", "Information Set", 4, "S", [
         "A set of decision nodes a player cannot distinguish among when choosing. Singleton information sets correspond to perfect information; non-singleton sets capture imperfect information (e.g., simultaneous moves embedded in a tree)."]),
-    ("matching-pennies", "Matching Pennies", 4, "S", [
+    ("matching-pennies", "Matching Pennies", 4, 4, [
         "Canonical zero-sum 2x2 game with no pure-strategy NE. The unique equilibrium has each player mixing 50-50. The standard illustration of why mixed strategies are needed."]),
     ("battle-of-the-sexes", "Battle of the Sexes", 4, "S", [
         "2x2 coordination game with two asymmetric pure NE (both go to opera, both go to football) and a mixed NE. Illustrates equilibrium selection: which pure outcome occurs depends on focal points or communication, not the model alone."]),
@@ -281,17 +281,17 @@ CONCEPTS = [
         "Anti-coordination 2x2 game in which each player wants to do the opposite of the other (be Hawk if the other is Dove). Two asymmetric pure NE plus one mixed. Standard model for cuban-missile-style brinksmanship."]),
     ("iterated-elimination-strictly-dominated", "Iterated Elimination of Strictly Dominated Strategies", 4, "S", [
         "Recursively delete strictly dominated strategies until no further deletions are possible. The set that survives always contains every Nash equilibrium. Justified by common knowledge of rationality."]),
-    ("strict-vs-weak-dominance", "Strict vs Weak Dominance", 4, "S", [
+    ("strict-vs-weak-dominance", "Strict vs Weak Dominance", 4, 3, [
         "Strict dominance: strictly higher payoff against every opponent strategy. Weak dominance: at least as high everywhere, strictly higher somewhere. Iterated elimination of weakly dominated strategies is path-dependent and can remove NE; iterated elimination of strictly dominated strategies cannot."]),
     ("tit-for-tat", "Tit-for-Tat Strategy", 4, "S", [
         "Cooperate in the first period; thereafter copy the opponent's previous action. Won Axelrod's repeated Prisoner's Dilemma tournament twice. Less punishing than grim trigger but more forgiving."]),
     ("nash-reversion", "Nash Reversion Strategy", 4, "S", [
         "Punish a deviator by reverting permanently to one-shot Nash play. A milder punishment than minmax-then-revert, but easier to verify as an SPE because the punishment phase is itself a NE."]),
-    ("strategic-substitutes-complements", "Strategic Substitutes vs Complements", 4, "S", [
+    ("strategic-substitutes-complements", "Strategic Substitutes vs Complements", 4, 3, [
         "Strategic substitutes: a more aggressive action by one player makes a less aggressive response optimal for the other (Cournot quantities). Strategic complements: aggression begets aggression (Bertrand prices). Determines whether reaction functions slope down or up and how shocks propagate."]),
-    ("first-mover-advantage", "First-Mover Advantage", 4, "S", [
+    ("first-mover-advantage", "First-Mover Advantage", 4, 4, [
         "When commitment is valuable, the player who moves first can do better than in the simultaneous game. Stackelberg quantity competition is the leading example. Not universal: in some games (Bertrand-like, or matching pennies) moving first is a disadvantage."]),
-    ("credible-threat", "Credible Threat", 4, "S", [
+    ("credible-threat", "Credible Threat", 4, 2, [
         "A threat to take an action whose execution is itself sequentially rational. Non-credible threats can support Nash equilibria but not SPE. The distinction matters in entry deterrence and bargaining models."]),
     ("nash-existence-theorem", "Nash Existence Theorem", 4, "S", [
         "Every finite game has at least one Nash equilibrium (in pure or mixed strategies). The proof uses Brouwer's or Kakutani's fixed-point theorem applied to the best-response correspondence."]),
@@ -316,7 +316,7 @@ CONCEPTS = [
     ("williamson-trade-off", "Williamson Trade-off", 5, 2, [
         "A merger that reduces marginal cost (efficiency gain) but also raises market power (price rise) can be welfare-improving if the cost saving on inframarginal output outweighs the deadweight loss on lost trades. The standard CBA tool for merger review.",
         "Diagrammatically: shaded rectangle of cost savings against shaded triangle of deadweight loss. Whether the rectangle exceeds the triangle is a quantitative question depending on demand elasticity and the size of cost cuts."]),
-    ("collusion-sustainability", "Collusion Sustainability", 5, "S", [
+    ("collusion-sustainability", "Collusion Sustainability", 5, 1, [
         "Cartels sustain collusion when delta exceeds the critical discount factor for the relevant punishment strategy. Conditions that help collusion: few firms, frequent interactions, symmetric costs, transparent prices, stable demand, multimarket contact."]),
     ("hhi-index", "Herfindahl-Hirschman Index (HHI)", 5, "S", [
         "Sum of squared market shares (in percent), ranging from near 0 (atomistic) to 10000 (monopoly). Antitrust authorities use HHI thresholds (e.g., post-merger > 2500 with delta > 200 triggers scrutiny) as a screening rule for mergers."]),
@@ -328,7 +328,7 @@ CONCEPTS = [
         "Charging different prices to different consumers for the same good. First-degree: perfect (extract all surplus). Second-degree: by self-selection (different versions/bundles). Third-degree: by observable characteristics (student discounts). Welfare effects are ambiguous."]),
     ("two-part-tariff", "Two-Part Tariff", 5, "S", [
         "A pricing scheme with a fixed fee plus a per-unit price (e.g., gym membership plus per-class charge). Allows a monopolist to extract more surplus than a single per-unit price. Efficient when the per-unit price equals marginal cost and the fee captures surplus."]),
-    ("leniency-programme", "Leniency Programme", 5, "S", [
+    ("leniency-programme", "Leniency Programme", 5, 3, [
         "Antitrust policy granting immunity (or reduced penalties) to the first cartel member to confess. Designed to destabilise collusion by making each member fear betrayal. Empirically successful in detecting cartels."]),
     ("uk-competition-act", "UK Competition Act 1998 and EU Articles 101-102", 5, "S", [
         "Statutory framework: Chapter I / Article 101 prohibits anti-competitive agreements (cartels). Chapter II / Article 102 prohibits abuse of dominance. The Enterprise Act 2002 adds criminal liability for individuals participating in cartels."]),
@@ -387,15 +387,15 @@ CONCEPTS = [
         "Full insurance corresponds to the 45-degree line (equalised wealth across states). Risk-averse agents with fair-priced insurance fully insure; with actuarially unfair insurance, they partially insure."]),
     ("fair-premium", "Fair Premium", 6, 4, [
         "An insurance premium equal to the expected loss. With fair pricing, the insurer breaks even in expectation and the consumer transfers risk costlessly. A risk-averse agent always fully insures at fair prices; underinsurance arises only when premiums are unfair."]),
-    ("allais-paradox", "Allais Paradox", 6, "S", [
+    ("allais-paradox", "Allais Paradox", 6, 3, [
         "Empirical finding that most subjects violate the independence axiom in a specific way: they over-weight certainty. Demonstrates that real preferences over lotteries are not (always) expected utility. The most-cited evidence against EU as a positive theory."]),
     ("st-petersburg-paradox", "St Petersburg Paradox", 6, "S", [
         "A coin-flip lottery paying $2^n$ if heads first appears on flip n has infinite expected value, but most people would pay only a small amount to play. Bernoulli's resolution: use a concave utility (log) over outcomes. The historical origin of expected utility theory."]),
     ("dutch-book-argument", "Dutch Book Argument", 6, "S", [
         "If your preferences over lotteries violate EU axioms, a bookmaker can offer you a sequence of bets you would each accept individually but which together leave you sure to lose money. The standard normative defence of EU theory."]),
-    ("mean-variance-utility", "Mean-Variance Utility", 6, "S", [
+    ("mean-variance-utility", "Mean-Variance Utility", 6, 2, [
         "Under CARA utility and normally distributed wealth, $CE = E[w] - \\frac{a}{2} \\sigma^2$. The agent maximises mean minus a scaled variance. This collapses the dimensionality of the choice problem to two statistics and underlies modern portfolio theory."]),
-    ("mean-preserving-spread", "Mean-Preserving Spread", 6, "S", [
+    ("mean-preserving-spread", "Mean-Preserving Spread", 6, 3, [
         "A transformation that adds noise to a random variable without changing its mean. Increases variance and (more generally) spreads probability mass to the tails. Rothschild-Stiglitz: L is SOSD by L' iff L' is obtained from L by adding mean-preserving spreads."]),
 
     # ===== TOPIC 7: ADVERSE SELECTION =====
@@ -430,7 +430,7 @@ CONCEPTS = [
         "A contract that pays a partial refund if the good turns out to be defective. With appropriate reimbursement, asymmetric-information markets can sometimes restore efficiency (e.g., 2018 Q4 used bicycle with reimbursement of 50)."]),
     ("asymmetric-information", "Asymmetric Information", 7, 3, [
         "One party to a transaction has more information than the other. The textbook taxonomy: adverse selection (hidden type, pre-contracting) and moral hazard (hidden action, post-contracting). Information asymmetry breaks the first welfare theorem."]),
-    ("hidden-information-vs-hidden-action", "Hidden Information vs Hidden Action", 7, "S", [
+    ("hidden-information-vs-hidden-action", "Hidden Information vs Hidden Action", 7, 2, [
         "The two pure types of information asymmetry. Hidden information (adverse selection): type is private before contracting. Hidden action (moral hazard): effort is private after contracting. Many real situations involve both."]),
     ("riley-outcome", "Riley Outcome", 7, "S", [
         "The unique separating equilibrium that survives standard refinements in signalling games: the least-cost separating equilibrium. Each type sends the smallest signal compatible with separation."]),
@@ -438,7 +438,7 @@ CONCEPTS = [
         "In Rothschild-Stiglitz models, allowing insurers to withdraw contracts that become unprofitable in response to other firms' entry. Restores equilibrium existence in cases where the basic model has none."]),
     ("partial-unravelling", "Partial Unravelling", 7, "S", [
         "An adverse-selection equilibrium in which some, but not all, types participate. The Akerlof model with a finite type distribution typically has equilibria with cutoff types: everyone below a threshold trades, everyone above stays out."]),
-    ("multiple-equilibria-lemons", "Multiple Equilibria in Lemons Markets", 7, "S", [
+    ("multiple-equilibria-lemons", "Multiple Equilibria in Lemons Markets", 7, 4, [
         "Akerlof's used car model can have several equilibria: an active high-quality market, an intermediate market with some withdrawal, and a collapsed market. Coordination on which equilibrium prevails depends on beliefs."]),
     ("winners-curse", "Winner's Curse", 7, "S", [
         "In a common-value auction, the winning bidder is the one whose value estimate was most optimistic. Rational bidders shade their bids down to account for this. The phenomenon is a form of adverse selection over information."]),
@@ -482,11 +482,11 @@ CONCEPTS = [
         "If the likelihood ratio $f(x|e_H) / f(x|e_L)$ is increasing in output x, then the optimal second-best wage schedule is increasing in x. MLRP guarantees the natural intuition that higher output should be rewarded with higher wages."]),
     ("peltzman-effect", "Peltzman Effect", 8, 4, [
         "When safety regulations make a dangerous activity safer (e.g., seatbelts, helmets, better roads), agents respond by behaving more riskily. A specific form of moral hazard in which the agent compensates for reduced risk by taking more of it. Empirically supported in some contexts, contested in others."]),
-    ("holmstrom-milgrom-model", "Holmstrom-Milgrom Linear Contracts Model", 8, "S", [
+    ("holmstrom-milgrom-model", "Holmstrom-Milgrom Linear Contracts Model", 8, 1, [
         "An extension of the static principal-agent model to continuous time with Brownian noise. Shows that under CARA utility and normally distributed output, the optimal contract is linear in observed output. Used to justify linear pay-for-performance schemes."]),
     ("multitasking", "Multitasking", 8, "S", [
         "When the agent allocates effort across multiple tasks (some measurable, some not), incentivising the measurable task can distort effort away from the unmeasurable one. The Holmstrom-Milgrom multi-task model: pay for performance can backfire when output measures are incomplete."]),
-    ("selling-the-firm", "Selling the Firm to the Agent", 8, "S", [
+    ("selling-the-firm", "Selling the Firm to the Agent", 8, 3, [
         "A theoretical solution to moral hazard: the principal sells the firm to the agent for an upfront fee equal to expected profit. The agent then bears all output risk and chooses first-best effort. Fails when the agent is risk-averse: they would not accept the deal because they cannot bear the risk."]),
     ("insurance-moral-hazard", "Moral Hazard in Insurance", 8, "S", [
         "Insured agents bear less of the cost of an accident and so take less care to avoid it. Insurers respond with partial coverage, deductibles, no-claims discounts, and exclusions. The standard practical example of moral hazard."]),
