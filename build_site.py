@@ -18,8 +18,8 @@ try:
 except Exception:
     PHASE2 = {}
 
-OUT = "/sessions/practical-beautiful-bell/mnt/Big Brain/Areas/Economics/Core Micro/Website"
-QT_DIR = "/sessions/practical-beautiful-bell/mnt/Big Brain/Areas/Economics/Core Micro/Study Guide/Question Types"
+OUT = "/sessions/exciting-upbeat-davinci/mnt/Big Brain/Areas/Economics/Core Micro/Website"
+QT_DIR = "/sessions/exciting-upbeat-davinci/mnt/Big Brain/Areas/Economics/Core Micro/Study Guide/Question Types"
 
 
 def slugify(name: str) -> str:
