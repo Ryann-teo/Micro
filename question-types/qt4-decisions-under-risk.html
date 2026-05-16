@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question Types 4: Decisions under Risk | Core Micro</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="../index.html">Core Micro</a>
+  <input id="search" class="search" type="text" placeholder="Search concepts..." autocomplete="off">
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#topics">Topics</a>
+    <a href="../index.html#concepts">Concepts</a>
+    <a href="../index.html#question-types">Question Types</a>
+  </nav>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-inner">
+<div class="sidebar-section"><a href="../index.html#question-types" class="sidebar-link">Question Types</a></div>
+<div class="sidebar-section">
+  <a href="../topics/1-general-equilibrium.html" class="sidebar-topic" data-topic-id="1">General Equilibrium</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/competitive-equilibrium.html" class="sidebar-concept" data-name="Competitive Equilibrium">Competitive Equilibrium</a></li>
+    <li><a href="../concepts/quasi-linear-utility.html" class="sidebar-concept" data-name="Quasi-linear Utility">Quasi-linear Utility</a></li>
+    <li><a href="../concepts/cobb-douglas-demand.html" class="sidebar-concept" data-name="Cobb-Douglas Demand">Cobb-Douglas Demand</a></li>
+    <li><a href="../concepts/edgeworth-box.html" class="sidebar-concept" data-name="Edgeworth Box">Edgeworth Box</a></li>
+    <li><a href="../concepts/excess-demand.html" class="sidebar-concept" data-name="Excess Demand">Excess Demand</a></li>
+    <li><a href="../concepts/ppf-and-mrt.html" class="sidebar-concept" data-name="PPF and MRT">PPF and MRT</a></li>
+    <li><a href="../concepts/ricardian-trade-model.html" class="sidebar-concept" data-name="Ricardian Trade Model">Ricardian Trade Model</a></li>
+    <li><a href="../concepts/walras-law.html" class="sidebar-concept" data-name="Walras Law">Walras Law</a></li>
+    <li><a href="../concepts/autarky.html" class="sidebar-concept" data-name="Autarky">Autarky</a></li>
+    <li><a href="../concepts/comparative-advantage.html" class="sidebar-concept" data-name="Comparative Advantage">Comparative Advantage</a></li>
+    <li><a href="../concepts/gross-substitutes.html" class="sidebar-concept" data-name="Gross Substitutes">Gross Substitutes</a></li>
+    <li><a href="../concepts/heckscher-ohlin-model.html" class="sidebar-concept" data-name="Heckscher-Ohlin Model">Heckscher-Ohlin Model</a></li>
+    <li><a href="../concepts/homogeneity-degree-zero.html" class="sidebar-concept" data-name="Homogeneity of Degree Zero">Homogeneity of Degree Zero</a></li>
+    <li><a href="../concepts/numeraire-good.html" class="sidebar-concept" data-name="Numeraire Good">Numeraire Good</a></li>
+    <li><a href="../concepts/robinson-crusoe-economy.html" class="sidebar-concept" data-name="Robinson Crusoe Economy">Robinson Crusoe Economy</a></li>
+    <li><a href="../concepts/rybczynski-theorem.html" class="sidebar-concept" data-name="Rybczynski Theorem">Rybczynski Theorem</a></li>
+    <li><a href="../concepts/stolper-samuelson.html" class="sidebar-concept" data-name="Stolper-Samuelson Theorem">Stolper-Samuelson Theorem</a></li>
+    <li><a href="../concepts/uniqueness-of-equilibrium.html" class="sidebar-concept" data-name="Uniqueness of Equilibrium">Uniqueness of Equilibrium</a></li>
+    <li><a href="../concepts/zero-profit-condition.html" class="sidebar-concept" data-name="Zero-Profit Condition">Zero-Profit Condition</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/2-welfare-and-social-choice.html" class="sidebar-topic" data-topic-id="2">Welfare and Social Choice</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pareto-criterion.html" class="sidebar-concept" data-name="Pareto Criterion">Pareto Criterion</a></li>
+    <li><a href="../concepts/pareto-efficiency.html" class="sidebar-concept" data-name="Pareto Efficiency">Pareto Efficiency</a></li>
+    <li><a href="../concepts/second-welfare-theorem.html" class="sidebar-concept" data-name="Second Welfare Theorem">Second Welfare Theorem</a></li>
+    <li><a href="../concepts/first-welfare-theorem.html" class="sidebar-concept" data-name="First Welfare Theorem">First Welfare Theorem</a></li>
+    <li><a href="../concepts/kaldor-hicks-compensation.html" class="sidebar-concept" data-name="Kaldor-Hicks Compensation">Kaldor-Hicks Compensation</a></li>
+    <li><a href="../concepts/social-welfare-functions.html" class="sidebar-concept" data-name="Social Welfare Functions">Social Welfare Functions</a></li>
+    <li><a href="../concepts/rawlsian-planner.html" class="sidebar-concept" data-name="Rawlsian Planner">Rawlsian Planner</a></li>
+    <li><a href="../concepts/utilitarian-planner.html" class="sidebar-concept" data-name="Utilitarian Planner">Utilitarian Planner</a></li>
+    <li><a href="../concepts/arrow-impossibility.html" class="sidebar-concept" data-name="Arrow&#x27;s Impossibility Theorem">Arrow&#x27;s Impossibility Theorem</a></li>
+    <li><a href="../concepts/borda-count.html" class="sidebar-concept" data-name="Borda Count">Borda Count</a></li>
+    <li><a href="../concepts/compensating-variation.html" class="sidebar-concept" data-name="Compensating Variation">Compensating Variation</a></li>
+    <li><a href="../concepts/condorcet-paradox.html" class="sidebar-concept" data-name="Condorcet Paradox">Condorcet Paradox</a></li>
+    <li><a href="../concepts/consumer-surplus.html" class="sidebar-concept" data-name="Consumer Surplus">Consumer Surplus</a></li>
+    <li><a href="../concepts/contingent-valuation.html" class="sidebar-concept" data-name="Contingent Valuation">Contingent Valuation</a></li>
+    <li><a href="../concepts/contract-curve.html" class="sidebar-concept" data-name="Contract Curve">Contract Curve</a></li>
+    <li><a href="../concepts/cost-benefit-analysis.html" class="sidebar-concept" data-name="Cost-Benefit Analysis">Cost-Benefit Analysis</a></li>
+    <li><a href="../concepts/deadweight-loss.html" class="sidebar-concept" data-name="Deadweight Loss">Deadweight Loss</a></li>
+    <li><a href="../concepts/equivalent-variation.html" class="sidebar-concept" data-name="Equivalent Variation">Equivalent Variation</a></li>
+    <li><a href="../concepts/expenditure-function.html" class="sidebar-concept" data-name="Expenditure Function">Expenditure Function</a></li>
+    <li><a href="../concepts/gibbard-satterthwaite.html" class="sidebar-concept" data-name="Gibbard-Satterthwaite Theorem">Gibbard-Satterthwaite Theorem</a></li>
+    <li><a href="../concepts/hedonic-pricing.html" class="sidebar-concept" data-name="Hedonic Pricing">Hedonic Pricing</a></li>
+    <li><a href="../concepts/hicksian-demand.html" class="sidebar-concept" data-name="Hicksian Demand">Hicksian Demand</a></li>
+    <li><a href="../concepts/majority-rule.html" class="sidebar-concept" data-name="Majority Rule">Majority Rule</a></li>
+    <li><a href="../concepts/marshallian-demand.html" class="sidebar-concept" data-name="Marshallian Demand">Marshallian Demand</a></li>
+    <li><a href="../concepts/median-voter-theorem.html" class="sidebar-concept" data-name="Median Voter Theorem">Median Voter Theorem</a></li>
+    <li><a href="../concepts/qaly.html" class="sidebar-concept" data-name="Quality-Adjusted Life Year (QALY)">Quality-Adjusted Life Year (QALY)</a></li>
+    <li><a href="../concepts/ramsey-equation.html" class="sidebar-concept" data-name="Ramsey Equation">Ramsey Equation</a></li>
+    <li><a href="../concepts/ramsey-taxation.html" class="sidebar-concept" data-name="Ramsey Taxation">Ramsey Taxation</a></li>
+    <li><a href="../concepts/single-peaked-preferences.html" class="sidebar-concept" data-name="Single-Peaked Preferences">Single-Peaked Preferences</a></li>
+    <li><a href="../concepts/social-discount-rate.html" class="sidebar-concept" data-name="Social Discount Rate">Social Discount Rate</a></li>
+    <li><a href="../concepts/strategy-proofness.html" class="sidebar-concept" data-name="Strategy-Proofness">Strategy-Proofness</a></li>
+    <li><a href="../concepts/travel-cost-method.html" class="sidebar-concept" data-name="Travel Cost Method">Travel Cost Method</a></li>
+    <li><a href="../concepts/utility-possibility-frontier.html" class="sidebar-concept" data-name="Utility Possibility Frontier">Utility Possibility Frontier</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/3-externalities-and-public-goods.html" class="sidebar-topic" data-topic-id="3">Externalities and Public Goods</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pigouvian-tax.html" class="sidebar-concept" data-name="Pigouvian Tax">Pigouvian Tax</a></li>
+    <li><a href="../concepts/samuelson-condition.html" class="sidebar-concept" data-name="Samuelson Condition">Samuelson Condition</a></li>
+    <li><a href="../concepts/clarke-groves-mechanism.html" class="sidebar-concept" data-name="Clarke-Groves Mechanism">Clarke-Groves Mechanism</a></li>
+    <li><a href="../concepts/coase-theorem.html" class="sidebar-concept" data-name="Coase Theorem">Coase Theorem</a></li>
+    <li><a href="../concepts/externality-internalisation.html" class="sidebar-concept" data-name="Externality Internalisation">Externality Internalisation</a></li>
+    <li><a href="../concepts/free-rider-problem.html" class="sidebar-concept" data-name="Free Rider Problem">Free Rider Problem</a></li>
+    <li><a href="../concepts/lindahl-prices.html" class="sidebar-concept" data-name="Lindahl Prices">Lindahl Prices</a></li>
+    <li><a href="../concepts/marginal-private-vs-social-benefit.html" class="sidebar-concept" data-name="Marginal Private vs Social Benefit">Marginal Private vs Social Benefit</a></li>
+    <li><a href="../concepts/public-goods.html" class="sidebar-concept" data-name="Public Goods">Public Goods</a></li>
+    <li><a href="../concepts/tragedy-of-the-commons.html" class="sidebar-concept" data-name="Tragedy of the Commons">Tragedy of the Commons</a></li>
+    <li><a href="../concepts/voluntary-contribution-nash.html" class="sidebar-concept" data-name="Voluntary Contribution Nash Equilibrium">Voluntary Contribution Nash Equilibrium</a></li>
+    <li><a href="../concepts/weitzman-prices-vs-quantities.html" class="sidebar-concept" data-name="Weitzman Prices vs Quantities">Weitzman Prices vs Quantities</a></li>
+    <li><a href="../concepts/rivalry-and-excludability.html" class="sidebar-concept" data-name="Rivalry and Excludability">Rivalry and Excludability</a></li>
+    <li><a href="../concepts/tradeable-permits.html" class="sidebar-concept" data-name="Tradeable Permits">Tradeable Permits</a></li>
+    <li><a href="../concepts/cap-and-trade.html" class="sidebar-concept" data-name="Cap-and-Trade">Cap-and-Trade</a></li>
+    <li><a href="../concepts/clarke-tax.html" class="sidebar-concept" data-name="Clarke Tax (Pivotal Mechanism)">Clarke Tax (Pivotal Mechanism)</a></li>
+    <li><a href="../concepts/club-goods.html" class="sidebar-concept" data-name="Club Goods">Club Goods</a></li>
+    <li><a href="../concepts/coasean-bargaining.html" class="sidebar-concept" data-name="Coasean Bargaining">Coasean Bargaining</a></li>
+    <li><a href="../concepts/common-pool-resources.html" class="sidebar-concept" data-name="Common Pool Resources">Common Pool Resources</a></li>
+    <li><a href="../concepts/vickrey-auction.html" class="sidebar-concept" data-name="Vickrey (Second-Price) Auction">Vickrey (Second-Price) Auction</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/4-game-theory.html" class="sidebar-topic" data-topic-id="4">Game Theory</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/best-response-functions.html" class="sidebar-concept" data-name="Best Response Functions">Best Response Functions</a></li>
+    <li><a href="../concepts/grim-trigger-strategy.html" class="sidebar-concept" data-name="Grim Trigger Strategy">Grim Trigger Strategy</a></li>
+    <li><a href="../concepts/nash-equilibrium.html" class="sidebar-concept" data-name="Nash Equilibrium">Nash Equilibrium</a></li>
+    <li><a href="../concepts/subgame-perfect-equilibrium.html" class="sidebar-concept" data-name="Subgame Perfect Equilibrium">Subgame Perfect Equilibrium</a></li>
+    <li><a href="../concepts/critical-discount-factor.html" class="sidebar-concept" data-name="Critical Discount Factor">Critical Discount Factor</a></li>
+    <li><a href="../concepts/dominance.html" class="sidebar-concept" data-name="Dominance">Dominance</a></li>
+    <li><a href="../concepts/infinitely-repeated-games.html" class="sidebar-concept" data-name="Infinitely Repeated Games">Infinitely Repeated Games</a></li>
+    <li><a href="../concepts/affine-utility-normalisation.html" class="sidebar-concept" data-name="Affine Utility Normalisation">Affine Utility Normalisation</a></li>
+    <li><a href="../concepts/backward-induction.html" class="sidebar-concept" data-name="Backward Induction">Backward Induction</a></li>
+    <li><a href="../concepts/folk-theorem.html" class="sidebar-concept" data-name="Folk Theorem">Folk Theorem</a></li>
+    <li><a href="../concepts/mixed-strategy-equilibrium.html" class="sidebar-concept" data-name="Mixed Strategy Equilibrium">Mixed Strategy Equilibrium</a></li>
+    <li><a href="../concepts/battle-of-the-sexes.html" class="sidebar-concept" data-name="Battle of the Sexes">Battle of the Sexes</a></li>
+    <li><a href="../concepts/credible-threat.html" class="sidebar-concept" data-name="Credible Threat">Credible Threat</a></li>
+    <li><a href="../concepts/extensive-form-game.html" class="sidebar-concept" data-name="Extensive Form Game">Extensive Form Game</a></li>
+    <li><a href="../concepts/first-mover-advantage.html" class="sidebar-concept" data-name="First-Mover Advantage">First-Mover Advantage</a></li>
+    <li><a href="../concepts/hawk-dove-game.html" class="sidebar-concept" data-name="Hawk-Dove (Chicken) Game">Hawk-Dove (Chicken) Game</a></li>
+    <li><a href="../concepts/information-set.html" class="sidebar-concept" data-name="Information Set">Information Set</a></li>
+    <li><a href="../concepts/iterated-elimination-strictly-dominated.html" class="sidebar-concept" data-name="Iterated Elimination of Strictly Dominated Strategies">Iterated Elimination of Strictly Dominated Strategies</a></li>
+    <li><a href="../concepts/matching-pennies.html" class="sidebar-concept" data-name="Matching Pennies">Matching Pennies</a></li>
+    <li><a href="../concepts/nash-existence-theorem.html" class="sidebar-concept" data-name="Nash Existence Theorem">Nash Existence Theorem</a></li>
+    <li><a href="../concepts/nash-reversion.html" class="sidebar-concept" data-name="Nash Reversion Strategy">Nash Reversion Strategy</a></li>
+    <li><a href="../concepts/strategic-form-game.html" class="sidebar-concept" data-name="Strategic Form Game">Strategic Form Game</a></li>
+    <li><a href="../concepts/strategic-substitutes-complements.html" class="sidebar-concept" data-name="Strategic Substitutes vs Complements">Strategic Substitutes vs Complements</a></li>
+    <li><a href="../concepts/strict-vs-weak-dominance.html" class="sidebar-concept" data-name="Strict vs Weak Dominance">Strict vs Weak Dominance</a></li>
+    <li><a href="../concepts/tit-for-tat.html" class="sidebar-concept" data-name="Tit-for-Tat Strategy">Tit-for-Tat Strategy</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/5-industrial-organisation-and-competition-policy.html" class="sidebar-topic" data-topic-id="5">Industrial Organisation and Competition Policy</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/williamson-trade-off.html" class="sidebar-concept" data-name="Williamson Trade-off">Williamson Trade-off</a></li>
+    <li><a href="../concepts/bertrand-duopoly.html" class="sidebar-concept" data-name="Bertrand Duopoly">Bertrand Duopoly</a></li>
+    <li><a href="../concepts/cournot-duopoly.html" class="sidebar-concept" data-name="Cournot Duopoly">Cournot Duopoly</a></li>
+    <li><a href="../concepts/entry-deterrence.html" class="sidebar-concept" data-name="Entry Deterrence">Entry Deterrence</a></li>
+    <li><a href="../concepts/merger-analysis.html" class="sidebar-concept" data-name="Merger Analysis">Merger Analysis</a></li>
+    <li><a href="../concepts/differentiated-bertrand.html" class="sidebar-concept" data-name="Differentiated Bertrand">Differentiated Bertrand</a></li>
+    <li><a href="../concepts/collusion-sustainability.html" class="sidebar-concept" data-name="Collusion Sustainability">Collusion Sustainability</a></li>
+    <li><a href="../concepts/hhi-index.html" class="sidebar-concept" data-name="Herfindahl-Hirschman Index (HHI)">Herfindahl-Hirschman Index (HHI)</a></li>
+    <li><a href="../concepts/hotelling-linear-city.html" class="sidebar-concept" data-name="Hotelling Linear City">Hotelling Linear City</a></li>
+    <li><a href="../concepts/leniency-programme.html" class="sidebar-concept" data-name="Leniency Programme">Leniency Programme</a></li>
+    <li><a href="../concepts/price-discrimination.html" class="sidebar-concept" data-name="Price Discrimination">Price Discrimination</a></li>
+    <li><a href="../concepts/ssnip-test.html" class="sidebar-concept" data-name="SSNIP Test">SSNIP Test</a></li>
+    <li><a href="../concepts/stackelberg-leadership.html" class="sidebar-concept" data-name="Stackelberg Leadership">Stackelberg Leadership</a></li>
+    <li><a href="../concepts/two-part-tariff.html" class="sidebar-concept" data-name="Two-Part Tariff">Two-Part Tariff</a></li>
+    <li><a href="../concepts/uk-competition-act.html" class="sidebar-concept" data-name="UK Competition Act 1998 and EU Articles 101-102">UK Competition Act 1998 and EU Articles 101-102</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/6-decisions-under-risk.html" class="sidebar-topic active" data-topic-id="6">Decisions under Risk</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/arrow-pratt-ara.html" class="sidebar-concept" data-name="Arrow-Pratt ARA">Arrow-Pratt ARA</a></li>
+    <li><a href="../concepts/cara-utility.html" class="sidebar-concept" data-name="CARA Utility">CARA Utility</a></li>
+    <li><a href="../concepts/crra-utility.html" class="sidebar-concept" data-name="CRRA Utility">CRRA Utility</a></li>
+    <li><a href="../concepts/dara-utility.html" class="sidebar-concept" data-name="DARA Utility">DARA Utility</a></li>
+    <li><a href="../concepts/expected-utility.html" class="sidebar-concept" data-name="Expected Utility">Expected Utility</a></li>
+    <li><a href="../concepts/certainty-equivalent.html" class="sidebar-concept" data-name="Certainty Equivalent">Certainty Equivalent</a></li>
+    <li><a href="../concepts/first-order-stochastic-dominance.html" class="sidebar-concept" data-name="First-Order Stochastic Dominance">First-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/independence-axiom.html" class="sidebar-concept" data-name="Independence Axiom">Independence Axiom</a></li>
+    <li><a href="../concepts/risk-aversion.html" class="sidebar-concept" data-name="Risk Aversion">Risk Aversion</a></li>
+    <li><a href="../concepts/second-order-stochastic-dominance.html" class="sidebar-concept" data-name="Second-Order Stochastic Dominance">Second-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/state-space-insurance-diagram.html" class="sidebar-concept" data-name="State-Space Insurance Diagram">State-Space Insurance Diagram</a></li>
+    <li><a href="../concepts/von-neumann-morgenstern-axioms.html" class="sidebar-concept" data-name="von Neumann Morgenstern Axioms">von Neumann Morgenstern Axioms</a></li>
+    <li><a href="../concepts/continuity-axiom.html" class="sidebar-concept" data-name="Continuity Axiom">Continuity Axiom</a></li>
+    <li><a href="../concepts/risk-premium.html" class="sidebar-concept" data-name="Risk Premium">Risk Premium</a></li>
+    <li><a href="../concepts/arrow-pratt-rra.html" class="sidebar-concept" data-name="Arrow-Pratt RRA">Arrow-Pratt RRA</a></li>
+    <li><a href="../concepts/fair-premium.html" class="sidebar-concept" data-name="Fair Premium">Fair Premium</a></li>
+    <li><a href="../concepts/reduction-of-compound-lotteries.html" class="sidebar-concept" data-name="Reduction of Compound Lotteries">Reduction of Compound Lotteries</a></li>
+    <li><a href="../concepts/risk-pooling.html" class="sidebar-concept" data-name="Risk Pooling">Risk Pooling</a></li>
+    <li><a href="../concepts/allais-paradox.html" class="sidebar-concept" data-name="Allais Paradox">Allais Paradox</a></li>
+    <li><a href="../concepts/dutch-book-argument.html" class="sidebar-concept" data-name="Dutch Book Argument">Dutch Book Argument</a></li>
+    <li><a href="../concepts/mean-preserving-spread.html" class="sidebar-concept" data-name="Mean-Preserving Spread">Mean-Preserving Spread</a></li>
+    <li><a href="../concepts/mean-variance-utility.html" class="sidebar-concept" data-name="Mean-Variance Utility">Mean-Variance Utility</a></li>
+    <li><a href="../concepts/st-petersburg-paradox.html" class="sidebar-concept" data-name="St Petersburg Paradox">St Petersburg Paradox</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/7-adverse-selection.html" class="sidebar-topic" data-topic-id="7">Adverse Selection</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/adverse-selection.html" class="sidebar-concept" data-name="Adverse Selection">Adverse Selection</a></li>
+    <li><a href="../concepts/akerlof-lemons-market.html" class="sidebar-concept" data-name="Akerlof Lemons Market">Akerlof Lemons Market</a></li>
+    <li><a href="../concepts/fair-odds-line.html" class="sidebar-concept" data-name="Fair Odds Line">Fair Odds Line</a></li>
+    <li><a href="../concepts/full-unravelling.html" class="sidebar-concept" data-name="Full Unravelling">Full Unravelling</a></li>
+    <li><a href="../concepts/intuitive-criterion.html" class="sidebar-concept" data-name="Intuitive Criterion">Intuitive Criterion</a></li>
+    <li><a href="../concepts/rothschild-stiglitz-screening.html" class="sidebar-concept" data-name="Rothschild-Stiglitz Screening">Rothschild-Stiglitz Screening</a></li>
+    <li><a href="../concepts/single-crossing-property.html" class="sidebar-concept" data-name="Single Crossing Property">Single Crossing Property</a></li>
+    <li><a href="../concepts/spence-signalling.html" class="sidebar-concept" data-name="Spence Signalling">Spence Signalling</a></li>
+    <li><a href="../concepts/state-space-rothschild-stiglitz.html" class="sidebar-concept" data-name="State-Space Diagram (Rothschild-Stiglitz)">State-Space Diagram (Rothschild-Stiglitz)</a></li>
+    <li><a href="../concepts/asymmetric-information.html" class="sidebar-concept" data-name="Asymmetric Information">Asymmetric Information</a></li>
+    <li><a href="../concepts/separating-vs-pooling.html" class="sidebar-concept" data-name="Separating vs Pooling Equilibrium">Separating vs Pooling Equilibrium</a></li>
+    <li><a href="../concepts/pooling-equilibrium.html" class="sidebar-concept" data-name="Pooling Equilibrium">Pooling Equilibrium</a></li>
+    <li><a href="../concepts/reimbursement-contracts.html" class="sidebar-concept" data-name="Reimbursement Contracts">Reimbursement Contracts</a></li>
+    <li><a href="../concepts/conspicuous-consumption.html" class="sidebar-concept" data-name="Conspicuous Consumption (Veblen Goods)">Conspicuous Consumption (Veblen Goods)</a></li>
+    <li><a href="../concepts/hidden-information-vs-hidden-action.html" class="sidebar-concept" data-name="Hidden Information vs Hidden Action">Hidden Information vs Hidden Action</a></li>
+    <li><a href="../concepts/multiple-equilibria-lemons.html" class="sidebar-concept" data-name="Multiple Equilibria in Lemons Markets">Multiple Equilibria in Lemons Markets</a></li>
+    <li><a href="../concepts/partial-unravelling.html" class="sidebar-concept" data-name="Partial Unravelling">Partial Unravelling</a></li>
+    <li><a href="../concepts/riley-outcome.html" class="sidebar-concept" data-name="Riley Outcome">Riley Outcome</a></li>
+    <li><a href="../concepts/wilson-refinement.html" class="sidebar-concept" data-name="Wilson Equilibrium Refinement">Wilson Equilibrium Refinement</a></li>
+    <li><a href="../concepts/winners-curse.html" class="sidebar-concept" data-name="Winner&#x27;s Curse">Winner&#x27;s Curse</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/8-moral-hazard.html" class="sidebar-topic" data-topic-id="8">Moral Hazard</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/agency-cost.html" class="sidebar-concept" data-name="Agency Cost">Agency Cost</a></li>
+    <li><a href="../concepts/incentive-compatibility.html" class="sidebar-concept" data-name="Incentive Compatibility">Incentive Compatibility</a></li>
+    <li><a href="../concepts/individual-rationality.html" class="sidebar-concept" data-name="Individual Rationality">Individual Rationality</a></li>
+    <li><a href="../concepts/principal-agent-problem.html" class="sidebar-concept" data-name="Principal-Agent Problem">Principal-Agent Problem</a></li>
+    <li><a href="../concepts/first-best-contract.html" class="sidebar-concept" data-name="First-Best Contract">First-Best Contract</a></li>
+    <li><a href="../concepts/moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard">Moral Hazard</a></li>
+    <li><a href="../concepts/risk-vs-insurance-tradeoff.html" class="sidebar-concept" data-name="Risk vs Insurance Trade-off">Risk vs Insurance Trade-off</a></li>
+    <li><a href="../concepts/second-best-contract.html" class="sidebar-concept" data-name="Second-Best Contract">Second-Best Contract</a></li>
+    <li><a href="../concepts/linear-contracts.html" class="sidebar-concept" data-name="Linear Contracts">Linear Contracts</a></li>
+    <li><a href="../concepts/monotone-likelihood-ratio.html" class="sidebar-concept" data-name="Monotone Likelihood Ratio">Monotone Likelihood Ratio</a></li>
+    <li><a href="../concepts/peltzman-effect.html" class="sidebar-concept" data-name="Peltzman Effect">Peltzman Effect</a></li>
+    <li><a href="../concepts/revenue-sharing.html" class="sidebar-concept" data-name="Revenue Sharing">Revenue Sharing</a></li>
+    <li><a href="../concepts/wage-bounds-limited-liability.html" class="sidebar-concept" data-name="Wage Bounds Limited Liability">Wage Bounds Limited Liability</a></li>
+    <li><a href="../concepts/holmstrom-milgrom-model.html" class="sidebar-concept" data-name="Holmstrom-Milgrom Linear Contracts Model">Holmstrom-Milgrom Linear Contracts Model</a></li>
+    <li><a href="../concepts/insurance-moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard in Insurance">Moral Hazard in Insurance</a></li>
+    <li><a href="../concepts/multitasking.html" class="sidebar-concept" data-name="Multitasking">Multitasking</a></li>
+    <li><a href="../concepts/repeated-moral-hazard.html" class="sidebar-concept" data-name="Repeated Moral Hazard">Repeated Moral Hazard</a></li>
+    <li><a href="../concepts/selling-the-firm.html" class="sidebar-concept" data-name="Selling the Firm to the Agent">Selling the Firm to the Agent</a></li>
+  </ul>
+</div>
+</div>
+</aside>
+<main class="content">
+<nav class="breadcrumb"><a href="../index.html">Home</a> / <span>Question Types</span></nav><article class="qt-article"><h1>Question Types: Decisions under Risk</h1>
+<blockquote>All Core Microeconomics finals questions on expected utility, risk aversion, lotteries and risk-sharing from 2014 to 2025, organised by Part A short problem, Part B essay, and Part B long-answer problem. Maps to Topic 6 in the 2025 reading list.</blockquote>
+<hr>
+<h2>Excluded sub-topics</h2>
+<p>The 2014 to 2020 outline answers cover only Q10 or Q11 for Part B, so essay-style Part B questions on risk before 2022 are not in the catalogue and cannot be reconstructed from outlines. The Part A coverage from 2014 to 2025 is complete. No questions tagged Decisions under Risk are omitted from this guide.</p>
+<hr>
+<h2>Part A: short compulsory problems</h2>
+<h3>Sub-question Type A.1: Define certainty equivalent and risk premium, use to argue acceptance or refusal</h3>
+<ul>
+<li><strong>What it asks</strong>: Give precise definitions of the <a class="wikilink" href="../concepts/certainty-equivalent.html">Concepts/Certainty Equivalent</a> $w^c$ and <a class="wikilink" href="../concepts/risk-premium.html">Concepts/Risk Premium</a> $\pi$ for a lottery $L$ paying $w_i$ with probability $p_i$, then deploy them to say whether a risk-averse agent accepts a project, sells a lottery ticket, or buys it. Often phrased as "explain how the certainty equivalent determines whether Janet plays."</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>State the definitions cleanly. Expected utility of the lottery is $E[u(W)] = \sum_i p_i u(w_i)$. The certainty equivalent $w^c$ is the sure wealth that gives the same utility, $u(w^c) = E[u(W)]$. The risk premium is $\pi = E[W] - w^c$.</li>
+<li>Note the equivalent statement: an <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a> maximiser is willing to accept the lottery in exchange for sure wealth $w_0$ if and only if $w_0 \leq w^c$, equivalently $u(w_0) \leq E[u(W)]$.</li>
+<li>For risk-averse $u$ (concave), Jensen's inequality gives $E[u(W)] < u(E[W])$, so $w^c < E[W]$ and $\pi > 0$. State this as the operational test.</li>
+<li>Apply to the specific scenario: compute $E[u(W)]$, invert $u$ to find $w^c$, compare to the asking price or the outside option.</li>
+<li><strong>Appeared in</strong>: 2019 Q3(a), 2020 Q3(a), 2016 Q2(a).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/certainty-equivalent.html">Concepts/Certainty Equivalent</a>, <a class="wikilink" href="../concepts/risk-premium.html">Concepts/Risk Premium</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/risk-aversion.html">Concepts/Risk Aversion</a>.</li>
+</ul>
+<h3>Sub-question Type A.2: Compute the certainty equivalent and risk premium for a specific utility and lottery</h3>
+<ul>
+<li><strong>What it asks</strong>: Given an explicit utility (typically $u(w) = \log w$, $u(w) = \sqrt{w}$, $u(w) = 2\sqrt{w}$ or $u(w) = -e^{-aw}$) and a lottery, compute $w^c$ and $\pi$ numerically.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Write out $E[u(W)] = \sum_i p_i u(w_i)$ explicitly. Keep symbolic where possible to avoid arithmetic slips.</li>
+<li>Invert: $w^c = u^{-1}(E[u(W)])$. For $u(w) = \log w$, $w^c = \exp(E[\log W])$, the geometric mean of outcomes when probabilities are equal. For $u(w) = a\sqrt{w}$, $w^c = (E[\sqrt{W}])^2$. For $u(w) = -e^{-aw}$, $w^c = -\frac{1}{a}\log(-E[u(W)])$.</li>
+<li>Compute $E[W] = \sum_i p_i w_i$ and the risk premium $\pi = E[W] - w^c$.</li>
+<li>Sanity check the sign: for concave $u$ you need $\pi > 0$. If the question asks for the "minimum price Janet would sell at" with current wealth $w_0$, this is $w^c$ relative to $w_0$, not $w^c$ alone, so add or subtract starting wealth where the lottery is over wealth changes versus over final wealth.</li>
+<li><strong>Appeared in</strong>: 2017 Q3(b) (Janet $u = 2\sqrt{w}$, lottery $\pm 40$ from $w = 10000$), 2018 Q3(a) (Janet log utility, project with two outcomes), 2019 Q3(b)(c) (lottery 12 or 0, square root utility, selling and buying prices), 2025 Q10(b) (CE of lottery B under specific $v(t)$).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/certainty-equivalent.html">Concepts/Certainty Equivalent</a>, <a class="wikilink" href="../concepts/risk-premium.html">Concepts/Risk Premium</a>, <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a>, <a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.3: Show ARA is decreasing and RRA is constant for CRRA-style utility</h3>
+<ul>
+<li><strong>What it asks</strong>: Given $u(w) = 2\sqrt{w}$, $u(w) = \log w$ or a related CRRA form, show that the Arrow-Pratt coefficient of absolute risk aversion $A(w) = -u''(w)/u'(w)$ is decreasing in $w$ and that the coefficient of relative risk aversion $R(w) = w \cdot A(w)$ is constant.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Compute $u'(w)$ and $u''(w)$. For $u(w) = 2\sqrt{w}$: $u'(w) = w^{-1/2}$, $u''(w) = -\frac{1}{2}w^{-3/2}$.</li>
+<li>Form $A(w) = -u''(w)/u'(w)$. For $u = 2\sqrt{w}$, $A(w) = \frac{1}{2w}$. Differentiate: $A'(w) = -\frac{1}{2w^2} < 0$, so <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a> holds.</li>
+<li>Form $R(w) = w \cdot A(w)$. For $u = 2\sqrt{w}$, $R(w) = \frac{1}{2}$, a constant, so this is <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a> with coefficient $1/2$.</li>
+<li>State the economic content: under DARA, agents hold more risky assets in absolute terms as they get richer. Under CRRA, the share of wealth in risky assets is wealth-invariant.</li>
+<li><strong>Appeared in</strong>: 2017 Q3(a), 2022 Q8 (essay context, drawing on this computation), 2025 Q10(c)(d).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a>, <a class="wikilink" href="../concepts/arrow-pratt-rra.html">Concepts/Arrow-Pratt RRA</a>, <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a>, <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.4: Use the Arrow-Pratt approximation to compare risk premia across agents or lottery sizes</h3>
+<ul>
+<li><strong>What it asks</strong>: For a small zero-mean risk $\tilde{\epsilon}$ around wealth $w$, the risk premium satisfies $\pi \approx \frac{1}{2} A(w) \sigma^2$ where $\sigma^2 = \text{Var}(\tilde{\epsilon})$. Use this to compare two agents, or to predict how $\pi$ scales with the size of the lottery.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>State the approximation: for small $\sigma^2$, $\pi(w, \tilde{\epsilon}) \approx \frac{1}{2} A(w) \cdot \text{Var}(\tilde{\epsilon})$.</li>
+<li>For each agent, evaluate $A(w)$ at the relevant wealth. The ratio of risk premia is $\pi_S / \pi_J \approx A_S(w) / A_J(w)$.</li>
+<li>For scaling in lottery size: if the lottery is scaled by $\lambda$, variance scales by $\lambda^2$, so $\pi$ scales by $\lambda^2$ approximately. This is why doubling the stakes more than doubles the premium for the same agent.</li>
+<li>Sanity check: the approximation is local. For large lotteries, compute the exact premium and compare. The error grows in $\sigma^2$ and in the curvature of $A$.</li>
+<li><strong>Appeared in</strong>: 2017 Q3(c) (compare Sam's risk premium to Janet's for a smaller lottery).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a>, <a class="wikilink" href="../concepts/risk-premium.html">Concepts/Risk Premium</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.5: Infer risk attitude from observed willingness to swap or sell</h3>
+<ul>
+<li><strong>What it asks</strong>: Given that an agent is indifferent between, or strictly prefers, one lottery over another (or over a sure outcome), what does this tell you about the curvature of $u$? Often the question pairs this with a specific functional form like $u = \log w$ and asks for a numerical bound on a price.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Translate the observed choice into an inequality on expected utility. "Janet is willing to swap lottery $X$ for sure wealth $w_0$" gives $u(w_0) \geq E[u(X)]$.</li>
+<li>Compare $w_0$ to $E[X]$. If $w_0 < E[X]$, Janet is risk-averse (she accepts less than the expected value to avoid risk). If $w_0 > E[X]$, she is risk-loving. If equal, risk-neutral.</li>
+<li>For numerical bounds: substitute the assumed $u$, set the indifference equation $u(w_0) = E[u(X)]$, and solve for $w_0$. This is the largest sum she would pay or the smallest she would accept.</li>
+<li>State the qualitative conclusion (sign of $u''$) before quoting numbers, since the question usually wants the inference, not just the answer.</li>
+<li><strong>Appeared in</strong>: 2016 Q2(b)(c) (Janet, lottery swap, log utility), 2020 Q3(b) (Sam's argument that Janet must be risk averse), 2024 Q4(b) (preferring $L$ to $L'$ implies $p > q$ and bounds $u$).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/risk-aversion.html">Concepts/Risk Aversion</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/certainty-equivalent.html">Concepts/Certainty Equivalent</a>.</li>
+</ul>
+<h3>Sub-question Type A.6: Optimal risk-sharing in a syndicate of $n$ investors and the optimal size of the group</h3>
+<ul>
+<li><strong>What it asks</strong>: A risky project with payoff $X$ is shared equally between $n$ investors, each takes $X/n$ and pays a share of the cost. For what $n$ does each investor accept? At what $n$ is per-investor expected utility maximised, and why does utility eventually fall as $n$ grows?</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Write each investor's payoff: net wealth is $w_0 + X/n - c/n$ where $c$ is the cost of joining (or zero if costless). Their EU is $E[u(w_0 + X/n - c/n)]$.</li>
+<li>Acceptance condition: $E[u(w_0 + X/n - c/n)] \geq u(w_0)$. For log utility this gives a closed-form bound on $n$.</li>
+<li>As $n \to \infty$, the per-person risk shrinks like $1/n^2$ in variance terms, so the risk premium falls. By the Arrow-Pratt approximation, $\pi_n \approx \frac{1}{2}A(w_0) \sigma^2/n^2$.</li>
+<li>Optimal group size when there is a cost or non-investor outside option. Maximise $E[u(w_0 + (X-c)/n)]$ over $n$, then check the FOC. Beyond the optimum, each new member dilutes the expected upside more than the variance reduction is worth, especially if $E[X] - c > 0$ but the per-capita expected gain $(E[X] - c)/n$ falls in $n$. This is the "sharing eventually hurts" intuition.</li>
+<li>State the trade-off cleanly: more members means less risk per head but also less expected gain per head.</li>
+<li><strong>Appeared in</strong>: 2014 Q4(b)(c), 2018 Q3(b)(c).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/risk-pooling.html">Concepts/Risk Pooling</a>, <a class="wikilink" href="../concepts/risk-aversion.html">Concepts/Risk Aversion</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a>.</li>
+</ul>
+<h3>Sub-question Type A.7: Two-state insurance problem in a state-space diagram</h3>
+<ul>
+<li><strong>What it asks</strong>: An agent faces wealth $w_g$ in the good state (prob $1-\pi$) and $w_b = w_g - L$ in the bad state (prob $\pi$). They buy coverage $q$ at premium price $\gamma$. Find optimal coverage, draw the <a class="wikilink" href="../concepts/state-space-insurance-diagram.html">Concepts/State-Space Insurance Diagram</a>, compare fair ($\gamma = \pi$) with unfair ($\gamma > \pi$) premia, and the role of monopoly versus competitive insurer.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Wealth in each state after buying $q$ units of coverage at unit price $\gamma$: $w_g(q) = w_0 - \gamma q$ and $w_b(q) = w_0 - L + (1-\gamma)q$. Plot $w_b$ against $w_g$. The budget line has slope $-\gamma/(1-\gamma)$. The 45-degree line is the "full insurance" locus.</li>
+<li>Indifference curves of EU $\pi u(w_b) + (1-\pi)u(w_g)$ have slope $-\frac{(1-\pi)u'(w_g)}{\pi u'(w_b)}$. At the 45-degree line this slope is $-(1-\pi)/\pi$, the fair-odds slope.</li>
+<li>Fair premium $\gamma = \pi$: budget slope equals fair-odds slope, tangency lies on the 45 line, so optimal $q^* = L$ (full insurance).</li>
+<li>Unfair premium $\gamma > \pi$: budget is steeper than fair-odds, tangency to the right of the 45 line, so $w_g > w_b$ at optimum, hence $q^* < L$ (underinsurance). Solve the FOC $\frac{(1-\pi)u'(w_g)}{\pi u'(w_b)} = \frac{\gamma}{1-\gamma}$.</li>
+<li>Monopoly versus competitive: competitive insurers earn zero profit, so $\gamma = \pi$ if risk-neutral and frictionless. Monopolist extracts the agent's surplus by offering a contract that holds the agent at $u(w_0)$ on the EU indifference curve through the endowment, the contract lies on the agent's reservation indifference curve at the highest profit point.</li>
+<li>Risk pooling between two agents: if incomes are perfectly negatively correlated ($\rho = -1$), aggregate variance is zero, full insurance is possible without cost. As $\rho \to 1$, no gains from pooling. The pooling gain falls in $\rho$.</li>
+<li><strong>Appeared in</strong>: 2015 Q4(a)(b)(c)(d), 2023 Q4(a)(b)(c)(d), 2018 Q10(a)(b)(c)(d) (long-answer extension).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/state-space-insurance-diagram.html">Concepts/State-Space Insurance Diagram</a>, <a class="wikilink" href="../concepts/fair-premium.html">Concepts/Fair Premium</a>, <a class="wikilink" href="../concepts/risk-pooling.html">Concepts/Risk Pooling</a>, <a class="wikilink" href="../concepts/risk-aversion.html">Concepts/Risk Aversion</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.8: Compound lotteries, the reduction property, and the independence axiom</h3>
+<ul>
+<li><strong>What it asks</strong>: Given two stage-lotteries that play out into final prizes with different probability trees, check whether a particular preference ranking is implied by <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a> alone. Distinguishes between rankings that follow from reduction of compound lotteries (any EU maximiser must hold) and rankings that only follow from extra structure (concavity, monotonicity).</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Use <a class="wikilink" href="../concepts/reduction-of-compound-lotteries.html">Concepts/Reduction of Compound Lotteries</a>: a two-stage lottery yielding $L_1$ with probability $\alpha$ and $L_2$ with probability $1-\alpha$ is equivalent to the simple lottery with prize probabilities $\alpha \Pr_{L_1}(\cdot) + (1-\alpha) \Pr_{L_2}(\cdot)$.</li>
+<li>Reduce both compound lotteries to simple form. If one simple form first-order stochastically dominates the other, every monotone $u$ ranks them the same way.</li>
+<li>Check whether the prizes can be ordered so that the ranking holds for all $u$ (FOSD), for all concave $u$ (SOSD), or only for specific $u$. Cite the <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a> when the question hinges on substituting a common-prize branch.</li>
+<li>For statements of the form "every risk-averse agent prefers $X$ to $Y$ when $y_1 < x_1 < x_2 < y_2$": check whether this is single-crossing of CDFs, which gives <a class="wikilink" href="../concepts/second-order-stochastic-dominance.html">Concepts/Second-Order Stochastic Dominance</a> of $X$ over $Y$ when $E[X] \geq E[Y]$. Without the mean condition, no general ranking.</li>
+<li><strong>Appeared in</strong>: 2022 Q3(a)(b), 2024 Q4(a) (FOSD check on binary lotteries), 2024 Q8 (essay, independence axiom and Sordid club).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/reduction-of-compound-lotteries.html">Concepts/Reduction of Compound Lotteries</a>, <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a>, <a class="wikilink" href="../concepts/first-order-stochastic-dominance.html">Concepts/First-Order Stochastic Dominance</a>, <a class="wikilink" href="../concepts/second-order-stochastic-dominance.html">Concepts/Second-Order Stochastic Dominance</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.9: First-order stochastic dominance check between two lotteries</h3>
+<ul>
+<li><strong>What it asks</strong>: Given two CDFs $F$ and $G$, check whether $F$ first-order stochastically dominates $G$, equivalently $F(x) \leq G(x)$ for all $x$ with strict inequality somewhere. If yes, every monotone $u$ ranks $F$ strictly above $G$.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Compute or sketch both CDFs over the support.</li>
+<li>Check $F(x) \leq G(x)$ pointwise. If true with strict inequality somewhere, $F$ FOSD-dominates $G$.</li>
+<li>If the CDFs cross, FOSD fails. Try <a class="wikilink" href="../concepts/second-order-stochastic-dominance.html">Concepts/Second-Order Stochastic Dominance</a> by integrating: $\int_{-\infty}^x F(t) dt \leq \int_{-\infty}^x G(t) dt$ for all $x$ with equal means gives SOSD, which is the all-risk-averse ranking.</li>
+<li>State the implication: under FOSD, $E_F[u(X)] \geq E_G[u(X)]$ for every weakly increasing $u$, with strict inequality for strictly increasing $u$ and non-degenerate $F-G$.</li>
+<li><strong>Appeared in</strong>: 2024 Q4(a) (FOSD when $q \geq p$ for binary lotteries with same prizes), 2025 Q10(a) (CDFs of A and B, FOSD ranking), 2025 Q8 (doctor explaining treatments, FOSD discussion).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/first-order-stochastic-dominance.html">Concepts/First-Order Stochastic Dominance</a>, <a class="wikilink" href="../concepts/second-order-stochastic-dominance.html">Concepts/Second-Order Stochastic Dominance</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.10: Affine normalisation of vNM utility and invariance of risk preferences</h3>
+<ul>
+<li><strong>What it asks</strong>: Show that if $v(w) = \alpha + \beta u(w)$ with $\beta > 0$, then $v$ represents the same preferences over lotteries as $u$. Optionally justify a particular normalisation, like setting $u$ to map two reference outcomes to 0 and 1.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Pick two lotteries $L$ and $L'$. Show $E[u(L)] \geq E[u(L')] \iff E[v(L)] \geq E[v(L')]$ using linearity of expectation and $\beta > 0$.</li>
+<li>Note the Arrow-Pratt coefficients are invariant: $-v''/v' = -(\beta u'')/(\beta u') = -u''/u'$, so <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a> and RRA are pinned down by preferences, the cardinal scale is not.</li>
+<li>Defend the normalisation. vNM utility is unique up to positive affine transformation, so fixing two points (e.g., $u(\text{worst}) = 0$, $u(\text{best}) = 1$) is without loss of generality and helpful for calibration.</li>
+<li>Be precise about what is not invariant: differences of utility levels are meaningful only relative to the chosen scale, but ratios of differences (and the implied probabilities at indifference) are invariant.</li>
+<li><strong>Appeared in</strong>: 2024 Q4(c), 2023 Q10(a) (normalisation of payoffs in a game, related idea applied to mixed strategies).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/von-neumann-morgenstern-axioms.html">Concepts/von Neumann Morgenstern Axioms</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a>.</li>
+</ul>
+<h3>Sub-question Type A.11: Compare buying versus selling prices under DARA</h3>
+<ul>
+<li><strong>What it asks</strong>: An agent owning lottery $L$ has minimum selling price $p_s$ with $u(w_0 + p_s) = E[u(w_0 + L)]$. An agent without the lottery has maximum buying price $p_b$ with $u(w_0 - p_b) + E[u(L)] = u(w_0)$, equivalently $u(w_0) = E[u(w_0 - p_b + L)]$. Compare $p_s$ and $p_b$ for an agent with <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a>.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Set up both indifference equations cleanly. The selling agent evaluates the lottery starting from wealth $w_0 + L$; the buying agent evaluates from $w_0$.</li>
+<li>Under DARA, $A(w)$ is decreasing, so the agent is "less risk-averse" at higher wealth. The selling agent (richer with the lottery in hand) demands a smaller risk premium, so $p_s \geq p_b$. Under CARA, $p_s = p_b$ since the risk premium is wealth-independent.</li>
+<li>Diagrammatic version: plot $u$ as a concave function, mark the points $(w_0, u(w_0))$, $(w_0 + L_1, u(w_0+L_1))$, $(w_0 + L_2, u(w_0+L_2))$, and the chords. The buying and selling prices read off as horizontal distances from the chord midpoint to $u$.</li>
+<li>State the policy intuition: an "endowment effect" can be rationalised within EU under DARA, without needing reference dependence.</li>
+<li><strong>Appeared in</strong>: 2019 Q3(d).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a>, <a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a>, <a class="wikilink" href="../concepts/risk-premium.html">Concepts/Risk Premium</a>, <a class="wikilink" href="../concepts/certainty-equivalent.html">Concepts/Certainty Equivalent</a>.</li>
+</ul>
+<hr>
+<h2>Part B: essay-style questions</h2>
+<h3>Sub-question Type B.E.1: Financial advisor advising EU maximisers, role of Arrow-Pratt, design a lottery survey</h3>
+<ul>
+<li><strong>What it asks</strong>: You are a financial advisor to clients who maximise expected utility. What information do you need from each client to gauge their risk attitude? Explain the role of the <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a> coefficient and the related RRA coefficient. Design a survey based on lottery choices to elicit risk attitudes in practice.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: For an EU maximiser, all behaviour over risky prospects is encoded in the curvature of $u$. The advisor's job reduces to estimating $-u''(w)/u'(w)$ at each client's wealth, since this single number governs the local risk premium $\pi \approx \frac{1}{2}A(w)\sigma^2$ for any small risk and pins down portfolio choice for the marginal dollar.</li>
+<li><strong>Framework</strong>: Define <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>. State the result that vNM utility is unique up to positive affine transformation, so cardinal numbers are not directly observable, only behaviour over lotteries. The advisor must elicit choices, not introspective reports.</li>
+<li><strong>ARA versus RRA</strong>: Define $A(w) = -u''(w)/u'(w)$ and $R(w) = w \cdot A(w)$. ARA governs the absolute dollar amount placed at risk; RRA governs the share of wealth. Cite the <a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a> benchmark ($A$ constant, dollar risk-bearing wealth-independent) and the <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a> benchmark ($R$ constant, share wealth-independent). Empirically, <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a> with mildly increasing RRA looks close to typical investor behaviour.</li>
+<li><strong>Information needed</strong>: Wealth level, age and horizon (changes effective $A$ through background risks), human capital, dependents, liquidity constraints, and the source of risk (idiosyncratic versus systematic). The advisor also needs reference to small-stakes versus large-stakes behaviour, since calibrating only on small bets can vastly under-estimate large-stakes risk aversion (Rabin's calibration theorem).</li>
+<li><strong>Survey design</strong>: Offer a sequence of binary lotteries varying expected value and variance. The Holt-Laury menu of paired lotteries works well: ten rows where the safe option is constant and the risky option's high outcome rises, the switching row pins down a range of $R$. Add a high-stakes hypothetical lottery to detect large-stakes risk aversion. Cross-validate using a second instrument with a different framing, since framing effects can show up even within EU-consistent answers.</li>
+<li><strong>Caveats</strong>: EU is a model. Many subjects violate the <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a> (Allais paradox) or weight probabilities non-linearly. The advisor should treat the elicited $A(w)$ as a working number, not a deep parameter, and revisit when wealth or circumstances change.</li>
+<li><strong>Appeared in</strong>: 2022 Q8.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a>, <a class="wikilink" href="../concepts/arrow-pratt-rra.html">Concepts/Arrow-Pratt RRA</a>, <a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a>, <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a>, <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a>, <a class="wikilink" href="../concepts/von-neumann-morgenstern-axioms.html">Concepts/von Neumann Morgenstern Axioms</a>.</li>
+</ul>
+<h3>Sub-question Type B.E.2: Explain EU theory and why a risk-averse agent still invests in a risky asset</h3>
+<ul>
+<li><strong>What it asks</strong>: Explain expected utility theory and the meaning of risk aversion within it. Then show, with a model, why a risk-averse agent invests a positive amount in a risky asset whenever its expected return exceeds the risk-free rate.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: Risk aversion does not mean refusing all risk. Concavity of $u$ implies a strict positive risk premium for fair gambles, but for any actuarially favourable gamble (positive risk premium offered by the market), a risk-averse agent strictly prefers some positive exposure. The first-order condition at zero exposure has a strictly positive value, so the corner is never optimal.</li>
+<li><strong>EU framework</strong>: State the four <a class="wikilink" href="../concepts/von-neumann-morgenstern-axioms.html">Concepts/von Neumann Morgenstern Axioms</a> (completeness, transitivity, <a class="wikilink" href="../concepts/continuity-axiom.html">Concepts/Continuity Axiom</a>, <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a>) and the vNM theorem: under these axioms there exists $u: X \to \mathbb{R}$ unique up to positive affine transformation such that $L \succ L' \iff E_L[u(x)] > E_{L'}[u(x)]$.</li>
+<li><strong>Risk aversion</strong>: Define as $u$ strictly concave. State Jensen's inequality $E[u(W)] < u(E[W])$ for non-degenerate $W$, and the equivalent statements: positive risk premium, negative certainty equivalent of any fair bet, Arrow-Pratt $A(w) > 0$.</li>
+<li><strong>Portfolio model</strong>: Wealth $w_0$, risky asset with return $r$ (random, mean $\mu > r_f$, variance $\sigma^2 > 0$), safe asset with return $r_f$. Allocate $\alpha$ to risky, $w_0 - \alpha$ to safe. Final wealth $W(\alpha) = w_0(1+r_f) + \alpha(r - r_f)$.</li>
+<li><strong>First-order condition</strong>: $\frac{d}{d\alpha} E[u(W(\alpha))] = E[u'(W(\alpha))(r - r_f)]$. At $\alpha = 0$, this equals $u'(w_0(1+r_f)) \cdot E[r - r_f] = u'(\cdot) \cdot (\mu - r_f) > 0$. So the derivative is strictly positive at zero exposure, the optimum is interior with $\alpha^* > 0$.</li>
+<li><strong>Intuition</strong>: At zero exposure there is no marginal risk premium to demand (no risk yet), only the marginal expected gain. The agent buys some risky asset until the marginal risk-bearing cost catches up with the marginal expected reward.</li>
+<li><strong>Extensions to cite</strong>: For small $\alpha$, Arrow-Pratt gives $\alpha^<em> \approx (\mu - r_f) / (A(w_0(1+r_f)) \sigma^2)$, which falls in $A$. Under <a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a>, $\alpha^</em>$ is wealth-independent; under <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a>, the share $\alpha^*/w_0$ is wealth-independent. Both are observed empirical regularities in different domains.</li>
+<li><strong>Caveat</strong>: If $\mu \leq r_f$, the agent shorts the risky asset (or holds nothing if shorting is banned). The result is sharp: $\alpha^* > 0 \iff \mu > r_f$ given strict concavity.</li>
+<li><strong>Appeared in</strong>: 2023 Q8.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/von-neumann-morgenstern-axioms.html">Concepts/von Neumann Morgenstern Axioms</a>, <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a>, <a class="wikilink" href="../concepts/continuity-axiom.html">Concepts/Continuity Axiom</a>, <a class="wikilink" href="../concepts/risk-aversion.html">Concepts/Risk Aversion</a>, <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a>, <a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a>, <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a>.</li>
+</ul>
+<h3>Sub-question Type B.E.3: Sordid club framing of continuity and independence axioms</h3>
+<ul>
+<li><strong>What it asks</strong>: A "Sordid Club" offers a lottery with a small probability of a very bad outcome and a large probability of a small good outcome. Use this to illustrate the <a class="wikilink" href="../concepts/continuity-axiom.html">Concepts/Continuity Axiom</a> and the <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a>. Prove that EU satisfies them. Identify which EU maximisers would play.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: Continuity rules out lexicographic aversion to catastrophic outcomes: for any three ranked prizes $x \succ y \succ z$, there is some probability mix of $x$ and $z$ indifferent to $y$. Independence rules out reversals from adding common branches. Many people resist these axioms in stylised settings like the Sordid Club, but EU satisfies them by construction.</li>
+<li><strong>State the axioms</strong>: For prizes $x \succ y \succ z$, continuity says $\exists \alpha \in (0,1)$ with $y \sim \alpha x + (1-\alpha) z$. Independence says $L \succ L' \iff \alpha L + (1-\alpha) L'' \succ \alpha L' + (1-\alpha) L''$ for any $L''$ and any $\alpha \in (0,1]$.</li>
+<li><strong>EU satisfies continuity</strong>: With $u(x) > u(y) > u(z)$, set $\alpha = (u(y) - u(z))/(u(x) - u(z))$, which is in $(0,1)$. Then $\alpha u(x) + (1-\alpha) u(z) = u(y)$, so the mix is EU-indifferent to $y$. Done.</li>
+<li><strong>EU satisfies independence</strong>: $L \succ L' \iff E_L[u] > E_{L'}[u]$. By linearity, $E_{\alpha L + (1-\alpha)L''}[u] = \alpha E_L[u] + (1-\alpha) E_{L''}[u]$, similarly for $L'$. So $L \succ L' \iff \alpha E_L[u] + (1-\alpha) E_{L''}[u] > \alpha E_{L'}[u] + (1-\alpha) E_{L''}[u]$, which is $\alpha L + (1-\alpha) L'' \succ \alpha L' + (1-\alpha) L''$. Done.</li>
+<li><strong>Sordid Club application</strong>: Suppose the lottery offers $+\$1$ with prob $1-\epsilon$ and a catastrophic loss $-C$ with prob $\epsilon$. Continuity says some $\epsilon$ makes the agent indifferent between playing and not playing. People who refuse to play for any $\epsilon > 0$ violate continuity, which by the vNM theorem rules out a finite-valued utility. Under EU, the agent plays iff $(1-\epsilon) u(w_0 + 1) + \epsilon u(w_0 - C) \geq u(w_0)$. For risk-averse $u$ with continuous $u(w_0 - C)$ finite, an $\epsilon$ small enough makes this hold.</li>
+<li><strong>Who plays</strong>: EU maximisers with $u$ such that $u(w_0 - C)$ is not $-\infty$. Log utility on wealth that can hit zero or negative regions raises problems and may rationalise refusing for any $\epsilon$, but only because $u \to -\infty$, which itself is a borderline case for continuity. Risk-loving and risk-neutral agents always play if $E$ of payoff is positive. Heavily risk-averse agents need very small $\epsilon$.</li>
+<li><strong>Caveats</strong>: Real-world refusal of small-probability catastrophic risks (e.g., insurance puzzles, terrorism aversion) may reflect probability distortion (prospect theory), violations of independence (Allais), or genuinely unbounded $u$. Cite the Allais paradox briefly.</li>
+<li><strong>Appeared in</strong>: 2024 Q8.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/continuity-axiom.html">Concepts/Continuity Axiom</a>, <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a>, <a class="wikilink" href="../concepts/von-neumann-morgenstern-axioms.html">Concepts/von Neumann Morgenstern Axioms</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>.</li>
+</ul>
+<h3>Sub-question Type B.E.4: Doctor explaining treatments, EU and FOSD between probabilistic outcomes</h3>
+<ul>
+<li><strong>What it asks</strong>: A patient faces a choice between two treatments with stochastic health outcomes in $[0,1]$. Why should the doctor communicate the probabilistic consequences, not just the means? Would the answer change if the patient is an EU maximiser? What if one treatment FOSD-dominates the other?</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: Means alone are insufficient for any decision rule that depends on more than the expectation. EU agents need the full distribution (or at least its expected utility transform) to choose. The doctor's communication is part of constructing the decision-relevant statistic.</li>
+<li><strong>General case (non-EU patient)</strong>: Patients may be loss-averse, distort small probabilities, or care about variance per se. Means hide all of this. Communicating the full distribution lets the patient apply their own decision rule.</li>
+<li><strong>EU patient</strong>: An EU patient cares only about $E[u(\text{health})]$. The mean is sufficient only if $u$ is linear (risk-neutral), which is rarely a defensible assumption for health. For concave $u$ (risk-averse over health), the patient values a treatment with mean 0.7 and zero variance over one with mean 0.75 and high variance. So even an EU patient needs the full distribution.</li>
+<li><strong>FOSD between treatments</strong>: If treatment $A$ FOSD-dominates $B$, then $E[u(A)] > E[u(B)]$ for every weakly increasing $u$. Cite <a class="wikilink" href="../concepts/first-order-stochastic-dominance.html">Concepts/First-Order Stochastic Dominance</a>: $F_A(x) \leq F_B(x)$ for all $x$. In this case, the doctor can recommend $A$ without knowing $u$, since every preference for "more health is better" agrees.</li>
+<li><strong>What if FOSD fails</strong>: If the CDFs cross, recommendation depends on $u$. The doctor should communicate the full distributions and let the patient choose. Special cases: if means are equal and $A$ second-order stochastically dominates $B$, then every risk-averse patient prefers $A$. Cite <a class="wikilink" href="../concepts/second-order-stochastic-dominance.html">Concepts/Second-Order Stochastic Dominance</a>.</li>
+<li><strong>Practical recommendation</strong>: Default to FOSD reporting when it holds. When it fails, give histograms or quantiles. Avoid summary statistics that strip the higher moments. Acknowledge that patients vary in $u$ and elicit risk preferences when stakes are large and FOSD fails.</li>
+<li><strong>Appeared in</strong>: 2025 Q8.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/first-order-stochastic-dominance.html">Concepts/First-Order Stochastic Dominance</a>, <a class="wikilink" href="../concepts/second-order-stochastic-dominance.html">Concepts/Second-Order Stochastic Dominance</a>, <a class="wikilink" href="../concepts/risk-aversion.html">Concepts/Risk Aversion</a>.</li>
+</ul>
+<hr>
+<h2>Part B: long-answer problems</h2>
+<h3>Sub-question Type B.L.1: Alex's flood insurance with unfair premium under log utility (2018 Q10)</h3>
+<ul>
+<li><strong>What it asks</strong>: Alex owns a house of value $h$ and financial assets $f$. The house floods with probability $\pi$, destroying value $h$. Insurance is available at unit premium $p > \pi$. Alex has log utility on total wealth and chooses coverage $q$.</li>
+<li>(a) Draw wealth in the two states, mark no insurance, full insurance and partial insurance points.</li>
+<li>(b) Show Alex is risk-averse, write down expected utility, explain why she underinsures.</li>
+<li>(c) Solve for optimal $q$; show the tangency condition implies $q = 0$ at some threshold premium.</li>
+<li>(d) Comparative statics: how does optimal $q$ change in house value $h$ and in financial assets $f$.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li><strong>State-space setup</strong>: Let $w_g$ = wealth in good (no-flood) state, $w_b$ = wealth in bad (flood) state. Without insurance: $w_g = f + h$, $w_b = f$. With $q$ units of coverage: $w_g(q) = f + h - pq$, $w_b(q) = f + (1-p)q$ (coverage pays $q$ in the bad state minus premium $pq$ in both states; net good-state payoff is $-pq$, net bad-state payoff is $q - pq = (1-p)q$).</li>
+<li><strong>Diagram</strong>: Plot $w_b$ on the vertical axis against $w_g$ on the horizontal. The endowment $(f+h, f)$ sits below the 45-degree line. The budget line through the endowment has slope $-(1-p)/p$ (from $\Delta w_b / \Delta w_g = -(1-p)/p$). Full insurance is the intersection with the 45-degree line, where $q = h$. Partial insurance is any interior point on the budget line above the endowment and below the 45-line.</li>
+<li><strong>Risk aversion and EU</strong>: $u(w) = \log w$ has $u'' < 0$, hence risk-averse. EU is $V(q) = (1-\pi) \log(f + h - pq) + \pi \log(f + (1-p)q)$.</li>
+<li><strong>Why she underinsures at unfair premium</strong>: At full insurance ($q = h$), wealth is $f + h - ph = f + h(1-p)$ in both states. The marginal utility of moving away from full insurance is $\frac{\partial V}{\partial q}|_{q=h}$. Computing: the marginal utility loss in the good state is $-(1-\pi) \cdot p / w$ and the marginal gain in the bad state is $\pi(1-p)/w$ at $w = f + h(1-p)$. Sum is $[\pi(1-p) - (1-\pi)p]/w = (\pi - p)/w < 0$ since $p > \pi$. So increasing $q$ above $h$ reduces utility, but the same logic shows that at slightly below full insurance, the marginal gain in the bad state exceeds the marginal loss in the good state up to the tangency point. The agent stops short of full insurance because each unit of cover transfers wealth from a likely good state to an unlikely bad state at an unfavourable rate.</li>
+<li><strong>Optimal $q$</strong>: FOC: $\frac{\pi(1-p)}{f + (1-p)q} = \frac{(1-\pi)p}{f + h - pq}$. Cross-multiplying: $\pi(1-p)(f + h - pq) = (1-\pi)p(f + (1-p)q)$. Solve for $q$:</li>
+</ul>
+<p>  $$q^* = \frac{\pi(1-p)(f + h) - (1-\pi)pf}{(1-p)p[\pi + (1-\pi)]} = \frac{\pi(1-p)(f + h) - (1-\pi)pf}{p(1-p)}.$$</p>
+<p>  Simplify: $q^* = \frac{\pi(1-p)(f+h) - (1-\pi)pf}{p(1-p)}$.</p>
+<ol>
+<li><strong>Boundary $q^<em> = 0$</strong>: Set $q^</em> = 0$: $\pi(1-p)(f+h) = (1-\pi)pf$, giving $p = \frac{\pi(f+h)}{\pi(f+h) + (1-\pi)f} \cdot \frac{1}{(\text{simplify})}$. More cleanly, $q^* > 0$ iff $\frac{\pi(1-p)}{(1-\pi)p} \cdot \frac{f+h}{f} > 1$, i.e., $\frac{f+h}{f} > \frac{(1-\pi)p}{\pi(1-p)}$. So coverage is positive iff the house is large enough relative to financial wealth, given the markup $p/\pi$.</li>
+<li><strong>Comparative statics</strong>: $\partial q^<em> / \partial h > 0$ (bigger house, more coverage, intuitively). $\partial q^</em> / \partial f$: differentiate the formula. Higher $f$ raises both terms but the negative term grows faster relative to the positive term, so $\partial q^* / \partial f < 0$ under DARA (richer agents take less insurance, since each pound of wealth is less valuable at the margin in the bad state). For log utility, this is a clean result: insurance falls in non-insured wealth.</li>
+<li><strong>Diagram annotation</strong>: Mark Alex's optimum strictly between the endowment and the full-insurance point. Mark the slope of the indifference curve at the optimum equal to $-p/(1-p)$. The 45-degree line lies above the optimum, showing underinsurance.</li>
+<li><strong>Appeared in</strong>: 2018 Q10.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/state-space-insurance-diagram.html">Concepts/State-Space Insurance Diagram</a>, <a class="wikilink" href="../concepts/fair-premium.html">Concepts/Fair Premium</a>, <a class="wikilink" href="../concepts/risk-aversion.html">Concepts/Risk Aversion</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a>.</li>
+</ul>
+<h3>Sub-question Type B.L.2: Three lotteries, ARA, independence, and CDFs (2025 Q10)</h3>
+<ul>
+<li><strong>What it asks</strong>: Three lotteries $A$, $B$, $C$ over a number of tickets, with EU under specific utility functions and ARA analysis.</li>
+<li>(a) CDFs of $A$ and $B$, FOSD ranking.</li>
+<li>(b) Compute EU of $B$ and $C$, CE of $B$.</li>
+<li>(c) Derivatives of $v(t)$, check risk aversion, rank $A$ versus $C$.</li>
+<li>(d) Show Spin's ARA equals $v(t)$.</li>
+<li>(e) How ARA changes with $t$, compare to CARA and CRRA, rank $C^+$ versus $B^+$.</li>
+<li>(f) $BD$ and $CD$ state and prove the independence property.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li><strong>CDFs and FOSD (a)</strong>: For each lottery, write the CDF as a step function. Plot or tabulate $F_A(x)$ and $F_B(x)$ at every jump point. If $F_A(x) \leq F_B(x)$ for all $x$ with strict inequality somewhere, $A$ FOSD-dominates $B$. State the implication: every weakly increasing $u$ ranks $A$ above $B$.</li>
+<li><strong>EU of $B$ and $C$ (b)</strong>: $E[u(B)] = \sum_i p_i u(b_i)$. Substitute the specific $v(t)$ provided in the question and evaluate term by term. For CE of $B$: solve $v(t_B^c) = E[v(B)]$ by inverting $v$. If $v$ is not analytically invertible, leave $t_B^c$ defined implicitly and quote the numerical inversion.</li>
+<li><strong>Risk aversion and $A$ versus $C$ (c)</strong>: Compute $v'(t)$ and $v''(t)$. If $v'' < 0$ everywhere on the support, Spin is risk-averse, and any FOSD/SOSD result applies. If $A$ FOSD $C$ (or vice versa), the ranking is immediate. If not, compute $E[v(A)]$ versus $E[v(C)]$ directly.</li>
+<li><strong>Spin's ARA equals $v(t)$ (d)</strong>: This is a deliberate trick of notation where the utility function $u$ has been chosen so that $A_u(t) = -u''(t)/u'(t)$ happens to equal $v(t)$ itself (or a normalised version). Verify by computing $-u''/u'$ and matching to $v(t)$. The key is to identify the chosen $u$. If $u'(t) = e^{-V(t)}$ for some $V$, then $u''(t) = -V'(t) e^{-V(t)}$ and $A_u(t) = V'(t)$. So whichever $V$ has $V' = v$ gives the result.</li>
+<li><strong>ARA behaviour and comparison to CARA / CRRA (e)</strong>: Differentiate $v(t)$. If $v'(t) < 0$, ARA is decreasing in $t$, so <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a>. Compare:</li>
+<li><a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a> $u(t) = -e^{-at}$ has $A(t) = a$, constant.</li>
+<li><a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a> $u(t) = t^{1-\rho}/(1-\rho)$ has $A(t) = \rho/t$, decreasing.</li>
+</ul>
+<p>     If $v(t)$ matches the CRRA pattern, Spin is CRRA; otherwise it is a different DARA family.</p>
+<p>     For ranking $C^+$ versus $B^+$ (lotteries shifted by a constant): a wealth shift moves $A(t)$ along the curve. Under CARA, ranking is invariant to shifts. Under DARA, a larger common constant added to both makes Spin less risk-averse, so the SOSD ranking can change.</p>
+<ol>
+<li><strong>Independence property for $BD$ and $CD$ (f)</strong>: The independence statement: if $B \succ C$, then $\alpha B + (1-\alpha) D \succ \alpha C + (1-\alpha) D$ for any $D$ and $\alpha \in (0,1]$. Prove using linearity of expectation: $E[u(\alpha B + (1-\alpha) D)] = \alpha E[u(B)] + (1-\alpha) E[u(D)]$, and similarly for $C$. So the ranking of the mixes is identical to the ranking of $B$ and $C$. State that this is one of the <a class="wikilink" href="../concepts/von-neumann-morgenstern-axioms.html">Concepts/von Neumann Morgenstern Axioms</a> and is what gives EU its linear-in-probabilities form.</li>
+<li><strong>Appeared in</strong>: 2025 Q10.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/first-order-stochastic-dominance.html">Concepts/First-Order Stochastic Dominance</a>, <a class="wikilink" href="../concepts/expected-utility.html">Concepts/Expected Utility</a>, <a class="wikilink" href="../concepts/certainty-equivalent.html">Concepts/Certainty Equivalent</a>, <a class="wikilink" href="../concepts/arrow-pratt-ara.html">Concepts/Arrow-Pratt ARA</a>, <a class="wikilink" href="../concepts/dara-utility.html">Concepts/DARA Utility</a>, <a class="wikilink" href="../concepts/cara-utility.html">Concepts/CARA Utility</a>, <a class="wikilink" href="../concepts/crra-utility.html">Concepts/CRRA Utility</a>, <a class="wikilink" href="../concepts/independence-axiom.html">Concepts/Independence Axiom</a>, <a class="wikilink" href="../concepts/von-neumann-morgenstern-axioms.html">Concepts/von Neumann Morgenstern Axioms</a>.</li>
+</ul>
+<hr>
+<h2>How to recognise the format on the day</h2>
+<p>A Decisions under Risk Part A problem opens with a named character (Janet, Sam, Arthur, Alex, Cornelia, Spin) facing a lottery, a project, or a flood. The first part almost always asks for a definition (CE, risk premium, FOSD) or a derivation of $A(w)$ and $R(w)$ from a stated utility. The second part computes a numerical CE or risk premium. The third part is either a comparative statics exercise (how does $\pi$ change in stakes, wealth or number of partners) or a state-space insurance setup with fair versus unfair premium. If you see "syndicate" or "share with $n$ investors," it is a risk-pooling question, treat $X/n$ as the per-head payoff and bound $n$ using EU. If you see a state-space diagram or insurance premium, plot $w_b$ versus $w_g$ and find the tangency.</p>
+<p>A Part B essay on risk is signalled by a real-world framing (financial advisor, doctor, Sordid Club, risky asset investment). The structure is always: state the EU framework, define the key concept (Arrow-Pratt, FOSD, independence axiom), apply it to the framing, then give a caveat or extension. Reserve at least one paragraph for axiom violations (Allais, prospect theory) to show critical engagement.</p>
+<p>A Part B long-answer on risk is either a flood-insurance problem (state-space, log utility, comparative statics) or a multi-part lottery analysis (CDFs, FOSD, ARA, independence). Both require the formula bank in hand: $E[u(W)] = \sum p_i u(w_i)$, the CE-RP inversion, the Arrow-Pratt FOC for portfolio choice, and the linearity-of-expectation proof of independence under EU. If a question asks you to "rank" two lotteries for all risk-averse agents, your first move is FOSD; if FOSD fails, try SOSD; if SOSD fails, say it depends on $u$.</p>
+<hr>
+<h2>Applied procedures</h2>
+<p>This file applies CLAUDE.md inline rules 1 (no em-dashes), 4 (avoid AI tells), 5 (final deliverable to Big Brain workspace).</p></article>
+</main>
+</div>
+<footer class="footer">
+  Core Micro Study Guide. Built from past papers 2014 to 2025, FHS lecture slides, and Micro2025 reading list.
+</footer>
+</body>
+</html>

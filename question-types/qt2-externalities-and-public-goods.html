@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question Types 2: Externalities and Public Goods | Core Micro</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="../index.html">Core Micro</a>
+  <input id="search" class="search" type="text" placeholder="Search concepts..." autocomplete="off">
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#topics">Topics</a>
+    <a href="../index.html#concepts">Concepts</a>
+    <a href="../index.html#question-types">Question Types</a>
+  </nav>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-inner">
+<div class="sidebar-section"><a href="../index.html#question-types" class="sidebar-link">Question Types</a></div>
+<div class="sidebar-section">
+  <a href="../topics/1-general-equilibrium.html" class="sidebar-topic" data-topic-id="1">General Equilibrium</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/competitive-equilibrium.html" class="sidebar-concept" data-name="Competitive Equilibrium">Competitive Equilibrium</a></li>
+    <li><a href="../concepts/quasi-linear-utility.html" class="sidebar-concept" data-name="Quasi-linear Utility">Quasi-linear Utility</a></li>
+    <li><a href="../concepts/cobb-douglas-demand.html" class="sidebar-concept" data-name="Cobb-Douglas Demand">Cobb-Douglas Demand</a></li>
+    <li><a href="../concepts/edgeworth-box.html" class="sidebar-concept" data-name="Edgeworth Box">Edgeworth Box</a></li>
+    <li><a href="../concepts/excess-demand.html" class="sidebar-concept" data-name="Excess Demand">Excess Demand</a></li>
+    <li><a href="../concepts/ppf-and-mrt.html" class="sidebar-concept" data-name="PPF and MRT">PPF and MRT</a></li>
+    <li><a href="../concepts/ricardian-trade-model.html" class="sidebar-concept" data-name="Ricardian Trade Model">Ricardian Trade Model</a></li>
+    <li><a href="../concepts/walras-law.html" class="sidebar-concept" data-name="Walras Law">Walras Law</a></li>
+    <li><a href="../concepts/autarky.html" class="sidebar-concept" data-name="Autarky">Autarky</a></li>
+    <li><a href="../concepts/comparative-advantage.html" class="sidebar-concept" data-name="Comparative Advantage">Comparative Advantage</a></li>
+    <li><a href="../concepts/gross-substitutes.html" class="sidebar-concept" data-name="Gross Substitutes">Gross Substitutes</a></li>
+    <li><a href="../concepts/heckscher-ohlin-model.html" class="sidebar-concept" data-name="Heckscher-Ohlin Model">Heckscher-Ohlin Model</a></li>
+    <li><a href="../concepts/homogeneity-degree-zero.html" class="sidebar-concept" data-name="Homogeneity of Degree Zero">Homogeneity of Degree Zero</a></li>
+    <li><a href="../concepts/numeraire-good.html" class="sidebar-concept" data-name="Numeraire Good">Numeraire Good</a></li>
+    <li><a href="../concepts/robinson-crusoe-economy.html" class="sidebar-concept" data-name="Robinson Crusoe Economy">Robinson Crusoe Economy</a></li>
+    <li><a href="../concepts/rybczynski-theorem.html" class="sidebar-concept" data-name="Rybczynski Theorem">Rybczynski Theorem</a></li>
+    <li><a href="../concepts/stolper-samuelson.html" class="sidebar-concept" data-name="Stolper-Samuelson Theorem">Stolper-Samuelson Theorem</a></li>
+    <li><a href="../concepts/uniqueness-of-equilibrium.html" class="sidebar-concept" data-name="Uniqueness of Equilibrium">Uniqueness of Equilibrium</a></li>
+    <li><a href="../concepts/zero-profit-condition.html" class="sidebar-concept" data-name="Zero-Profit Condition">Zero-Profit Condition</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/2-welfare-and-social-choice.html" class="sidebar-topic" data-topic-id="2">Welfare and Social Choice</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pareto-criterion.html" class="sidebar-concept" data-name="Pareto Criterion">Pareto Criterion</a></li>
+    <li><a href="../concepts/pareto-efficiency.html" class="sidebar-concept" data-name="Pareto Efficiency">Pareto Efficiency</a></li>
+    <li><a href="../concepts/second-welfare-theorem.html" class="sidebar-concept" data-name="Second Welfare Theorem">Second Welfare Theorem</a></li>
+    <li><a href="../concepts/first-welfare-theorem.html" class="sidebar-concept" data-name="First Welfare Theorem">First Welfare Theorem</a></li>
+    <li><a href="../concepts/kaldor-hicks-compensation.html" class="sidebar-concept" data-name="Kaldor-Hicks Compensation">Kaldor-Hicks Compensation</a></li>
+    <li><a href="../concepts/social-welfare-functions.html" class="sidebar-concept" data-name="Social Welfare Functions">Social Welfare Functions</a></li>
+    <li><a href="../concepts/rawlsian-planner.html" class="sidebar-concept" data-name="Rawlsian Planner">Rawlsian Planner</a></li>
+    <li><a href="../concepts/utilitarian-planner.html" class="sidebar-concept" data-name="Utilitarian Planner">Utilitarian Planner</a></li>
+    <li><a href="../concepts/arrow-impossibility.html" class="sidebar-concept" data-name="Arrow&#x27;s Impossibility Theorem">Arrow&#x27;s Impossibility Theorem</a></li>
+    <li><a href="../concepts/borda-count.html" class="sidebar-concept" data-name="Borda Count">Borda Count</a></li>
+    <li><a href="../concepts/compensating-variation.html" class="sidebar-concept" data-name="Compensating Variation">Compensating Variation</a></li>
+    <li><a href="../concepts/condorcet-paradox.html" class="sidebar-concept" data-name="Condorcet Paradox">Condorcet Paradox</a></li>
+    <li><a href="../concepts/consumer-surplus.html" class="sidebar-concept" data-name="Consumer Surplus">Consumer Surplus</a></li>
+    <li><a href="../concepts/contingent-valuation.html" class="sidebar-concept" data-name="Contingent Valuation">Contingent Valuation</a></li>
+    <li><a href="../concepts/contract-curve.html" class="sidebar-concept" data-name="Contract Curve">Contract Curve</a></li>
+    <li><a href="../concepts/cost-benefit-analysis.html" class="sidebar-concept" data-name="Cost-Benefit Analysis">Cost-Benefit Analysis</a></li>
+    <li><a href="../concepts/deadweight-loss.html" class="sidebar-concept" data-name="Deadweight Loss">Deadweight Loss</a></li>
+    <li><a href="../concepts/equivalent-variation.html" class="sidebar-concept" data-name="Equivalent Variation">Equivalent Variation</a></li>
+    <li><a href="../concepts/expenditure-function.html" class="sidebar-concept" data-name="Expenditure Function">Expenditure Function</a></li>
+    <li><a href="../concepts/gibbard-satterthwaite.html" class="sidebar-concept" data-name="Gibbard-Satterthwaite Theorem">Gibbard-Satterthwaite Theorem</a></li>
+    <li><a href="../concepts/hedonic-pricing.html" class="sidebar-concept" data-name="Hedonic Pricing">Hedonic Pricing</a></li>
+    <li><a href="../concepts/hicksian-demand.html" class="sidebar-concept" data-name="Hicksian Demand">Hicksian Demand</a></li>
+    <li><a href="../concepts/majority-rule.html" class="sidebar-concept" data-name="Majority Rule">Majority Rule</a></li>
+    <li><a href="../concepts/marshallian-demand.html" class="sidebar-concept" data-name="Marshallian Demand">Marshallian Demand</a></li>
+    <li><a href="../concepts/median-voter-theorem.html" class="sidebar-concept" data-name="Median Voter Theorem">Median Voter Theorem</a></li>
+    <li><a href="../concepts/qaly.html" class="sidebar-concept" data-name="Quality-Adjusted Life Year (QALY)">Quality-Adjusted Life Year (QALY)</a></li>
+    <li><a href="../concepts/ramsey-equation.html" class="sidebar-concept" data-name="Ramsey Equation">Ramsey Equation</a></li>
+    <li><a href="../concepts/ramsey-taxation.html" class="sidebar-concept" data-name="Ramsey Taxation">Ramsey Taxation</a></li>
+    <li><a href="../concepts/single-peaked-preferences.html" class="sidebar-concept" data-name="Single-Peaked Preferences">Single-Peaked Preferences</a></li>
+    <li><a href="../concepts/social-discount-rate.html" class="sidebar-concept" data-name="Social Discount Rate">Social Discount Rate</a></li>
+    <li><a href="../concepts/strategy-proofness.html" class="sidebar-concept" data-name="Strategy-Proofness">Strategy-Proofness</a></li>
+    <li><a href="../concepts/travel-cost-method.html" class="sidebar-concept" data-name="Travel Cost Method">Travel Cost Method</a></li>
+    <li><a href="../concepts/utility-possibility-frontier.html" class="sidebar-concept" data-name="Utility Possibility Frontier">Utility Possibility Frontier</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/3-externalities-and-public-goods.html" class="sidebar-topic active" data-topic-id="3">Externalities and Public Goods</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pigouvian-tax.html" class="sidebar-concept" data-name="Pigouvian Tax">Pigouvian Tax</a></li>
+    <li><a href="../concepts/samuelson-condition.html" class="sidebar-concept" data-name="Samuelson Condition">Samuelson Condition</a></li>
+    <li><a href="../concepts/clarke-groves-mechanism.html" class="sidebar-concept" data-name="Clarke-Groves Mechanism">Clarke-Groves Mechanism</a></li>
+    <li><a href="../concepts/coase-theorem.html" class="sidebar-concept" data-name="Coase Theorem">Coase Theorem</a></li>
+    <li><a href="../concepts/externality-internalisation.html" class="sidebar-concept" data-name="Externality Internalisation">Externality Internalisation</a></li>
+    <li><a href="../concepts/free-rider-problem.html" class="sidebar-concept" data-name="Free Rider Problem">Free Rider Problem</a></li>
+    <li><a href="../concepts/lindahl-prices.html" class="sidebar-concept" data-name="Lindahl Prices">Lindahl Prices</a></li>
+    <li><a href="../concepts/marginal-private-vs-social-benefit.html" class="sidebar-concept" data-name="Marginal Private vs Social Benefit">Marginal Private vs Social Benefit</a></li>
+    <li><a href="../concepts/public-goods.html" class="sidebar-concept" data-name="Public Goods">Public Goods</a></li>
+    <li><a href="../concepts/tragedy-of-the-commons.html" class="sidebar-concept" data-name="Tragedy of the Commons">Tragedy of the Commons</a></li>
+    <li><a href="../concepts/voluntary-contribution-nash.html" class="sidebar-concept" data-name="Voluntary Contribution Nash Equilibrium">Voluntary Contribution Nash Equilibrium</a></li>
+    <li><a href="../concepts/weitzman-prices-vs-quantities.html" class="sidebar-concept" data-name="Weitzman Prices vs Quantities">Weitzman Prices vs Quantities</a></li>
+    <li><a href="../concepts/rivalry-and-excludability.html" class="sidebar-concept" data-name="Rivalry and Excludability">Rivalry and Excludability</a></li>
+    <li><a href="../concepts/tradeable-permits.html" class="sidebar-concept" data-name="Tradeable Permits">Tradeable Permits</a></li>
+    <li><a href="../concepts/cap-and-trade.html" class="sidebar-concept" data-name="Cap-and-Trade">Cap-and-Trade</a></li>
+    <li><a href="../concepts/clarke-tax.html" class="sidebar-concept" data-name="Clarke Tax (Pivotal Mechanism)">Clarke Tax (Pivotal Mechanism)</a></li>
+    <li><a href="../concepts/club-goods.html" class="sidebar-concept" data-name="Club Goods">Club Goods</a></li>
+    <li><a href="../concepts/coasean-bargaining.html" class="sidebar-concept" data-name="Coasean Bargaining">Coasean Bargaining</a></li>
+    <li><a href="../concepts/common-pool-resources.html" class="sidebar-concept" data-name="Common Pool Resources">Common Pool Resources</a></li>
+    <li><a href="../concepts/vickrey-auction.html" class="sidebar-concept" data-name="Vickrey (Second-Price) Auction">Vickrey (Second-Price) Auction</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/4-game-theory.html" class="sidebar-topic" data-topic-id="4">Game Theory</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/best-response-functions.html" class="sidebar-concept" data-name="Best Response Functions">Best Response Functions</a></li>
+    <li><a href="../concepts/grim-trigger-strategy.html" class="sidebar-concept" data-name="Grim Trigger Strategy">Grim Trigger Strategy</a></li>
+    <li><a href="../concepts/nash-equilibrium.html" class="sidebar-concept" data-name="Nash Equilibrium">Nash Equilibrium</a></li>
+    <li><a href="../concepts/subgame-perfect-equilibrium.html" class="sidebar-concept" data-name="Subgame Perfect Equilibrium">Subgame Perfect Equilibrium</a></li>
+    <li><a href="../concepts/critical-discount-factor.html" class="sidebar-concept" data-name="Critical Discount Factor">Critical Discount Factor</a></li>
+    <li><a href="../concepts/dominance.html" class="sidebar-concept" data-name="Dominance">Dominance</a></li>
+    <li><a href="../concepts/infinitely-repeated-games.html" class="sidebar-concept" data-name="Infinitely Repeated Games">Infinitely Repeated Games</a></li>
+    <li><a href="../concepts/affine-utility-normalisation.html" class="sidebar-concept" data-name="Affine Utility Normalisation">Affine Utility Normalisation</a></li>
+    <li><a href="../concepts/backward-induction.html" class="sidebar-concept" data-name="Backward Induction">Backward Induction</a></li>
+    <li><a href="../concepts/folk-theorem.html" class="sidebar-concept" data-name="Folk Theorem">Folk Theorem</a></li>
+    <li><a href="../concepts/mixed-strategy-equilibrium.html" class="sidebar-concept" data-name="Mixed Strategy Equilibrium">Mixed Strategy Equilibrium</a></li>
+    <li><a href="../concepts/battle-of-the-sexes.html" class="sidebar-concept" data-name="Battle of the Sexes">Battle of the Sexes</a></li>
+    <li><a href="../concepts/credible-threat.html" class="sidebar-concept" data-name="Credible Threat">Credible Threat</a></li>
+    <li><a href="../concepts/extensive-form-game.html" class="sidebar-concept" data-name="Extensive Form Game">Extensive Form Game</a></li>
+    <li><a href="../concepts/first-mover-advantage.html" class="sidebar-concept" data-name="First-Mover Advantage">First-Mover Advantage</a></li>
+    <li><a href="../concepts/hawk-dove-game.html" class="sidebar-concept" data-name="Hawk-Dove (Chicken) Game">Hawk-Dove (Chicken) Game</a></li>
+    <li><a href="../concepts/information-set.html" class="sidebar-concept" data-name="Information Set">Information Set</a></li>
+    <li><a href="../concepts/iterated-elimination-strictly-dominated.html" class="sidebar-concept" data-name="Iterated Elimination of Strictly Dominated Strategies">Iterated Elimination of Strictly Dominated Strategies</a></li>
+    <li><a href="../concepts/matching-pennies.html" class="sidebar-concept" data-name="Matching Pennies">Matching Pennies</a></li>
+    <li><a href="../concepts/nash-existence-theorem.html" class="sidebar-concept" data-name="Nash Existence Theorem">Nash Existence Theorem</a></li>
+    <li><a href="../concepts/nash-reversion.html" class="sidebar-concept" data-name="Nash Reversion Strategy">Nash Reversion Strategy</a></li>
+    <li><a href="../concepts/strategic-form-game.html" class="sidebar-concept" data-name="Strategic Form Game">Strategic Form Game</a></li>
+    <li><a href="../concepts/strategic-substitutes-complements.html" class="sidebar-concept" data-name="Strategic Substitutes vs Complements">Strategic Substitutes vs Complements</a></li>
+    <li><a href="../concepts/strict-vs-weak-dominance.html" class="sidebar-concept" data-name="Strict vs Weak Dominance">Strict vs Weak Dominance</a></li>
+    <li><a href="../concepts/tit-for-tat.html" class="sidebar-concept" data-name="Tit-for-Tat Strategy">Tit-for-Tat Strategy</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/5-industrial-organisation-and-competition-policy.html" class="sidebar-topic" data-topic-id="5">Industrial Organisation and Competition Policy</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/williamson-trade-off.html" class="sidebar-concept" data-name="Williamson Trade-off">Williamson Trade-off</a></li>
+    <li><a href="../concepts/bertrand-duopoly.html" class="sidebar-concept" data-name="Bertrand Duopoly">Bertrand Duopoly</a></li>
+    <li><a href="../concepts/cournot-duopoly.html" class="sidebar-concept" data-name="Cournot Duopoly">Cournot Duopoly</a></li>
+    <li><a href="../concepts/entry-deterrence.html" class="sidebar-concept" data-name="Entry Deterrence">Entry Deterrence</a></li>
+    <li><a href="../concepts/merger-analysis.html" class="sidebar-concept" data-name="Merger Analysis">Merger Analysis</a></li>
+    <li><a href="../concepts/differentiated-bertrand.html" class="sidebar-concept" data-name="Differentiated Bertrand">Differentiated Bertrand</a></li>
+    <li><a href="../concepts/collusion-sustainability.html" class="sidebar-concept" data-name="Collusion Sustainability">Collusion Sustainability</a></li>
+    <li><a href="../concepts/hhi-index.html" class="sidebar-concept" data-name="Herfindahl-Hirschman Index (HHI)">Herfindahl-Hirschman Index (HHI)</a></li>
+    <li><a href="../concepts/hotelling-linear-city.html" class="sidebar-concept" data-name="Hotelling Linear City">Hotelling Linear City</a></li>
+    <li><a href="../concepts/leniency-programme.html" class="sidebar-concept" data-name="Leniency Programme">Leniency Programme</a></li>
+    <li><a href="../concepts/price-discrimination.html" class="sidebar-concept" data-name="Price Discrimination">Price Discrimination</a></li>
+    <li><a href="../concepts/ssnip-test.html" class="sidebar-concept" data-name="SSNIP Test">SSNIP Test</a></li>
+    <li><a href="../concepts/stackelberg-leadership.html" class="sidebar-concept" data-name="Stackelberg Leadership">Stackelberg Leadership</a></li>
+    <li><a href="../concepts/two-part-tariff.html" class="sidebar-concept" data-name="Two-Part Tariff">Two-Part Tariff</a></li>
+    <li><a href="../concepts/uk-competition-act.html" class="sidebar-concept" data-name="UK Competition Act 1998 and EU Articles 101-102">UK Competition Act 1998 and EU Articles 101-102</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/6-decisions-under-risk.html" class="sidebar-topic" data-topic-id="6">Decisions under Risk</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/arrow-pratt-ara.html" class="sidebar-concept" data-name="Arrow-Pratt ARA">Arrow-Pratt ARA</a></li>
+    <li><a href="../concepts/cara-utility.html" class="sidebar-concept" data-name="CARA Utility">CARA Utility</a></li>
+    <li><a href="../concepts/crra-utility.html" class="sidebar-concept" data-name="CRRA Utility">CRRA Utility</a></li>
+    <li><a href="../concepts/dara-utility.html" class="sidebar-concept" data-name="DARA Utility">DARA Utility</a></li>
+    <li><a href="../concepts/expected-utility.html" class="sidebar-concept" data-name="Expected Utility">Expected Utility</a></li>
+    <li><a href="../concepts/certainty-equivalent.html" class="sidebar-concept" data-name="Certainty Equivalent">Certainty Equivalent</a></li>
+    <li><a href="../concepts/first-order-stochastic-dominance.html" class="sidebar-concept" data-name="First-Order Stochastic Dominance">First-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/independence-axiom.html" class="sidebar-concept" data-name="Independence Axiom">Independence Axiom</a></li>
+    <li><a href="../concepts/risk-aversion.html" class="sidebar-concept" data-name="Risk Aversion">Risk Aversion</a></li>
+    <li><a href="../concepts/second-order-stochastic-dominance.html" class="sidebar-concept" data-name="Second-Order Stochastic Dominance">Second-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/state-space-insurance-diagram.html" class="sidebar-concept" data-name="State-Space Insurance Diagram">State-Space Insurance Diagram</a></li>
+    <li><a href="../concepts/von-neumann-morgenstern-axioms.html" class="sidebar-concept" data-name="von Neumann Morgenstern Axioms">von Neumann Morgenstern Axioms</a></li>
+    <li><a href="../concepts/continuity-axiom.html" class="sidebar-concept" data-name="Continuity Axiom">Continuity Axiom</a></li>
+    <li><a href="../concepts/risk-premium.html" class="sidebar-concept" data-name="Risk Premium">Risk Premium</a></li>
+    <li><a href="../concepts/arrow-pratt-rra.html" class="sidebar-concept" data-name="Arrow-Pratt RRA">Arrow-Pratt RRA</a></li>
+    <li><a href="../concepts/fair-premium.html" class="sidebar-concept" data-name="Fair Premium">Fair Premium</a></li>
+    <li><a href="../concepts/reduction-of-compound-lotteries.html" class="sidebar-concept" data-name="Reduction of Compound Lotteries">Reduction of Compound Lotteries</a></li>
+    <li><a href="../concepts/risk-pooling.html" class="sidebar-concept" data-name="Risk Pooling">Risk Pooling</a></li>
+    <li><a href="../concepts/allais-paradox.html" class="sidebar-concept" data-name="Allais Paradox">Allais Paradox</a></li>
+    <li><a href="../concepts/dutch-book-argument.html" class="sidebar-concept" data-name="Dutch Book Argument">Dutch Book Argument</a></li>
+    <li><a href="../concepts/mean-preserving-spread.html" class="sidebar-concept" data-name="Mean-Preserving Spread">Mean-Preserving Spread</a></li>
+    <li><a href="../concepts/mean-variance-utility.html" class="sidebar-concept" data-name="Mean-Variance Utility">Mean-Variance Utility</a></li>
+    <li><a href="../concepts/st-petersburg-paradox.html" class="sidebar-concept" data-name="St Petersburg Paradox">St Petersburg Paradox</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/7-adverse-selection.html" class="sidebar-topic" data-topic-id="7">Adverse Selection</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/adverse-selection.html" class="sidebar-concept" data-name="Adverse Selection">Adverse Selection</a></li>
+    <li><a href="../concepts/akerlof-lemons-market.html" class="sidebar-concept" data-name="Akerlof Lemons Market">Akerlof Lemons Market</a></li>
+    <li><a href="../concepts/fair-odds-line.html" class="sidebar-concept" data-name="Fair Odds Line">Fair Odds Line</a></li>
+    <li><a href="../concepts/full-unravelling.html" class="sidebar-concept" data-name="Full Unravelling">Full Unravelling</a></li>
+    <li><a href="../concepts/intuitive-criterion.html" class="sidebar-concept" data-name="Intuitive Criterion">Intuitive Criterion</a></li>
+    <li><a href="../concepts/rothschild-stiglitz-screening.html" class="sidebar-concept" data-name="Rothschild-Stiglitz Screening">Rothschild-Stiglitz Screening</a></li>
+    <li><a href="../concepts/single-crossing-property.html" class="sidebar-concept" data-name="Single Crossing Property">Single Crossing Property</a></li>
+    <li><a href="../concepts/spence-signalling.html" class="sidebar-concept" data-name="Spence Signalling">Spence Signalling</a></li>
+    <li><a href="../concepts/state-space-rothschild-stiglitz.html" class="sidebar-concept" data-name="State-Space Diagram (Rothschild-Stiglitz)">State-Space Diagram (Rothschild-Stiglitz)</a></li>
+    <li><a href="../concepts/asymmetric-information.html" class="sidebar-concept" data-name="Asymmetric Information">Asymmetric Information</a></li>
+    <li><a href="../concepts/separating-vs-pooling.html" class="sidebar-concept" data-name="Separating vs Pooling Equilibrium">Separating vs Pooling Equilibrium</a></li>
+    <li><a href="../concepts/pooling-equilibrium.html" class="sidebar-concept" data-name="Pooling Equilibrium">Pooling Equilibrium</a></li>
+    <li><a href="../concepts/reimbursement-contracts.html" class="sidebar-concept" data-name="Reimbursement Contracts">Reimbursement Contracts</a></li>
+    <li><a href="../concepts/conspicuous-consumption.html" class="sidebar-concept" data-name="Conspicuous Consumption (Veblen Goods)">Conspicuous Consumption (Veblen Goods)</a></li>
+    <li><a href="../concepts/hidden-information-vs-hidden-action.html" class="sidebar-concept" data-name="Hidden Information vs Hidden Action">Hidden Information vs Hidden Action</a></li>
+    <li><a href="../concepts/multiple-equilibria-lemons.html" class="sidebar-concept" data-name="Multiple Equilibria in Lemons Markets">Multiple Equilibria in Lemons Markets</a></li>
+    <li><a href="../concepts/partial-unravelling.html" class="sidebar-concept" data-name="Partial Unravelling">Partial Unravelling</a></li>
+    <li><a href="../concepts/riley-outcome.html" class="sidebar-concept" data-name="Riley Outcome">Riley Outcome</a></li>
+    <li><a href="../concepts/wilson-refinement.html" class="sidebar-concept" data-name="Wilson Equilibrium Refinement">Wilson Equilibrium Refinement</a></li>
+    <li><a href="../concepts/winners-curse.html" class="sidebar-concept" data-name="Winner&#x27;s Curse">Winner&#x27;s Curse</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/8-moral-hazard.html" class="sidebar-topic" data-topic-id="8">Moral Hazard</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/agency-cost.html" class="sidebar-concept" data-name="Agency Cost">Agency Cost</a></li>
+    <li><a href="../concepts/incentive-compatibility.html" class="sidebar-concept" data-name="Incentive Compatibility">Incentive Compatibility</a></li>
+    <li><a href="../concepts/individual-rationality.html" class="sidebar-concept" data-name="Individual Rationality">Individual Rationality</a></li>
+    <li><a href="../concepts/principal-agent-problem.html" class="sidebar-concept" data-name="Principal-Agent Problem">Principal-Agent Problem</a></li>
+    <li><a href="../concepts/first-best-contract.html" class="sidebar-concept" data-name="First-Best Contract">First-Best Contract</a></li>
+    <li><a href="../concepts/moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard">Moral Hazard</a></li>
+    <li><a href="../concepts/risk-vs-insurance-tradeoff.html" class="sidebar-concept" data-name="Risk vs Insurance Trade-off">Risk vs Insurance Trade-off</a></li>
+    <li><a href="../concepts/second-best-contract.html" class="sidebar-concept" data-name="Second-Best Contract">Second-Best Contract</a></li>
+    <li><a href="../concepts/linear-contracts.html" class="sidebar-concept" data-name="Linear Contracts">Linear Contracts</a></li>
+    <li><a href="../concepts/monotone-likelihood-ratio.html" class="sidebar-concept" data-name="Monotone Likelihood Ratio">Monotone Likelihood Ratio</a></li>
+    <li><a href="../concepts/peltzman-effect.html" class="sidebar-concept" data-name="Peltzman Effect">Peltzman Effect</a></li>
+    <li><a href="../concepts/revenue-sharing.html" class="sidebar-concept" data-name="Revenue Sharing">Revenue Sharing</a></li>
+    <li><a href="../concepts/wage-bounds-limited-liability.html" class="sidebar-concept" data-name="Wage Bounds Limited Liability">Wage Bounds Limited Liability</a></li>
+    <li><a href="../concepts/holmstrom-milgrom-model.html" class="sidebar-concept" data-name="Holmstrom-Milgrom Linear Contracts Model">Holmstrom-Milgrom Linear Contracts Model</a></li>
+    <li><a href="../concepts/insurance-moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard in Insurance">Moral Hazard in Insurance</a></li>
+    <li><a href="../concepts/multitasking.html" class="sidebar-concept" data-name="Multitasking">Multitasking</a></li>
+    <li><a href="../concepts/repeated-moral-hazard.html" class="sidebar-concept" data-name="Repeated Moral Hazard">Repeated Moral Hazard</a></li>
+    <li><a href="../concepts/selling-the-firm.html" class="sidebar-concept" data-name="Selling the Firm to the Agent">Selling the Firm to the Agent</a></li>
+  </ul>
+</div>
+</div>
+</aside>
+<main class="content">
+<nav class="breadcrumb"><a href="../index.html">Home</a> / <span>Question Types</span></nav><article class="qt-article"><h1>Question Types: Externalities and Public Goods</h1>
+<blockquote>All Core Microeconomics finals questions on externalities and public goods from 2014 to 2025, organised by Part A short problem, Part B essay, and Part B long-answer problem. Maps to Topic 3 in the 2025 reading list.</blockquote>
+<blockquote>Applied / Environment questions appear only in Part B per the rubric.</blockquote>
+<hr>
+<h2>Excluded sub-topics</h2>
+<p>None identified. The 2014 Q5 (flood-defence public good) and 2015 Q5 (congested road / tragedy of the commons) sub-topics map cleanly onto post-2019 question patterns, so they are kept in scope.</p>
+<hr>
+<h2>Part A: short compulsory problems</h2>
+<h3>Sub-question Type A.1: Define public good vs private vs club, identify the free-rider problem</h3>
+<ul>
+<li><strong>What it asks</strong>: State the two defining characteristics of a <a class="wikilink" href="../concepts/public-goods.html">pure public good</a>, contrast with private goods and club goods, then explain why decentralised provision is inefficient.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Define the two properties using <a class="wikilink" href="../concepts/rivalry-and-excludability.html">Concepts/Rivalry and Excludability</a>. Non-rival: one person's consumption does not reduce what is available to another, formally $u_i$ depends on the same $Q$ for all $i$. Non-excludable: the provider cannot prevent any agent from consuming once $Q$ is supplied.</li>
+<li>Build the 2x2 table. Pure public good: non-rival, non-excludable (national defence, flood defence). Private good: rival and excludable (apple). Club good: non-rival but excludable (Netflix). Common pool: rival but non-excludable (open-access fishery, congested road), see <a class="wikilink" href="../concepts/tragedy-of-the-commons.html">Concepts/Tragedy of the Commons</a>.</li>
+<li>Explain the <a class="wikilink" href="../concepts/free-rider-problem.html">Concepts/Free Rider Problem</a>. Each agent's private optimum sets their own marginal benefit equal to marginal cost, ignoring the benefit conferred on the other $n-1$ agents. So private contributions $q_i$ aggregate to $Q < Q^*$.</li>
+<li>Note the link: non-excludability removes the ability to charge, non-rivalry means the efficient price is zero anyway (the marginal cost of an extra user is zero). Combined, the market fails on both supply and pricing.</li>
+<li>If asked for one sentence of policy lead-in: government provision financed by taxation, subsidies, or mechanisms like <a class="wikilink" href="../concepts/lindahl-prices.html">Concepts/Lindahl Prices</a> and the <a class="wikilink" href="../concepts/clarke-groves-mechanism.html">Concepts/Clarke-Groves Mechanism</a> are the textbook responses.</li>
+<li><strong>Appeared in</strong>: 2014 Q5(a), 2024 Q2(a) prelude, 2025 Q6 (essay backbone).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/public-goods.html">Concepts/Public Goods</a>, <a class="wikilink" href="../concepts/rivalry-and-excludability.html">Concepts/Rivalry and Excludability</a>, <a class="wikilink" href="../concepts/free-rider-problem.html">Concepts/Free Rider Problem</a>, <a class="wikilink" href="../concepts/tragedy-of-the-commons.html">Concepts/Tragedy of the Commons</a>.</li>
+</ul>
+<h3>Sub-question Type A.2: Samuelson condition, derive optimal $Q^*$ and discuss comparative statics in $n$</h3>
+<ul>
+<li><strong>What it asks</strong>: Derive the <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a> for efficient public good provision, solve for $Q^*$ given specific utilities, and sign the effect of more residents $n$.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Write the social planner's problem. With <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a> $u_i(Q, x_i) = b_i(Q) + x_i$ and aggregate resource $\sum x_i + c(Q) = W$, the planner maximises $\sum_i b_i(Q) - c(Q)$.</li>
+<li>Take FOC in $Q$. This gives $\sum_i b_i'(Q) = c'(Q)$, the Samuelson condition: sum of marginal benefits equals marginal cost.</li>
+<li>Plug in the functional form from the question. For 2014 Q5 with $b_i(Q) = a\ln(Q)$ and $c(Q) = Q^2/2$ (or whatever the paper supplies), get $\sum_i a / Q^<em> = c'(Q^</em>)$, so $Q^* = (na/c')^{1/k}$ for some $k$.</li>
+<li>Sign $\partial Q^<em>/\partial n$. With identical agents, the sum scales linearly in $n$, so $Q^</em>$ rises with $n$. The intuition: more beneficiaries means the same physical $Q$ generates more total marginal benefit.</li>
+<li>Contrast with the symmetric voluntary equilibrium $Q^{VC}$ (Type A.3) where $Q^{VC}$ does not rise with $n$ under standard quasi-linear forms. The wedge $Q^* - Q^{VC}$ grows in $n$: more agents means more free-riding.</li>
+<li>Diagram: draw the vertical sum of individual MB curves (because non-rival) versus MC, the intersection is $Q^*$. Contrast with horizontal sum for private goods.</li>
+<li><strong>Appeared in</strong>: 2014 Q5(b), 2014 Q5(e) diagram, 2022 Q10(b), 2024 Q2(b), 2025 Q6 (formal core).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a>, <a class="wikilink" href="../concepts/public-goods.html">Concepts/Public Goods</a>, <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>, <a class="wikilink" href="../concepts/marginal-private-vs-social-benefit.html">Concepts/Marginal Private vs Social Benefit</a>.</li>
+</ul>
+<h3>Sub-question Type A.3: Voluntary contribution Nash equilibrium and why it is independent of $n$</h3>
+<ul>
+<li><strong>What it asks</strong>: Write the reaction function $q_i(q_{-i})$, find the symmetric <a class="wikilink" href="../concepts/voluntary-contribution-nash.html">Concepts/Voluntary Contribution Nash Equilibrium</a>, and explain why $Q^{VC}$ does not depend on the number of contributors under quasi-linear preferences.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Set up agent $i$'s problem taking $q_{-i} = \sum_{j \ne i} q_j$ as given. With private numeraire $x_i$ and budget $x_i + p q_i = w_i$, the agent chooses $q_i \ge 0$ to maximise $b_i(q_i + q_{-i}) + w_i - p q_i$.</li>
+<li>Take FOC. Interior FOC: $b_i'(Q) = p$ where $Q = q_i + q_{-i}$. So each contributor sets their own marginal benefit equal to the private marginal cost, ignoring all $n-1$ others.</li>
+<li>Solve the reaction function. Invert: $Q = (b_i')^{-1}(p)$, i.e. each agent wants total provision to equal their private optimum $\bar{Q}_i$, contributing $q_i = \bar{Q}_i - q_{-i}$ if positive, else zero (corner).</li>
+<li>Identify the symmetric equilibrium. With identical agents, only one $\bar{Q}$ exists. In equilibrium $Q^{VC} = \bar{Q}$, and each contributes $q_i = \bar{Q}/n$ (or only some contribute, others corner-solve to zero).</li>
+<li>State the $n$-independence punchline. The total $Q^{VC} = \bar{Q}$ does not depend on $n$ because adding a contributor with the same $\bar{Q}$ just shrinks individual contributions, leaving aggregate fixed. This is the formal statement of <a class="wikilink" href="../concepts/free-rider-problem.html">Concepts/Free Rider Problem</a>: as $n$ grows, the gap $Q^* - Q^{VC}$ explodes.</li>
+<li>Verify with the question's numbers. Compute the wedge $Q^<em> - Q^{VC}$ and comment on the welfare loss, often quantifiable in the quasi-linear setup as the integral of the gap between $\sum b_i'$ and $c'$ between $Q^{VC}$ and $Q^</em>$.</li>
+<li><strong>Appeared in</strong>: 2014 Q5(c) and (d), 2022 Q10(a), 2024 Q2(a), 2025 Q6 (formal core).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/voluntary-contribution-nash.html">Concepts/Voluntary Contribution Nash Equilibrium</a>, <a class="wikilink" href="../concepts/free-rider-problem.html">Concepts/Free Rider Problem</a>, <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a>, <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.4: Tragedy of the commons, derive equilibrium $N^e$ and the optimum toll</h3>
+<ul>
+<li><strong>What it asks</strong>: For a congested road, open-access fishery, or shared resource, derive private equilibrium entry $N^e$, compare to the social optimum $N^*$, and design the <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a> / congestion toll.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Set up the <a class="wikilink" href="../concepts/tragedy-of-the-commons.html">Concepts/Tragedy of the Commons</a> framing. The good is rival but non-excludable, so any user can enter without paying for the externality they impose. Specify per-user benefit $b(N)$ that falls with congestion $N$, and outside option $\bar{u}$.</li>
+<li>Free-entry condition. Users enter until the marginal user is indifferent: $b(N^e) = \bar{u}$. This pins down $N^e$.</li>
+<li>Social planner problem. Maximise total surplus $N \cdot b(N) - N \bar{u}$. FOC: $b(N^<em>) + N^</em> b'(N^<em>) = \bar{u}$. The extra term $N^</em> b'(N^*) < 0$ is the negative externality each new user imposes on infra-marginal users.</li>
+<li>The wedge. Since $b'(N) < 0$, $N^* < N^e$: free entry over-uses the resource.</li>
+<li>Pigouvian toll. Set $\tau = -N^<em> b'(N^</em>) > 0$, which is the marginal external cost evaluated at the optimum. With the toll, the entry condition becomes $b(N) - \tau = \bar{u}$, which is satisfied at $N^*$ by construction.</li>
+<li>Revenue and welfare. Toll revenue is $\tau \cdot N^<em>$. If returned as a lump-sum transfer, it does not affect entry (because users compare margins). Deadweight loss saved is the triangle between $b(N) + N b'(N)$ and $\bar{u}$ over $[N^</em>, N^e]$.</li>
+<li>Road improvement subtlety (2015 Q5(e)): under free entry the long-run user welfare is pinned at $\bar{u}$, so widening a road raises $N^e$ without raising per-user benefit. Surplus accrues only if entry is taxed.</li>
+<li><strong>Appeared in</strong>: 2015 Q5 (full question), 2024 Q6 (congestion essay variant).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/tragedy-of-the-commons.html">Concepts/Tragedy of the Commons</a>, <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a>, <a class="wikilink" href="../concepts/marginal-private-vs-social-benefit.html">Concepts/Marginal Private vs Social Benefit</a>, <a class="wikilink" href="../concepts/externality-internalisation.html">Concepts/Externality Internalisation</a>.</li>
+</ul>
+<h3>Sub-question Type A.5: Derive Pigouvian tax with quasi-linear utilities, compute tax revenue</h3>
+<ul>
+<li><strong>What it asks</strong>: Given an agent generating an externality on another, find the private optimum, the Pareto efficient level, and the <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a> that decentralises efficiency. Often a follow-up asks for revenue.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Write the two utility functions. Typically $u_A(x) = f_A(x) - g_A(x)$ and $u_B(x) = -h(x)$ where $x$ is the externality-generating activity. Both linear in money via <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>.</li>
+<li>Solve A's private problem. FOC: $f_A'(x^p) - g_A'(x^p) = 0$, i.e. $x^p$ ignores Bob's loss $h(x)$.</li>
+<li>Solve the social problem. Maximise $u_A + u_B$ (quasi-linear aggregation is valid). FOC: $f_A'(x^<em>) - g_A'(x^</em>) - h'(x^<em>) = 0$. The extra term $-h'(x^</em>)$ is the marginal external cost.</li>
+<li>Construct the <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a>. Tax A at rate $t$ per unit of $x$. A's new FOC: $f_A'(x) - g_A'(x) - t = 0$. Match to the social FOC: set $t = h'(x^*)$. The tax equals the marginal external damage at the optimum.</li>
+<li>Compute revenue. Revenue is $R = t \cdot x^<em> = h'(x^</em>) \cdot x^<em>$. Note this is generally not equal to total damage $h(x^</em>)$, so the tax does not by itself fully compensate Bob.</li>
+<li>Lump-sum compensation (Coase angle). To make Bob whole, transfer $T = h(x^<em>)$ from A to B. With quasi-linear preferences this is a pure utility transfer with no efficiency loss, illustrating the second part of the <a class="wikilink" href="../concepts/coase-theorem.html">Concepts/Coase Theorem</a>: efficient $x^</em>$ plus a lump-sum split achieves any point on the contract curve.</li>
+<li><strong>Appeared in</strong>: 2023 Q1 (full question), 2025 Q2(b).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a>, <a class="wikilink" href="../concepts/coase-theorem.html">Concepts/Coase Theorem</a>, <a class="wikilink" href="../concepts/externality-internalisation.html">Concepts/Externality Internalisation</a>, <a class="wikilink" href="../concepts/marginal-private-vs-social-benefit.html">Concepts/Marginal Private vs Social Benefit</a>, <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.6: Coase theorem and lump-sum transfer for compensation</h3>
+<ul>
+<li><strong>What it asks</strong>: Given the efficient activity level $x^*$, find the lump-sum transfer that compensates the harmed party fully, or that leaves both parties at least as well off as the no-externality benchmark.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>State the <a class="wikilink" href="../concepts/coase-theorem.html">Concepts/Coase Theorem</a> in one line. With well-defined property rights, zero transaction costs, and quasi-linear preferences, parties bargain to the Pareto efficient $x^*$ regardless of initial rights. The rights assignment determines only distribution.</li>
+<li>Compute utilities at the efficient point. $u_A(x^<em>) = f_A(x^</em>) - g_A(x^<em>)$, $u_B(x^</em>) = -h(x^*)$.</li>
+<li>Compute baseline. Either the no-externality status quo (A produces nothing, $x=0$) or A's private optimum without intervention.</li>
+<li>Compensation transfer. If A pays B a transfer $T$:</li>
+<li>To make B indifferent to status quo: $T = h(x^*)$.</li>
+<li>To split surplus equally: $T = h(x^<em>) - \tfrac{1}{2}[f_A(x^</em>) - g_A(x^<em>) - h(x^</em>) - (f_A(0) - g_A(0))]$.</li>
+<li>To fully compensate A for moving from private optimum to $x^<em>$: $T = [f_A(x^p) - g_A(x^p)] - [f_A(x^</em>) - g_A(x^*)]$.</li>
+<li>Verify rights neutrality. If B has rights to clean air, A pays B for $x^<em>$. If A has rights to produce, B pays A to reduce $x$ to $x^</em>$. In both cases the same efficient $x^*$ emerges, only the direction of $T$ flips.</li>
+<li>Limitations to flag. Many parties means transaction costs; non-quasi-linear preferences mean wealth effects change $x^*$; asymmetric information breaks the bargaining.</li>
+<li><strong>Appeared in</strong>: 2023 Q1(d).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/coase-theorem.html">Concepts/Coase Theorem</a>, <a class="wikilink" href="../concepts/externality-internalisation.html">Concepts/Externality Internalisation</a>, <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>.</li>
+</ul>
+<h3>Sub-question Type A.7: Externality under uncertainty, quadratic profit/loss, Pigouvian tax robustness</h3>
+<ul>
+<li><strong>What it asks</strong>: Pollution $x$ generates benefits to a firm and losses to society, both quadratic. Compute efficient $x^<em>$, derive the formula for $t^</em>$, and discuss when a tax remains optimal under uncertainty about parameters.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Write profit and loss. Standard setup: $\pi(x) = (A + a\varepsilon)x - \tfrac{1}{2}x^2$ (linear marginal benefit declining in $x$), $L(x) = Bx + \tfrac{1}{2}bx^2$ (marginal damage increasing in $x$). Random shock $\varepsilon$ may be observed by the firm but not the regulator.</li>
+<li>Efficient $x^<em>$. Maximise $\pi - L$: FOC $A + a\varepsilon - x = B + bx$, so $x^</em> = (A + a\varepsilon - B)/(1 + b)$.</li>
+<li>Tax rate. Regulator sets tax $t$, firm's FOC: $A + a\varepsilon - x - t = 0$, so $x_t = A + a\varepsilon - t$. Setting $x_t = x^<em>$ gives $t^</em> = (B + bA + b a\varepsilon)/(1 + b)$.</li>
+<li>Special case from 2025 Q2. When the regulator knows $b = 0$ (marginal damage is flat at $B$), $t^* = B$ regardless of $A$ or $\varepsilon$. This is because a flat MD curve means the optimal price (Pigouvian tax) is identical for every realisation, while a flat marginal benefit means a quantity instrument would be wrong if $A$ is unknown.</li>
+<li>State the <a class="wikilink" href="../concepts/weitzman-prices-vs-quantities.html">Concepts/Weitzman Prices vs Quantities</a> intuition. When marginal damage is flatter than marginal benefit (slope of MD $<$ slope of MB), prices (taxes) dominate quantities (permits) under uncertainty. The 2025 Q2 setup with $b = 0$ is the corner case where this is strict.</li>
+<li>Why some pollution is Pareto superior to zero (2025 Q2(a)). At $x = 0$ marginal profit $A > 0$ exceeds marginal damage $B$ (assuming $A > B$), so a small increase in $x$ creates a gain that can be redistributed via a transfer to make everyone better off.</li>
+<li><strong>Appeared in</strong>: 2025 Q2 (full question).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a>, <a class="wikilink" href="../concepts/weitzman-prices-vs-quantities.html">Concepts/Weitzman Prices vs Quantities</a>, <a class="wikilink" href="../concepts/externality-internalisation.html">Concepts/Externality Internalisation</a>, <a class="wikilink" href="../concepts/tradeable-permits.html">Concepts/Tradeable Permits</a>, <a class="wikilink" href="../concepts/marginal-private-vs-social-benefit.html">Concepts/Marginal Private vs Social Benefit</a>.</li>
+</ul>
+<h3>Sub-question Type A.8: Lindahl pricing in a two-agent public good problem</h3>
+<ul>
+<li><strong>What it asks</strong>: Describe a <a class="wikilink" href="../concepts/lindahl-prices.html">Lindahl scheme</a>, compute the personalised prices, and evaluate practical limitations.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Definition. Each agent $i$ faces a personalised price $p_i$ per unit of $Q$ with $\sum_i p_i = c'(Q)$ (prices add up to marginal cost), and each agent demands the same quantity $Q$ at their own price.</li>
+<li>Compute demands. Agent $i$ solves $\max_Q b_i(Q) - p_i Q$, FOC $b_i'(Q) = p_i$. Invert: $Q_i^D(p_i) = (b_i')^{-1}(p_i)$.</li>
+<li>Equilibrium condition. Find $(p_1, ..., p_n, Q^L)$ such that $Q_i^D(p_i) = Q^L$ for all $i$ and $\sum_i p_i = c'(Q^L)$.</li>
+<li>Use the demand equality to get $b_i'(Q^L) = p_i$, sum over $i$: $\sum_i b_i'(Q^L) = \sum_i p_i = c'(Q^L)$. This is the <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a>, so $Q^L = Q^*$.</li>
+<li>So <a class="wikilink" href="../concepts/lindahl-prices.html">Concepts/Lindahl Prices</a> decentralise efficiency: personalised prices generate the Pareto efficient $Q^*$ as a competitive equilibrium.</li>
+<li>Practical limitations (the killer point). Truthful revelation: each agent has incentive to understate $b_i'(Q)$ to lower their personalised price. So Lindahl is not <a class="wikilink" href="../concepts/clarke-groves-mechanism.html">strategy-proof</a> and the regulator cannot directly observe preferences. This motivates the Clarke-Groves mechanism, which is strategy-proof but typically runs a budget deficit.</li>
+<li><strong>Appeared in</strong>: 2022 Q10(c), 2024 Q2(c).</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/lindahl-prices.html">Concepts/Lindahl Prices</a>, <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a>, <a class="wikilink" href="../concepts/clarke-groves-mechanism.html">Concepts/Clarke-Groves Mechanism</a>, <a class="wikilink" href="../concepts/free-rider-problem.html">Concepts/Free Rider Problem</a>.</li>
+</ul>
+<hr>
+<h2>Part B: essay-style questions</h2>
+<h3>Sub-question Type B.E.1: Positive externalities essay, are they safe to ignore</h3>
+<ul>
+<li><strong>What it asks</strong>: Critically assess the claim that policymakers can disregard positive externalities, contrasting with negative externalities and pointing to specific examples (R and D, vaccination, education).</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: The claim is wrong as a blanket rule. Both positive and negative externalities create a wedge between marginal private and marginal social benefit / cost, so both cause under- or over-provision relative to the social optimum. The case for ignoring positives rests on second-best considerations (administrative cost, distributional concerns, infra-marginality), not on the symmetry of the welfare analysis.</li>
+<li><strong>Formal core</strong>. Set up <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a> with two agents, one of whom benefits from another's activity. Show that the social FOC is $f_A'(x) + h'(x) = 0$ where $h'(x) > 0$ is the marginal external benefit. The private FOC ignores this term, so $x^p < x^*$. Symmetric to the negative externality case in sign.</li>
+<li><strong>Pigouvian subsidy</strong>. The dual of a <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a> is a subsidy $s = h'(x^*)$ paid to the generator. This is funded from general taxation, which itself has deadweight costs (the $\lambda > 1$ shadow value of public funds). This is one substantive reason a regulator may rationally underweight small positive externalities.</li>
+<li><strong>When ignoring is defensible</strong>. (a) Inframarginal benefits: the externality may be large in total but zero at the relevant margin, e.g. an iconic building enjoyed by passers-by where the marginal benefit of an additional building of the same kind is zero. (b) Existing institutions already internalise: patents on R and D, schools subsidies for education, public health vaccination subsidies. (c) Identification problems: positive spillovers are hard to measure, so subsidy levels are guesses.</li>
+<li><strong>When ignoring is dangerous</strong>. R and D: the social return is estimated at roughly 2 to 4 times the private return, so under-investment is large. Vaccination: herd immunity gives a discontinuous social benefit at high coverage that warrants mandates or aggressive subsidies. Education: rising tertiary fees in the UK and US plausibly under-supply human capital below the social optimum.</li>
+<li><strong>Comparison with negatives</strong>. Negative externalities have stronger political constituencies (victims demand action), positives often do not (beneficiaries are diffuse and unaware). So policy may be biased toward addressing negatives even when the welfare-relevant size is similar.</li>
+<li><strong>Conclusion</strong>. Disregarding positive externalities is defensible only when the marginal benefit is small, fiscal cost is high, or existing institutions already correct the wedge. As a general principle, the symmetry of the welfare analysis means positives deserve the same scrutiny as negatives.</li>
+<li><strong>Appeared in</strong>: 2022 Q6.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/marginal-private-vs-social-benefit.html">Concepts/Marginal Private vs Social Benefit</a>, <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a>, <a class="wikilink" href="../concepts/externality-internalisation.html">Concepts/Externality Internalisation</a>, <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>.</li>
+</ul>
+<h3>Sub-question Type B.E.2: Public goods canonical essay, private provision to Lindahl to Clarke-Groves</h3>
+<ul>
+<li><strong>What it asks</strong>: A canonical Topic 3 essay walking through the full sequence: definition of public goods, private provision and free-riding, Samuelson condition, Lindahl pricing, and the Clarke-Groves mechanism, with discussion of practical limits at each stage.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: Pure public goods (non-rival, non-excludable) generate two layers of market failure. Voluntary provision is inefficient because of free-riding; correcting this by simple subsidies cannot work because the regulator does not know preferences. The literature offers a ladder of solutions of increasing sophistication and decreasing practicality: <a class="wikilink" href="../concepts/lindahl-prices.html">Concepts/Lindahl Prices</a> decentralise efficiency but are not strategy-proof; the <a class="wikilink" href="../concepts/clarke-groves-mechanism.html">Concepts/Clarke-Groves Mechanism</a> is strategy-proof but generally not budget-balanced. Real-world institutions rely on cruder tools (taxation, regulation) combined with cost-benefit analysis.</li>
+<li><strong>Definition and free-rider problem</strong>. Use the <a class="wikilink" href="../concepts/rivalry-and-excludability.html">Concepts/Rivalry and Excludability</a> 2x2. Define <a class="wikilink" href="../concepts/voluntary-contribution-nash.html">Concepts/Voluntary Contribution Nash Equilibrium</a>: each agent's FOC $b_i'(Q) = p$ ignores the $n-1$ external benefits, so $Q^{VC} < Q^*$. Under <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a> $Q^{VC}$ does not rise with $n$, so the wedge grows linearly in $n$.</li>
+<li><strong>Samuelson condition</strong>. State and derive $\sum_i b_i'(Q^<em>) = c'(Q^</em>)$ from the planner's problem. Contrast with the private good condition $b_i'(q) = c'(q)$ for all $i$: vertical sum versus horizontal sum reflects non-rivalry.</li>
+<li><strong>Lindahl prices</strong>. Each agent faces personalised $p_i$ with $\sum p_i = c'(Q)$. Show that demand equality $Q_i^D(p_i) = Q^L$ for all $i$ plus the budget constraint reproduces the Samuelson condition, so $Q^L = Q^*$. Critique: not strategy-proof, since agents shade $b_i'$ downwards to lower $p_i$.</li>
+<li><strong>Clarke-Groves mechanism</strong>. Each agent reports their valuation $\tilde{b}_i(Q)$. The regulator chooses $Q$ to maximise reported social surplus. Each agent pays a tax equal to the externality their report imposes on others: $t_i = \max_Q \sum_{j \ne i} \tilde{b}_j(Q) - c(Q) - [\sum_{j \ne i} \tilde{b}_j(Q^<em>) - c(Q^</em>) + b_i\text{'s own term}]$ (Clarke pivot rule). Each agent's net payoff equals reported social surplus up to a constant, so truth-telling is a dominant strategy. Result: efficient $Q$ achieved without knowing preferences.</li>
+<li><strong>Clarke-Groves limitations</strong>. Generally not budget-balanced (sum of $t_i$ does not equal $c(Q^*)$); typically runs a surplus, so requires a residual claimant outside the mechanism. Also fails if preferences are not quasi-linear or if collusion among agents is possible. Practically used in some auction designs (VCG), not in routine public good provision.</li>
+<li><strong>What policy actually uses</strong>. (a) Tax-financed provision with cost-benefit analysis based on willingness-to-pay surveys; (b) <a class="wikilink" href="../concepts/tradeable-permits.html">Concepts/Tradeable Permits</a> for partially excludable cases; (c) clubs and matching grants for local public goods; (d) Tiebout sorting across jurisdictions.</li>
+<li><strong>Conclusion</strong>. The theory traces a clean trade-off: Samuelson gives the target, Lindahl gives the price system, Clarke-Groves gives strategy-proofness, but no mechanism delivers all three of efficiency, strategy-proofness, and budget balance simultaneously (a corollary of Myerson-Satterthwaite). Real institutions accept some inefficiency in exchange for administrative tractability.</li>
+<li><strong>Appeared in</strong>: 2023 Q6, 2025 Q6.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/public-goods.html">Concepts/Public Goods</a>, <a class="wikilink" href="../concepts/rivalry-and-excludability.html">Concepts/Rivalry and Excludability</a>, <a class="wikilink" href="../concepts/free-rider-problem.html">Concepts/Free Rider Problem</a>, <a class="wikilink" href="../concepts/voluntary-contribution-nash.html">Concepts/Voluntary Contribution Nash Equilibrium</a>, <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a>, <a class="wikilink" href="../concepts/lindahl-prices.html">Concepts/Lindahl Prices</a>, <a class="wikilink" href="../concepts/clarke-groves-mechanism.html">Concepts/Clarke-Groves Mechanism</a>, <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>.</li>
+</ul>
+<h3>Sub-question Type B.E.3: Policy instruments comparison for GHG or congestion</h3>
+<ul>
+<li><strong>What it asks</strong>: Compare property rights / Coasean bargaining, Pigouvian taxes, tradeable permits, and command-and-control regulation for either greenhouse gas emissions or traffic congestion.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: All four instruments can in principle achieve the socially efficient level of pollution / congestion, but they differ on three margins: (i) information requirements, (ii) distributional effects, (iii) robustness to uncertainty and incomplete enforcement. For greenhouse gases the most relevant trade-off is between price instruments (taxes) and quantity instruments (permits) under uncertainty. For congestion, simple Pigouvian tolling works best but distributional concerns dominate political feasibility.</li>
+<li><strong>Frame the externality</strong>. Marginal abatement cost curve $MAC(q)$ (slopes up as abatement rises) and marginal damage curve $MD(q)$ (slopes up as emissions rise). Efficient emissions $q^<em>$ where $MAC(q^</em>) = MD(q^*)$. The four instruments differ in how they make agents internalise $MD$.</li>
+<li><strong>Property rights and the <a class="wikilink" href="../concepts/coase-theorem.html">Concepts/Coase Theorem</a></strong>. Assign emission rights to either polluter or victim, allow bargaining. Achieves $q^*$ with zero transaction costs. For GHG this fails because of the very large number of parties (every human on earth) and the resulting transaction costs. For congestion it works locally (HOA agreements, road clubs) but not at city scale.</li>
+<li><strong>Pigouvian tax</strong>. Tax $t = MD(q^*)$ per unit emission. Polluters internalise: optimal abatement when $MAC(q) = t$. With heterogeneous polluters the tax automatically equalises marginal abatement costs across firms, so total abatement is achieved at minimum cost. Revenue can be recycled (carbon dividend, lower labour taxes). Uncertainty over $MAC$ leaves $q$ random but expected damages low.</li>
+<li><strong>Tradeable permits</strong>. Issue $\bar{Q} = q^*$ permits, allow trade. In equilibrium permit price $p$ equals MAC for all firms, $p = MAC(\bar{Q}/N)$ for each firm. Equivalent to tax under certainty. Under uncertainty over MAC, permits fix $q$ but allow price to vary; tax fixes $p$ but allows $q$ to vary. The <a class="wikilink" href="../concepts/weitzman-prices-vs-quantities.html">Concepts/Weitzman Prices vs Quantities</a> result: prefer permits when MD slope $>$ MAC slope (worry about catastrophic damages), prefer tax when MAC slope $>$ MD slope (worry about cost spikes). GHG has roughly flat short-run MD curve (climate damage is in stock, not flow), so taxes look better in theory. Permits dominate politically because emitters keep the rents from grandfathered allocations.</li>
+<li><strong>Command-and-control regulation</strong>. Uniform emission standards or technology mandates. Equalises emissions, not marginal costs, so generically more costly than tax or permits. Justified when monitoring of quantities is cheap (e.g. catalytic converters) but emissions monitoring expensive, or when corner solutions (zero emissions of a toxin) are wanted.</li>
+<li><strong>Congestion specifics (if Q chooses traffic)</strong>. Pigouvian toll $\tau = N b'(N)$ where $b' < 0$ is the marginal congestion externality. Implemented as London / Stockholm / Singapore congestion charges. Property rights work for tolls private roads but not public roads. Permits (rationing license plates by day) used in Mexico City and Beijing but distort towards multi-car households. Regulation (low-emission zones) is technology-targeted, complementary to tolls.</li>
+<li><strong>Distributional caveat</strong>. Carbon taxes and congestion charges are regressive in incidence but progressive when revenues are recycled per capita. Permit grandfathering transfers rents to incumbents.</li>
+<li><strong>Conclusion</strong>. Under standard assumptions and certainty all four instruments achieve $q^*$. Under uncertainty the price-quantity distinction is the live margin: GHG favours taxes on Weitzman grounds, congestion favours tolls. Regulation is a second-best when monitoring is asymmetric. Coasean bargaining is theoretically clean but practically null for global externalities.</li>
+<li><strong>Appeared in</strong>: 2024 Q6.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a>, <a class="wikilink" href="../concepts/tradeable-permits.html">Concepts/Tradeable Permits</a>, <a class="wikilink" href="../concepts/coase-theorem.html">Concepts/Coase Theorem</a>, <a class="wikilink" href="../concepts/weitzman-prices-vs-quantities.html">Concepts/Weitzman Prices vs Quantities</a>, <a class="wikilink" href="../concepts/externality-internalisation.html">Concepts/Externality Internalisation</a>, <a class="wikilink" href="../concepts/marginal-private-vs-social-benefit.html">Concepts/Marginal Private vs Social Benefit</a>, <a class="wikilink" href="../concepts/tragedy-of-the-commons.html">Concepts/Tragedy of the Commons</a>.</li>
+</ul>
+<hr>
+<h2>Part B: long-answer problems</h2>
+<h3>Sub-question Type B.L.1: Two colleges sharing a library, full Nash + Samuelson + Lindahl</h3>
+<ul>
+<li><strong>What it asks</strong>: Two colleges have Cobb-Douglas log utility over private good $x_i$ and shared books $B$. Find (a) the <a class="wikilink" href="../concepts/voluntary-contribution-nash.html">Concepts/Voluntary Contribution Nash Equilibrium</a>, (b) the Pareto efficient joint provision using the <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a>, (c) the <a class="wikilink" href="../concepts/lindahl-prices.html">Lindahl prices</a> supporting efficiency and comment on practical implementation (strategy-proofness, subsidy interpretation).</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li><strong>Set up</strong>. Two colleges $i = 1, 2$ with endowment $w_i$, utility $u_i(x_i, B) = \alpha_i \ln x_i + \beta_i \ln B$ where $B = b_1 + b_2$ is total books, $b_i$ is college $i$'s contribution at unit price (so $x_i + b_i = w_i$). Often $\alpha_i, \beta_i$ are symmetric.</li>
+<li><strong>(a) Nash best response</strong>. College $i$ takes $b_j$ as given, maximises $\alpha_i \ln(w_i - b_i) + \beta_i \ln(b_i + b_j)$ in $b_i \ge 0$. FOC: $-\alpha_i/(w_i - b_i) + \beta_i/(b_i + b_j) = 0$. Rearrange: $\beta_i(w_i - b_i) = \alpha_i(b_i + b_j)$, so $b_i = [\beta_i w_i - \alpha_i b_j]/(\alpha_i + \beta_i)$.</li>
+<li>Symmetric NE. With $\alpha_1 = \alpha_2 = \alpha$, $\beta_1 = \beta_2 = \beta$, $w_1 = w_2 = w$: substitute $b_1 = b_2 = b$: $b = [\beta w - \alpha b]/(\alpha + \beta)$, so $b(\alpha + \beta) + \alpha b = \beta w$, giving $b = \beta w/(2\alpha + \beta)$. Total $B^{VC} = 2\beta w/(2\alpha + \beta)$.</li>
+<li><strong>(b) Samuelson and the Pareto efficient $B^<em>$</strong>. Planner maximises $\sum_i u_i$ subject to $\sum_i x_i + B = 2w$. With log utility the Samuelson condition is $\sum_i \partial u_i/\partial B \div \partial u_i/\partial x_i = 1$, i.e. $\sum_i \beta_i x_i / (\alpha_i B) = 1$. With symmetry: $2 \beta x / (\alpha B) = 1$, so $\alpha B = 2 \beta x$, combined with $2x + B = 2w$ gives $B^</em> = 2 \beta w / (\alpha + \beta)$.</li>
+<li>Verify the wedge. $B^{VC}/B^* = (2\beta w/(2\alpha + \beta))/(2 \beta w/(\alpha + \beta)) = (\alpha + \beta)/(2\alpha + \beta) < 1$. Free-riding confirmed.</li>
+<li><strong>(c) Lindahl prices</strong>. Personalised prices $p_1, p_2$ with $p_1 + p_2 = 1$ (the marginal cost of a book). College $i$'s demand at price $p_i$: $b_i^D(p_i)$ such that the agent demands the same total $B$. From log utility, $i$'s demand is $\beta_i (w_i)/(\alpha_i p_i + \beta_i)$... Carefully: $i$ buys $B$ units at $p_i$ each, so budget $x_i + p_i B = w_i$, utility $\alpha_i \ln(w_i - p_i B) + \beta_i \ln B$. FOC: $\beta_i/B = \alpha_i p_i /(w_i - p_i B)$, so $\beta_i(w_i - p_i B) = \alpha_i p_i B$, giving $B = \beta_i w_i / [p_i (\alpha_i + \beta_i)]$.</li>
+<li>Demand equality plus budget. Equating $B_1^D = B_2^D = B^L$ with $\alpha_i = \alpha$, $\beta_i = \beta$ symmetric: $B^L = \beta w/[p_i(\alpha + \beta)]$ for both, so $p_1 = p_2 = 1/2$. Each college pays half. Substitute: $B^L = \beta w/[(1/2)(\alpha + \beta)] = 2\beta w/(\alpha + \beta) = B^*$. So Lindahl decentralises the Samuelson optimum.</li>
+<li><strong>Subsidy interpretation</strong>. If the colleges face market price 1 for books but the regulator subsidises so each pays $p_i = 1/2$, financed by a lump-sum tax $T_i$ equal to the subsidy bill, the outcome is efficient. With identical colleges this collapses to the equal-share rule.</li>
+<li><strong>Strategy-proofness critique</strong>. Each college has incentive to understate $\beta_i$ to push their Lindahl price down. Truthful revelation requires a Clarke-Groves variant. In a closed-form essay closer, mention that this is why real consortium libraries use formula-based contributions (FTE-weighted) rather than direct preference elicitation.</li>
+<li><strong>Appeared in</strong>: 2022 Q10.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/voluntary-contribution-nash.html">Concepts/Voluntary Contribution Nash Equilibrium</a>, <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a>, <a class="wikilink" href="../concepts/lindahl-prices.html">Concepts/Lindahl Prices</a>, <a class="wikilink" href="../concepts/free-rider-problem.html">Concepts/Free Rider Problem</a>, <a class="wikilink" href="../concepts/public-goods.html">Concepts/Public Goods</a>, <a class="wikilink" href="../concepts/clarke-groves-mechanism.html">Concepts/Clarke-Groves Mechanism</a>.</li>
+</ul>
+<hr>
+<h2>How to recognise the format on the day</h2>
+<p>Part A externality / public good questions in Core Micro almost always lead with one of three set-ups: a discrete public good (flood defence, library, vaccine), a common pool resource (road, fishery), or a bilateral negative externality (Alesha and Bob, polluter and victim). Spotting the set-up tells you which model to deploy in the first 30 seconds:</p>
+<ul>
+<li>If the prompt mentions "n residents" or "voluntary contributions" and the good is non-rival, expect <a class="wikilink" href="../concepts/voluntary-contribution-nash.html">Concepts/Voluntary Contribution Nash Equilibrium</a> in one part and <a class="wikilink" href="../concepts/samuelson-condition.html">Concepts/Samuelson Condition</a> in another (2014 Q5, 2024 Q2). The voluntary-contribution equilibrium will be independent of $n$ under quasi-linear preferences, the social optimum scales linearly in $n$. Show the wedge widening.</li>
+<li>If the prompt mentions "free entry," "congestion," or a rival but non-excludable good, expect <a class="wikilink" href="../concepts/tragedy-of-the-commons.html">Concepts/Tragedy of the Commons</a> with $b(N^e) = \bar{u}$ for the equilibrium and $b(N^<em>) + N^</em> b'(N^<em>) = \bar{u}$ for the optimum (2015 Q5). The Pigouvian toll is $\tau = -N^</em> b'(N^*)$.</li>
+<li>If the prompt is bilateral ("Alesha generates an externality on Bob") with <a class="wikilink" href="../concepts/quasi-linear-utility.html">Concepts/Quasi-linear Utility</a>, expect to compute private optimum, social optimum, <a class="wikilink" href="../concepts/pigouvian-tax.html">Concepts/Pigouvian Tax</a> (= marginal damage at optimum), and a compensating lump-sum transfer (2023 Q1).</li>
+<li>If the prompt has quadratic profit and quadratic loss with random shocks, expect a <a class="wikilink" href="../concepts/weitzman-prices-vs-quantities.html">Concepts/Weitzman Prices vs Quantities</a> comparison and a robustness claim about the tax (2025 Q2). Watch for the regulator knowing only the slope, not the level, of one curve.</li>
+</ul>
+<p>Part B essays follow three patterns:</p>
+<ul>
+<li>A canonical "explain the theory of public goods" essay (2023 Q6, 2025 Q6). Walk through definition, free-rider problem, Samuelson, Lindahl, Clarke-Groves with one practical sentence on each. Aim for the ladder of decreasing practicality at the end.</li>
+<li>A policy instrument comparison (2024 Q6). Use the four-way comparison: property rights, taxes, permits, regulation. The marginal point is usually Weitzman under uncertainty.</li>
+<li>A contrarian-claim essay (2022 Q6 on positive externalities). Engage with the claim, present the formal symmetry argument, then defend the second-best caveats. Top scripts always concede where the claim has merit before rejecting it overall.</li>
+</ul>
+<p>Part B long-answer problems in this topic are always a structured public-good calculation with three parts: Nash, Samuelson, Lindahl, sometimes a fourth on Clarke-Groves or a subsidy. The 2022 Q10 college library is the canonical template. If you see Cobb-Douglas log preferences over a private good and a shared good, the algebra is almost mechanical: Nash gives a smaller $B$ than Samuelson by a known ratio, Lindahl prices split as the ratio of weights $\beta_i / (\alpha_i + \beta_i)$ (or in the symmetric case, $1/2$ each).</p>
+<p>Three minute-savers on the day:</p>
+<ol>
+<li>In voluntary contribution problems with identical agents and quasi-linear preferences, write down "Q^{VC} is independent of n" before doing any algebra; this is worth a free sentence in part (d) of most A questions.</li>
+<li>In Samuelson derivations, draw the vertical-sum diagram (MB_1 stacked on MB_2 against MC). The diagram is worth marks and forces you to write the condition correctly.</li>
+<li>In Pigouvian tax problems, always check that the tax revenue $t^<em> \cdot x^</em>$ is not the same as total external damage $h(x^*)$. The two coincide only when $h$ is linear, and confusing them is the most common error.</li>
+</ul>
+<h2>Applied procedures</h2>
+<p>1A.1 (no em-dashes), 1A.2 (no AI-tells), 1A.3 (Obsidian conventions and wiki-links), General Context Section 5 (Core Micro question-typing), Skill "Economics Question Typing.md" methodology adapted to single-file scope.</p></article>
+</main>
+</div>
+<footer class="footer">
+  Core Micro Study Guide. Built from past papers 2014 to 2025, FHS lecture slides, and Micro2025 reading list.
+</footer>
+</body>
+</html>

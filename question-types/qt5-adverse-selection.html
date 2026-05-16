@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question Types 5: Adverse Selection | Core Micro</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="../index.html">Core Micro</a>
+  <input id="search" class="search" type="text" placeholder="Search concepts..." autocomplete="off">
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#topics">Topics</a>
+    <a href="../index.html#concepts">Concepts</a>
+    <a href="../index.html#question-types">Question Types</a>
+  </nav>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-inner">
+<div class="sidebar-section"><a href="../index.html#question-types" class="sidebar-link">Question Types</a></div>
+<div class="sidebar-section">
+  <a href="../topics/1-general-equilibrium.html" class="sidebar-topic" data-topic-id="1">General Equilibrium</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/competitive-equilibrium.html" class="sidebar-concept" data-name="Competitive Equilibrium">Competitive Equilibrium</a></li>
+    <li><a href="../concepts/quasi-linear-utility.html" class="sidebar-concept" data-name="Quasi-linear Utility">Quasi-linear Utility</a></li>
+    <li><a href="../concepts/cobb-douglas-demand.html" class="sidebar-concept" data-name="Cobb-Douglas Demand">Cobb-Douglas Demand</a></li>
+    <li><a href="../concepts/edgeworth-box.html" class="sidebar-concept" data-name="Edgeworth Box">Edgeworth Box</a></li>
+    <li><a href="../concepts/excess-demand.html" class="sidebar-concept" data-name="Excess Demand">Excess Demand</a></li>
+    <li><a href="../concepts/ppf-and-mrt.html" class="sidebar-concept" data-name="PPF and MRT">PPF and MRT</a></li>
+    <li><a href="../concepts/ricardian-trade-model.html" class="sidebar-concept" data-name="Ricardian Trade Model">Ricardian Trade Model</a></li>
+    <li><a href="../concepts/walras-law.html" class="sidebar-concept" data-name="Walras Law">Walras Law</a></li>
+    <li><a href="../concepts/autarky.html" class="sidebar-concept" data-name="Autarky">Autarky</a></li>
+    <li><a href="../concepts/comparative-advantage.html" class="sidebar-concept" data-name="Comparative Advantage">Comparative Advantage</a></li>
+    <li><a href="../concepts/gross-substitutes.html" class="sidebar-concept" data-name="Gross Substitutes">Gross Substitutes</a></li>
+    <li><a href="../concepts/heckscher-ohlin-model.html" class="sidebar-concept" data-name="Heckscher-Ohlin Model">Heckscher-Ohlin Model</a></li>
+    <li><a href="../concepts/homogeneity-degree-zero.html" class="sidebar-concept" data-name="Homogeneity of Degree Zero">Homogeneity of Degree Zero</a></li>
+    <li><a href="../concepts/numeraire-good.html" class="sidebar-concept" data-name="Numeraire Good">Numeraire Good</a></li>
+    <li><a href="../concepts/robinson-crusoe-economy.html" class="sidebar-concept" data-name="Robinson Crusoe Economy">Robinson Crusoe Economy</a></li>
+    <li><a href="../concepts/rybczynski-theorem.html" class="sidebar-concept" data-name="Rybczynski Theorem">Rybczynski Theorem</a></li>
+    <li><a href="../concepts/stolper-samuelson.html" class="sidebar-concept" data-name="Stolper-Samuelson Theorem">Stolper-Samuelson Theorem</a></li>
+    <li><a href="../concepts/uniqueness-of-equilibrium.html" class="sidebar-concept" data-name="Uniqueness of Equilibrium">Uniqueness of Equilibrium</a></li>
+    <li><a href="../concepts/zero-profit-condition.html" class="sidebar-concept" data-name="Zero-Profit Condition">Zero-Profit Condition</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/2-welfare-and-social-choice.html" class="sidebar-topic" data-topic-id="2">Welfare and Social Choice</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pareto-criterion.html" class="sidebar-concept" data-name="Pareto Criterion">Pareto Criterion</a></li>
+    <li><a href="../concepts/pareto-efficiency.html" class="sidebar-concept" data-name="Pareto Efficiency">Pareto Efficiency</a></li>
+    <li><a href="../concepts/second-welfare-theorem.html" class="sidebar-concept" data-name="Second Welfare Theorem">Second Welfare Theorem</a></li>
+    <li><a href="../concepts/first-welfare-theorem.html" class="sidebar-concept" data-name="First Welfare Theorem">First Welfare Theorem</a></li>
+    <li><a href="../concepts/kaldor-hicks-compensation.html" class="sidebar-concept" data-name="Kaldor-Hicks Compensation">Kaldor-Hicks Compensation</a></li>
+    <li><a href="../concepts/social-welfare-functions.html" class="sidebar-concept" data-name="Social Welfare Functions">Social Welfare Functions</a></li>
+    <li><a href="../concepts/rawlsian-planner.html" class="sidebar-concept" data-name="Rawlsian Planner">Rawlsian Planner</a></li>
+    <li><a href="../concepts/utilitarian-planner.html" class="sidebar-concept" data-name="Utilitarian Planner">Utilitarian Planner</a></li>
+    <li><a href="../concepts/arrow-impossibility.html" class="sidebar-concept" data-name="Arrow&#x27;s Impossibility Theorem">Arrow&#x27;s Impossibility Theorem</a></li>
+    <li><a href="../concepts/borda-count.html" class="sidebar-concept" data-name="Borda Count">Borda Count</a></li>
+    <li><a href="../concepts/compensating-variation.html" class="sidebar-concept" data-name="Compensating Variation">Compensating Variation</a></li>
+    <li><a href="../concepts/condorcet-paradox.html" class="sidebar-concept" data-name="Condorcet Paradox">Condorcet Paradox</a></li>
+    <li><a href="../concepts/consumer-surplus.html" class="sidebar-concept" data-name="Consumer Surplus">Consumer Surplus</a></li>
+    <li><a href="../concepts/contingent-valuation.html" class="sidebar-concept" data-name="Contingent Valuation">Contingent Valuation</a></li>
+    <li><a href="../concepts/contract-curve.html" class="sidebar-concept" data-name="Contract Curve">Contract Curve</a></li>
+    <li><a href="../concepts/cost-benefit-analysis.html" class="sidebar-concept" data-name="Cost-Benefit Analysis">Cost-Benefit Analysis</a></li>
+    <li><a href="../concepts/deadweight-loss.html" class="sidebar-concept" data-name="Deadweight Loss">Deadweight Loss</a></li>
+    <li><a href="../concepts/equivalent-variation.html" class="sidebar-concept" data-name="Equivalent Variation">Equivalent Variation</a></li>
+    <li><a href="../concepts/expenditure-function.html" class="sidebar-concept" data-name="Expenditure Function">Expenditure Function</a></li>
+    <li><a href="../concepts/gibbard-satterthwaite.html" class="sidebar-concept" data-name="Gibbard-Satterthwaite Theorem">Gibbard-Satterthwaite Theorem</a></li>
+    <li><a href="../concepts/hedonic-pricing.html" class="sidebar-concept" data-name="Hedonic Pricing">Hedonic Pricing</a></li>
+    <li><a href="../concepts/hicksian-demand.html" class="sidebar-concept" data-name="Hicksian Demand">Hicksian Demand</a></li>
+    <li><a href="../concepts/majority-rule.html" class="sidebar-concept" data-name="Majority Rule">Majority Rule</a></li>
+    <li><a href="../concepts/marshallian-demand.html" class="sidebar-concept" data-name="Marshallian Demand">Marshallian Demand</a></li>
+    <li><a href="../concepts/median-voter-theorem.html" class="sidebar-concept" data-name="Median Voter Theorem">Median Voter Theorem</a></li>
+    <li><a href="../concepts/qaly.html" class="sidebar-concept" data-name="Quality-Adjusted Life Year (QALY)">Quality-Adjusted Life Year (QALY)</a></li>
+    <li><a href="../concepts/ramsey-equation.html" class="sidebar-concept" data-name="Ramsey Equation">Ramsey Equation</a></li>
+    <li><a href="../concepts/ramsey-taxation.html" class="sidebar-concept" data-name="Ramsey Taxation">Ramsey Taxation</a></li>
+    <li><a href="../concepts/single-peaked-preferences.html" class="sidebar-concept" data-name="Single-Peaked Preferences">Single-Peaked Preferences</a></li>
+    <li><a href="../concepts/social-discount-rate.html" class="sidebar-concept" data-name="Social Discount Rate">Social Discount Rate</a></li>
+    <li><a href="../concepts/strategy-proofness.html" class="sidebar-concept" data-name="Strategy-Proofness">Strategy-Proofness</a></li>
+    <li><a href="../concepts/travel-cost-method.html" class="sidebar-concept" data-name="Travel Cost Method">Travel Cost Method</a></li>
+    <li><a href="../concepts/utility-possibility-frontier.html" class="sidebar-concept" data-name="Utility Possibility Frontier">Utility Possibility Frontier</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/3-externalities-and-public-goods.html" class="sidebar-topic" data-topic-id="3">Externalities and Public Goods</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pigouvian-tax.html" class="sidebar-concept" data-name="Pigouvian Tax">Pigouvian Tax</a></li>
+    <li><a href="../concepts/samuelson-condition.html" class="sidebar-concept" data-name="Samuelson Condition">Samuelson Condition</a></li>
+    <li><a href="../concepts/clarke-groves-mechanism.html" class="sidebar-concept" data-name="Clarke-Groves Mechanism">Clarke-Groves Mechanism</a></li>
+    <li><a href="../concepts/coase-theorem.html" class="sidebar-concept" data-name="Coase Theorem">Coase Theorem</a></li>
+    <li><a href="../concepts/externality-internalisation.html" class="sidebar-concept" data-name="Externality Internalisation">Externality Internalisation</a></li>
+    <li><a href="../concepts/free-rider-problem.html" class="sidebar-concept" data-name="Free Rider Problem">Free Rider Problem</a></li>
+    <li><a href="../concepts/lindahl-prices.html" class="sidebar-concept" data-name="Lindahl Prices">Lindahl Prices</a></li>
+    <li><a href="../concepts/marginal-private-vs-social-benefit.html" class="sidebar-concept" data-name="Marginal Private vs Social Benefit">Marginal Private vs Social Benefit</a></li>
+    <li><a href="../concepts/public-goods.html" class="sidebar-concept" data-name="Public Goods">Public Goods</a></li>
+    <li><a href="../concepts/tragedy-of-the-commons.html" class="sidebar-concept" data-name="Tragedy of the Commons">Tragedy of the Commons</a></li>
+    <li><a href="../concepts/voluntary-contribution-nash.html" class="sidebar-concept" data-name="Voluntary Contribution Nash Equilibrium">Voluntary Contribution Nash Equilibrium</a></li>
+    <li><a href="../concepts/weitzman-prices-vs-quantities.html" class="sidebar-concept" data-name="Weitzman Prices vs Quantities">Weitzman Prices vs Quantities</a></li>
+    <li><a href="../concepts/rivalry-and-excludability.html" class="sidebar-concept" data-name="Rivalry and Excludability">Rivalry and Excludability</a></li>
+    <li><a href="../concepts/tradeable-permits.html" class="sidebar-concept" data-name="Tradeable Permits">Tradeable Permits</a></li>
+    <li><a href="../concepts/cap-and-trade.html" class="sidebar-concept" data-name="Cap-and-Trade">Cap-and-Trade</a></li>
+    <li><a href="../concepts/clarke-tax.html" class="sidebar-concept" data-name="Clarke Tax (Pivotal Mechanism)">Clarke Tax (Pivotal Mechanism)</a></li>
+    <li><a href="../concepts/club-goods.html" class="sidebar-concept" data-name="Club Goods">Club Goods</a></li>
+    <li><a href="../concepts/coasean-bargaining.html" class="sidebar-concept" data-name="Coasean Bargaining">Coasean Bargaining</a></li>
+    <li><a href="../concepts/common-pool-resources.html" class="sidebar-concept" data-name="Common Pool Resources">Common Pool Resources</a></li>
+    <li><a href="../concepts/vickrey-auction.html" class="sidebar-concept" data-name="Vickrey (Second-Price) Auction">Vickrey (Second-Price) Auction</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/4-game-theory.html" class="sidebar-topic" data-topic-id="4">Game Theory</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/best-response-functions.html" class="sidebar-concept" data-name="Best Response Functions">Best Response Functions</a></li>
+    <li><a href="../concepts/grim-trigger-strategy.html" class="sidebar-concept" data-name="Grim Trigger Strategy">Grim Trigger Strategy</a></li>
+    <li><a href="../concepts/nash-equilibrium.html" class="sidebar-concept" data-name="Nash Equilibrium">Nash Equilibrium</a></li>
+    <li><a href="../concepts/subgame-perfect-equilibrium.html" class="sidebar-concept" data-name="Subgame Perfect Equilibrium">Subgame Perfect Equilibrium</a></li>
+    <li><a href="../concepts/critical-discount-factor.html" class="sidebar-concept" data-name="Critical Discount Factor">Critical Discount Factor</a></li>
+    <li><a href="../concepts/dominance.html" class="sidebar-concept" data-name="Dominance">Dominance</a></li>
+    <li><a href="../concepts/infinitely-repeated-games.html" class="sidebar-concept" data-name="Infinitely Repeated Games">Infinitely Repeated Games</a></li>
+    <li><a href="../concepts/affine-utility-normalisation.html" class="sidebar-concept" data-name="Affine Utility Normalisation">Affine Utility Normalisation</a></li>
+    <li><a href="../concepts/backward-induction.html" class="sidebar-concept" data-name="Backward Induction">Backward Induction</a></li>
+    <li><a href="../concepts/folk-theorem.html" class="sidebar-concept" data-name="Folk Theorem">Folk Theorem</a></li>
+    <li><a href="../concepts/mixed-strategy-equilibrium.html" class="sidebar-concept" data-name="Mixed Strategy Equilibrium">Mixed Strategy Equilibrium</a></li>
+    <li><a href="../concepts/battle-of-the-sexes.html" class="sidebar-concept" data-name="Battle of the Sexes">Battle of the Sexes</a></li>
+    <li><a href="../concepts/credible-threat.html" class="sidebar-concept" data-name="Credible Threat">Credible Threat</a></li>
+    <li><a href="../concepts/extensive-form-game.html" class="sidebar-concept" data-name="Extensive Form Game">Extensive Form Game</a></li>
+    <li><a href="../concepts/first-mover-advantage.html" class="sidebar-concept" data-name="First-Mover Advantage">First-Mover Advantage</a></li>
+    <li><a href="../concepts/hawk-dove-game.html" class="sidebar-concept" data-name="Hawk-Dove (Chicken) Game">Hawk-Dove (Chicken) Game</a></li>
+    <li><a href="../concepts/information-set.html" class="sidebar-concept" data-name="Information Set">Information Set</a></li>
+    <li><a href="../concepts/iterated-elimination-strictly-dominated.html" class="sidebar-concept" data-name="Iterated Elimination of Strictly Dominated Strategies">Iterated Elimination of Strictly Dominated Strategies</a></li>
+    <li><a href="../concepts/matching-pennies.html" class="sidebar-concept" data-name="Matching Pennies">Matching Pennies</a></li>
+    <li><a href="../concepts/nash-existence-theorem.html" class="sidebar-concept" data-name="Nash Existence Theorem">Nash Existence Theorem</a></li>
+    <li><a href="../concepts/nash-reversion.html" class="sidebar-concept" data-name="Nash Reversion Strategy">Nash Reversion Strategy</a></li>
+    <li><a href="../concepts/strategic-form-game.html" class="sidebar-concept" data-name="Strategic Form Game">Strategic Form Game</a></li>
+    <li><a href="../concepts/strategic-substitutes-complements.html" class="sidebar-concept" data-name="Strategic Substitutes vs Complements">Strategic Substitutes vs Complements</a></li>
+    <li><a href="../concepts/strict-vs-weak-dominance.html" class="sidebar-concept" data-name="Strict vs Weak Dominance">Strict vs Weak Dominance</a></li>
+    <li><a href="../concepts/tit-for-tat.html" class="sidebar-concept" data-name="Tit-for-Tat Strategy">Tit-for-Tat Strategy</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/5-industrial-organisation-and-competition-policy.html" class="sidebar-topic" data-topic-id="5">Industrial Organisation and Competition Policy</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/williamson-trade-off.html" class="sidebar-concept" data-name="Williamson Trade-off">Williamson Trade-off</a></li>
+    <li><a href="../concepts/bertrand-duopoly.html" class="sidebar-concept" data-name="Bertrand Duopoly">Bertrand Duopoly</a></li>
+    <li><a href="../concepts/cournot-duopoly.html" class="sidebar-concept" data-name="Cournot Duopoly">Cournot Duopoly</a></li>
+    <li><a href="../concepts/entry-deterrence.html" class="sidebar-concept" data-name="Entry Deterrence">Entry Deterrence</a></li>
+    <li><a href="../concepts/merger-analysis.html" class="sidebar-concept" data-name="Merger Analysis">Merger Analysis</a></li>
+    <li><a href="../concepts/differentiated-bertrand.html" class="sidebar-concept" data-name="Differentiated Bertrand">Differentiated Bertrand</a></li>
+    <li><a href="../concepts/collusion-sustainability.html" class="sidebar-concept" data-name="Collusion Sustainability">Collusion Sustainability</a></li>
+    <li><a href="../concepts/hhi-index.html" class="sidebar-concept" data-name="Herfindahl-Hirschman Index (HHI)">Herfindahl-Hirschman Index (HHI)</a></li>
+    <li><a href="../concepts/hotelling-linear-city.html" class="sidebar-concept" data-name="Hotelling Linear City">Hotelling Linear City</a></li>
+    <li><a href="../concepts/leniency-programme.html" class="sidebar-concept" data-name="Leniency Programme">Leniency Programme</a></li>
+    <li><a href="../concepts/price-discrimination.html" class="sidebar-concept" data-name="Price Discrimination">Price Discrimination</a></li>
+    <li><a href="../concepts/ssnip-test.html" class="sidebar-concept" data-name="SSNIP Test">SSNIP Test</a></li>
+    <li><a href="../concepts/stackelberg-leadership.html" class="sidebar-concept" data-name="Stackelberg Leadership">Stackelberg Leadership</a></li>
+    <li><a href="../concepts/two-part-tariff.html" class="sidebar-concept" data-name="Two-Part Tariff">Two-Part Tariff</a></li>
+    <li><a href="../concepts/uk-competition-act.html" class="sidebar-concept" data-name="UK Competition Act 1998 and EU Articles 101-102">UK Competition Act 1998 and EU Articles 101-102</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/6-decisions-under-risk.html" class="sidebar-topic" data-topic-id="6">Decisions under Risk</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/arrow-pratt-ara.html" class="sidebar-concept" data-name="Arrow-Pratt ARA">Arrow-Pratt ARA</a></li>
+    <li><a href="../concepts/cara-utility.html" class="sidebar-concept" data-name="CARA Utility">CARA Utility</a></li>
+    <li><a href="../concepts/crra-utility.html" class="sidebar-concept" data-name="CRRA Utility">CRRA Utility</a></li>
+    <li><a href="../concepts/dara-utility.html" class="sidebar-concept" data-name="DARA Utility">DARA Utility</a></li>
+    <li><a href="../concepts/expected-utility.html" class="sidebar-concept" data-name="Expected Utility">Expected Utility</a></li>
+    <li><a href="../concepts/certainty-equivalent.html" class="sidebar-concept" data-name="Certainty Equivalent">Certainty Equivalent</a></li>
+    <li><a href="../concepts/first-order-stochastic-dominance.html" class="sidebar-concept" data-name="First-Order Stochastic Dominance">First-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/independence-axiom.html" class="sidebar-concept" data-name="Independence Axiom">Independence Axiom</a></li>
+    <li><a href="../concepts/risk-aversion.html" class="sidebar-concept" data-name="Risk Aversion">Risk Aversion</a></li>
+    <li><a href="../concepts/second-order-stochastic-dominance.html" class="sidebar-concept" data-name="Second-Order Stochastic Dominance">Second-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/state-space-insurance-diagram.html" class="sidebar-concept" data-name="State-Space Insurance Diagram">State-Space Insurance Diagram</a></li>
+    <li><a href="../concepts/von-neumann-morgenstern-axioms.html" class="sidebar-concept" data-name="von Neumann Morgenstern Axioms">von Neumann Morgenstern Axioms</a></li>
+    <li><a href="../concepts/continuity-axiom.html" class="sidebar-concept" data-name="Continuity Axiom">Continuity Axiom</a></li>
+    <li><a href="../concepts/risk-premium.html" class="sidebar-concept" data-name="Risk Premium">Risk Premium</a></li>
+    <li><a href="../concepts/arrow-pratt-rra.html" class="sidebar-concept" data-name="Arrow-Pratt RRA">Arrow-Pratt RRA</a></li>
+    <li><a href="../concepts/fair-premium.html" class="sidebar-concept" data-name="Fair Premium">Fair Premium</a></li>
+    <li><a href="../concepts/reduction-of-compound-lotteries.html" class="sidebar-concept" data-name="Reduction of Compound Lotteries">Reduction of Compound Lotteries</a></li>
+    <li><a href="../concepts/risk-pooling.html" class="sidebar-concept" data-name="Risk Pooling">Risk Pooling</a></li>
+    <li><a href="../concepts/allais-paradox.html" class="sidebar-concept" data-name="Allais Paradox">Allais Paradox</a></li>
+    <li><a href="../concepts/dutch-book-argument.html" class="sidebar-concept" data-name="Dutch Book Argument">Dutch Book Argument</a></li>
+    <li><a href="../concepts/mean-preserving-spread.html" class="sidebar-concept" data-name="Mean-Preserving Spread">Mean-Preserving Spread</a></li>
+    <li><a href="../concepts/mean-variance-utility.html" class="sidebar-concept" data-name="Mean-Variance Utility">Mean-Variance Utility</a></li>
+    <li><a href="../concepts/st-petersburg-paradox.html" class="sidebar-concept" data-name="St Petersburg Paradox">St Petersburg Paradox</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/7-adverse-selection.html" class="sidebar-topic active" data-topic-id="7">Adverse Selection</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/adverse-selection.html" class="sidebar-concept" data-name="Adverse Selection">Adverse Selection</a></li>
+    <li><a href="../concepts/akerlof-lemons-market.html" class="sidebar-concept" data-name="Akerlof Lemons Market">Akerlof Lemons Market</a></li>
+    <li><a href="../concepts/fair-odds-line.html" class="sidebar-concept" data-name="Fair Odds Line">Fair Odds Line</a></li>
+    <li><a href="../concepts/full-unravelling.html" class="sidebar-concept" data-name="Full Unravelling">Full Unravelling</a></li>
+    <li><a href="../concepts/intuitive-criterion.html" class="sidebar-concept" data-name="Intuitive Criterion">Intuitive Criterion</a></li>
+    <li><a href="../concepts/rothschild-stiglitz-screening.html" class="sidebar-concept" data-name="Rothschild-Stiglitz Screening">Rothschild-Stiglitz Screening</a></li>
+    <li><a href="../concepts/single-crossing-property.html" class="sidebar-concept" data-name="Single Crossing Property">Single Crossing Property</a></li>
+    <li><a href="../concepts/spence-signalling.html" class="sidebar-concept" data-name="Spence Signalling">Spence Signalling</a></li>
+    <li><a href="../concepts/state-space-rothschild-stiglitz.html" class="sidebar-concept" data-name="State-Space Diagram (Rothschild-Stiglitz)">State-Space Diagram (Rothschild-Stiglitz)</a></li>
+    <li><a href="../concepts/asymmetric-information.html" class="sidebar-concept" data-name="Asymmetric Information">Asymmetric Information</a></li>
+    <li><a href="../concepts/separating-vs-pooling.html" class="sidebar-concept" data-name="Separating vs Pooling Equilibrium">Separating vs Pooling Equilibrium</a></li>
+    <li><a href="../concepts/pooling-equilibrium.html" class="sidebar-concept" data-name="Pooling Equilibrium">Pooling Equilibrium</a></li>
+    <li><a href="../concepts/reimbursement-contracts.html" class="sidebar-concept" data-name="Reimbursement Contracts">Reimbursement Contracts</a></li>
+    <li><a href="../concepts/conspicuous-consumption.html" class="sidebar-concept" data-name="Conspicuous Consumption (Veblen Goods)">Conspicuous Consumption (Veblen Goods)</a></li>
+    <li><a href="../concepts/hidden-information-vs-hidden-action.html" class="sidebar-concept" data-name="Hidden Information vs Hidden Action">Hidden Information vs Hidden Action</a></li>
+    <li><a href="../concepts/multiple-equilibria-lemons.html" class="sidebar-concept" data-name="Multiple Equilibria in Lemons Markets">Multiple Equilibria in Lemons Markets</a></li>
+    <li><a href="../concepts/partial-unravelling.html" class="sidebar-concept" data-name="Partial Unravelling">Partial Unravelling</a></li>
+    <li><a href="../concepts/riley-outcome.html" class="sidebar-concept" data-name="Riley Outcome">Riley Outcome</a></li>
+    <li><a href="../concepts/wilson-refinement.html" class="sidebar-concept" data-name="Wilson Equilibrium Refinement">Wilson Equilibrium Refinement</a></li>
+    <li><a href="../concepts/winners-curse.html" class="sidebar-concept" data-name="Winner&#x27;s Curse">Winner&#x27;s Curse</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/8-moral-hazard.html" class="sidebar-topic" data-topic-id="8">Moral Hazard</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/agency-cost.html" class="sidebar-concept" data-name="Agency Cost">Agency Cost</a></li>
+    <li><a href="../concepts/incentive-compatibility.html" class="sidebar-concept" data-name="Incentive Compatibility">Incentive Compatibility</a></li>
+    <li><a href="../concepts/individual-rationality.html" class="sidebar-concept" data-name="Individual Rationality">Individual Rationality</a></li>
+    <li><a href="../concepts/principal-agent-problem.html" class="sidebar-concept" data-name="Principal-Agent Problem">Principal-Agent Problem</a></li>
+    <li><a href="../concepts/first-best-contract.html" class="sidebar-concept" data-name="First-Best Contract">First-Best Contract</a></li>
+    <li><a href="../concepts/moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard">Moral Hazard</a></li>
+    <li><a href="../concepts/risk-vs-insurance-tradeoff.html" class="sidebar-concept" data-name="Risk vs Insurance Trade-off">Risk vs Insurance Trade-off</a></li>
+    <li><a href="../concepts/second-best-contract.html" class="sidebar-concept" data-name="Second-Best Contract">Second-Best Contract</a></li>
+    <li><a href="../concepts/linear-contracts.html" class="sidebar-concept" data-name="Linear Contracts">Linear Contracts</a></li>
+    <li><a href="../concepts/monotone-likelihood-ratio.html" class="sidebar-concept" data-name="Monotone Likelihood Ratio">Monotone Likelihood Ratio</a></li>
+    <li><a href="../concepts/peltzman-effect.html" class="sidebar-concept" data-name="Peltzman Effect">Peltzman Effect</a></li>
+    <li><a href="../concepts/revenue-sharing.html" class="sidebar-concept" data-name="Revenue Sharing">Revenue Sharing</a></li>
+    <li><a href="../concepts/wage-bounds-limited-liability.html" class="sidebar-concept" data-name="Wage Bounds Limited Liability">Wage Bounds Limited Liability</a></li>
+    <li><a href="../concepts/holmstrom-milgrom-model.html" class="sidebar-concept" data-name="Holmstrom-Milgrom Linear Contracts Model">Holmstrom-Milgrom Linear Contracts Model</a></li>
+    <li><a href="../concepts/insurance-moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard in Insurance">Moral Hazard in Insurance</a></li>
+    <li><a href="../concepts/multitasking.html" class="sidebar-concept" data-name="Multitasking">Multitasking</a></li>
+    <li><a href="../concepts/repeated-moral-hazard.html" class="sidebar-concept" data-name="Repeated Moral Hazard">Repeated Moral Hazard</a></li>
+    <li><a href="../concepts/selling-the-firm.html" class="sidebar-concept" data-name="Selling the Firm to the Agent">Selling the Firm to the Agent</a></li>
+  </ul>
+</div>
+</div>
+</aside>
+<main class="content">
+<nav class="breadcrumb"><a href="../index.html">Home</a> / <span>Question Types</span></nav><article class="qt-article"><h1>Question Types: Adverse Selection</h1>
+<blockquote>All Core Microeconomics finals questions on adverse selection (asymmetric information before contracting) from 2014 to 2025, organised by Part A short problem, Part B essay, and Part B long-answer problem. Maps to Topic 7 / Information Economics 1 in the 2025 reading list.</blockquote>
+<hr>
+<h2>Excluded sub-topics</h2>
+<p>The catalogue contains no clear Part B long-answer question whose primary content is pure adverse selection in the 2014 to 2025 window. The Information Economics long-answer slot in those years is held by moral hazard problems (2014 Q11, 2017 Q10, 2024 Q10), which belong in <a class="wikilink">Question Types 6 - Moral Hazard</a>. The 2024 Q9 essay sits at the boundary of adverse selection and moral hazard and is cross-listed here.</p>
+<p>Also excluded: pure moral hazard sub-topics (hidden action, principal agent, optimal incentive contracts), pure risk-without-information topics (Arrow Pratt, certainty equivalent, risk premium without an information friction). These live in <a class="wikilink">Question Types 4 - Decisions under Risk</a> and <a class="wikilink">Question Types 6 - Moral Hazard</a>.</p>
+<hr>
+<h2>Part A: short compulsory problems</h2>
+<h3>Sub-question Type A.1: Akerlof lemons with discrete quality types, full unravelling</h3>
+<ul>
+<li><strong>What it asks</strong>: Given a market for used goods (cars, bicycles) with a discrete distribution of quality types and buyers who cannot observe quality, identify which types trade at which prices, find the equilibrium price, and judge efficiency.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>List the types, their seller reservation values $v_s^i$, and the buyer values $v_b^i$. Note that the buyer typically values quality at $v_b^i = v_s^i + k$ where $k$ is the gain from trade.</li>
+<li>Compute the full-information benchmark: every type with $v_b^i > v_s^i$ trades at a price in $[v_s^i, v_b^i]$. Note total surplus.</li>
+<li>Under asymmetric information, the buyer pays one pooled price $p$ for a unit of unknown type. Compute the buyer's expected value $E[v_b \mid \text{types selling at } p]$. The buyer is willing to pay up to $E[v_b]$.</li>
+<li>Apply the seller participation condition: type $i$ sells if $p \ge v_s^i$. The set of selling types is the set with $v_s^i \le p$.</li>
+<li>Solve the fixed point: a candidate $p$ is an equilibrium if $p = E[v_b \mid v_s^i \le p]$, or, if $p > E[v_b]$ no trade occurs, or if $p < v_s^{\min}$ nothing is sold.</li>
+<li>Check for <a class="wikilink" href="../concepts/full-unravelling.html">Concepts/Full Unravelling</a>: start with the pool that includes the highest type. If $E[v_b]$ over that pool is less than $v_s^{\text{top}}$, the top type withdraws. Iterate, dropping the next-highest type each round, until either an equilibrium pool remains or the market collapses to nothing.</li>
+<li>State efficiency: any equilibrium where a type with $v_b^i > v_s^i$ fails to trade is inefficient. The wedge is the asymmetric information friction, not preferences.</li>
+<li>If asked about a parameter (e.g. the gain $k$): find the threshold value of $k$ above which all types trade in one pool. At that threshold, $p = E[v_b]$ over all types and $p \ge v_s^{\text{top}}$.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2016 Q3 (used bicycles, three quality levels X, Y, Z, three consumer types)</li>
+<li>2018 Q4 (second-hand bicycles, three types, hidden quality)</li>
+<li>2025 Q4 (used cars, 2H + 1M + 2L, full trade when $k \ge 24$, and separate analysis for $k = 20$ and $k = 5$)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/akerlof-lemons-market.html">Concepts/Akerlof Lemons Market</a>, <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a>, <a class="wikilink" href="../concepts/full-unravelling.html">Concepts/Full Unravelling</a>, <a class="wikilink" href="../concepts/asymmetric-information.html">Concepts/Asymmetric Information</a>, <a class="wikilink" href="../concepts/pooling-equilibrium.html">Concepts/Pooling Equilibrium</a>.</li>
+</ul>
+<h3>Sub-question Type A.2: Threshold for full trade and the role of the gain-from-trade parameter</h3>
+<ul>
+<li><strong>What it asks</strong>: Find the smallest value of the gain-from-trade parameter $k$ (i.e. the buyer's premium over the seller's reservation) such that all types trade at a single pooled price, and state the equilibrium price.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Write $v_b^i = v_s^i + k$ for each type $i$.</li>
+<li>The pooled price under full trade is $p = E[v_b] = \bar v_s + k$ where $\bar v_s$ is the average seller reservation across types.</li>
+<li>The binding participation constraint is the highest type's: $p \ge v_s^{\text{top}}$. Substitute: $\bar v_s + k \ge v_s^{\text{top}}$, so $k \ge v_s^{\text{top}} - \bar v_s$.</li>
+<li>Plug in numbers. For 2025 Q4 with $v_s = (60, 36, 12)$ in shares $(2, 1, 2)/5$, $\bar v_s = (2 \cdot 60 + 36 + 2 \cdot 12)/5 = 36$, so $k \ge 60 - 36 = 24$. At $k = 24$, $p = 60$, and the top types are exactly indifferent.</li>
+<li>State efficiency: at $k$ above threshold every gainful trade occurs, so the outcome is first-best efficient, asymmetric information happens to be non-binding.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2025 Q4(a)(b)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/akerlof-lemons-market.html">Concepts/Akerlof Lemons Market</a>, <a class="wikilink" href="../concepts/full-unravelling.html">Concepts/Full Unravelling</a>, <a class="wikilink" href="../concepts/pareto-efficiency.html">Concepts/Pareto Efficiency</a>.</li>
+</ul>
+<h3>Sub-question Type A.3: Partial trade and market unravelling at intermediate parameter values</h3>
+<ul>
+<li><strong>What it asks</strong>: When the gain-from-trade parameter is below the full-trade threshold, identify which types still trade, find the new pooled price, and check whether the market collapses entirely.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Start by assuming all types trade. Check the top type's participation: $\bar v_s + k \ge v_s^{\text{top}}$. If it fails the top type drops out.</li>
+<li>Recompute $\bar v_s$ over the remaining pool. Add $k$. Check the new top type's participation.</li>
+<li>Iterate. Each round can only remove the top remaining type.</li>
+<li>If a pool is reached where every remaining seller is willing to trade at the pooled $E[v_b]$, that is an equilibrium. The price is $E[v_b \mid \text{pool}]$.</li>
+<li>If the iteration reaches the L-only pool and the L type still trades, the equilibrium is L-only at $p = v_s^L + k$. If even the L type fails to participate, the market collapses entirely.</li>
+<li>Note inefficiency: any types with $v_b^i > v_s^i$ who do not trade represent lost gains from trade. For 2025 Q4 at $k = 20$, H drops out, the M+L pool has $\bar v_s = (36 + 24)/3 = 20$, oh wait recompute with shares: M + L has 1 + 2 sellers, $\bar v_s = (36 + 2 \cdot 12)/3 = 20$, so $p = 20 + 20 = 40$, M needs $p \ge 36$ tick, L needs $p \ge 12$ tick. Check H: $p = 40 < 60$, H out, consistent. Efficiency: H types had $v_b^H = 80 > v_s^H = 60$, the H trade is lost.</li>
+<li>For $k = 5$, full pool: $\bar v_s + k = 41 < 60$, H out. M + L pool: $\bar v_s + k = 25 < 36$, M out. L only: $p = 12 + 5 = 17 \ge 12$, L trades. Equilibrium is L only at $p = 17$. Both H and M gains from trade are lost.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2025 Q4(c) ($k = 20$ and $k = 5$)</li>
+<li>2016 Q3(b) (asymmetric info equilibrium starting from X owners)</li>
+<li>2018 Q4(b) (market equilibrium with hidden quality)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/full-unravelling.html">Concepts/Full Unravelling</a>, <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a>, <a class="wikilink" href="../concepts/asymmetric-information.html">Concepts/Asymmetric Information</a>.</li>
+</ul>
+<h3>Sub-question Type A.4: Reimbursement, warranty, or money-back guarantee restoring efficiency</h3>
+<ul>
+<li><strong>What it asks</strong>: A contract feature lets the buyer reclaim part of the price if the good is bad. Show whether this restores the efficient outcome, and find any other equilibria.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Let the reimbursement (refund) be $R$, paid by the seller to the buyer if the good turns out to be the lowest type.</li>
+<li>Write the buyer's expected payment as the price $p$ minus the expected refund. If only the bottom type triggers a refund of $R$, the buyer pays $p - \pi_L R$ in expectation, where $\pi_L$ is the conditional probability of getting a low type given the pool.</li>
+<li>Write the seller's net receipt: high or medium types receive $p$, low type receives $p - R$.</li>
+<li>Try the candidate efficient equilibrium: all types pool at one $p$. For the L type to still want to trade we need $p - R \ge v_s^L$. For the H type we still need $p \ge v_s^H$.</li>
+<li>The break-even price under the buyer's willingness to pay is $E[v_b] = \bar v_b$, and the seller's revenue averaged across types is $p - \pi_L R$, which must equal $\bar v_b$ in a competitive market.</li>
+<li>Verify <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>: a low-type seller does not want to imitate a high-type seller because the refund is triggered by realised quality, not by the seller's claim. The refund acts as a quality bond.</li>
+<li>Show that with sufficient $R$, the L type still finds it weakly worthwhile to sell, while the H type is willing to participate at the pooled price. Conclude the <a class="wikilink" href="../concepts/reimbursement-contracts.html">Concepts/Reimbursement Contracts</a> equilibrium is efficient.</li>
+<li>Identify other equilibria: there are usually pooling equilibria where only some types trade, or no-trade equilibria sustained by pessimistic off-path beliefs.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2018 Q4(c) (reimbursement of 50 restoring efficiency)</li>
+<li>2018 Q4(d) (other inefficient equilibria)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/reimbursement-contracts.html">Concepts/Reimbursement Contracts</a>, <a class="wikilink" href="../concepts/akerlof-lemons-market.html">Concepts/Akerlof Lemons Market</a>, <a class="wikilink" href="../concepts/pareto-efficiency.html">Concepts/Pareto Efficiency</a>, <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>.</li>
+</ul>
+<h3>Sub-question Type A.5: Spence signalling, why H wants to signal and the credibility / single-crossing condition</h3>
+<ul>
+<li><strong>What it asks</strong>: In a Spence labour market with high and low productivity workers, explain when high-productivity workers want to incur an education signal, and state the conditions under which the signal is credible.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Set up two types $H$ and $L$ with productivities $\theta_H > \theta_L$, and a costly signal $e$ (years of education) with cost $c_H(e) < c_L(e)$ per unit and $c_H'(e) < c_L'(e)$. This is the <a class="wikilink" href="../concepts/single-crossing-property.html">Concepts/Single Crossing Property</a>.</li>
+<li>Under full information each type earns its productivity: $w_H = \theta_H$, $w_L = \theta_L$.</li>
+<li>Under asymmetric information with no signal, competitive firms pay the pooled wage $\bar w = \lambda \theta_H + (1 - \lambda) \theta_L$ where $\lambda$ is the H share. The L type is paid above productivity, the H type below.</li>
+<li>H wants to signal because under pooling the H type subsidises the L type and earns $\bar w < \theta_H$. By acquiring a signal that L cannot profitably mimic, H separates and is paid $\theta_H$.</li>
+<li>The signal is credible in a <a class="wikilink" href="../concepts/separating-vs-pooling.html">Concepts/Separating vs Pooling Equilibrium</a> separating equilibrium if (i) H prefers signalling to mimicking L: $\theta_H - c_H(e^<em>) \ge \theta_L$, and (ii) L prefers no signal to mimicking H: $\theta_L \ge \theta_H - c_L(e^</em>)$. Combine: $\theta_H - \theta_L \le c_L(e^<em>)$ and $\theta_H - \theta_L \ge c_H(e^</em>)$.</li>
+<li>The smallest signal level satisfying both is $e^<em>$ such that $c_L(e^</em>) = \theta_H - \theta_L$ (L just indifferent between signalling and not). This is the least-cost separating signal selected by the <a class="wikilink" href="../concepts/intuitive-criterion.html">Concepts/Intuitive Criterion</a>.</li>
+<li>Comment on efficiency: H earns $\theta_H - c_H(e^*)$, L earns $\theta_L$, the signal cost is pure waste because education here is unproductive, so separating is socially worse than pooling on welfare grounds, even though the individual H is better off.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2017 Q4(a) (why H workers want to signal, credibility conditions)</li>
+<li>2020 Q4(a) (why H types signal, credibility)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/spence-signalling.html">Concepts/Spence Signalling</a>, <a class="wikilink" href="../concepts/single-crossing-property.html">Concepts/Single Crossing Property</a>, <a class="wikilink" href="../concepts/separating-vs-pooling.html">Concepts/Separating vs Pooling Equilibrium</a>, <a class="wikilink" href="../concepts/intuitive-criterion.html">Concepts/Intuitive Criterion</a>.</li>
+</ul>
+<h3>Sub-question Type A.6: Spence signalling, pooling wage with no signal available</h3>
+<ul>
+<li><strong>What it asks</strong>: If the signal is unavailable (or forbidden by law), what is the competitive wage and how do the two types fare?</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Without a signal, no information transmits. Competitive firms break even on the average productivity: $w_{\text{pool}} = \lambda \theta_H + (1 - \lambda) \theta_L$.</li>
+<li>Both types earn the same wage. L is overpaid, H is underpaid.</li>
+<li>Check that H does not refuse to participate. If H has an outside option (home production) below $w_{\text{pool}}$, H stays in the labour market. If H's outside option exceeds $w_{\text{pool}}$, H drops out and the market unravels exactly as in <a class="wikilink" href="../concepts/akerlof-lemons-market.html">Concepts/Akerlof Lemons Market</a>.</li>
+<li>State that the no-signal pooling outcome can be socially superior to costly separation because no real resources are burned, even though distribution is regressive in productivity.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2017 Q4(b) (pooling wage when no signal available)</li>
+<li>2020 Q4(b) (pooling equilibrium no signal)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/pooling-equilibrium.html">Concepts/Pooling Equilibrium</a>, <a class="wikilink" href="../concepts/spence-signalling.html">Concepts/Spence Signalling</a>.</li>
+</ul>
+<h3>Sub-question Type A.7: Spence signalling, checking a candidate separating outcome and finding the equilibrium</h3>
+<ul>
+<li><strong>What it asks</strong>: Given specific cost numbers for the H and L types of acquiring the signal, check whether the candidate (H signals, L does not) is incentive compatible, find the equilibrium wage schedule, and comment on efficiency.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Write down the candidate: H takes signal $e$ at cost $c_H$, paid $w_H = \theta_H$. L takes no signal, paid $w_L = \theta_L$.</li>
+<li>Check H's <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>: $\theta_H - c_H \ge \theta_L$, i.e. $c_H \le \theta_H - \theta_L$.</li>
+<li>Check L's <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>: $\theta_L \ge \theta_H - c_L$, i.e. $c_L \ge \theta_H - \theta_L$.</li>
+<li>If both hold (e.g. 2017 Q4 with $c_H = 45 < \theta_H - \theta_L$ and $c_L = 55 > \theta_H - \theta_L$ for some plausible numbers), the candidate is an equilibrium. State so.</li>
+<li>Apply the <a class="wikilink" href="../concepts/intuitive-criterion.html">Concepts/Intuitive Criterion</a> to refine if multiple separating equilibria exist: the surviving equilibrium uses the lowest $e^*$ that still deters L. Higher signal levels are dominated for H.</li>
+<li>Comment on efficiency: total output under separating is $\lambda \theta_H + (1 - \lambda) \theta_L$ minus the signal cost $\lambda c_H$. Total output under pooling is also $\lambda \theta_H + (1 - \lambda) \theta_L$ with no cost. Pooling is socially better if the signal is unproductive. Separating is privately better for H, worse for L.</li>
+<li>If asked about a "semi-separating" or alternative equilibrium: try mixing by one type and find a wage schedule that makes the mixing type indifferent.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2017 Q4(c) (separating outcome at costs 45 vs 55)</li>
+<li>2020 Q4(c) (check separating, find alternative equilibrium, efficiency comment)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/spence-signalling.html">Concepts/Spence Signalling</a>, <a class="wikilink" href="../concepts/separating-vs-pooling.html">Concepts/Separating vs Pooling Equilibrium</a>, <a class="wikilink" href="../concepts/intuitive-criterion.html">Concepts/Intuitive Criterion</a>, <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>.</li>
+</ul>
+<h3>Sub-question Type A.8: Rothschild Stiglitz separating equilibrium in competitive insurance (state-space diagram)</h3>
+<ul>
+<li><strong>What it asks</strong>: In a competitive insurance market with high and low risk types, derive the separating equilibrium where H gets full insurance and L gets partial insurance at a fair premium for L's risk type, and verify both incentive compatibility and zero-profit conditions.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Set up the <a class="wikilink" href="../concepts/state-space-insurance-diagram.html">Concepts/State-Space Insurance Diagram</a>. The horizontal axis is wealth in the no-loss state $W_1$, the vertical axis is wealth in the loss state $W_2$. The 45-degree line is full insurance.</li>
+<li>Mark the endowment $E = (W, W - L)$, where $W$ is initial wealth and $L$ is the loss.</li>
+<li>Draw the <a class="wikilink" href="../concepts/fair-odds-line.html">Concepts/Fair Odds Line</a> through $E$ for each risk type. The H line has slope $-(1 - \pi_H)/\pi_H$, the L line has slope $-(1 - \pi_L)/\pi_L$ with $\pi_H > \pi_L$. The L line is steeper. Both lines pass through $E$.</li>
+<li>Each type's indifference curves are smooth and convex, with slope at the 45-degree line equal to the type's fair-odds line. Curves of different types cross only once: this is <a class="wikilink" href="../concepts/single-crossing-property.html">Concepts/Single Crossing Property</a> in insurance form. H's curves are flatter at any point than L's curves passing through the same point.</li>
+<li>The first contract: $\alpha_H$ is full insurance on H's fair-odds line. This is the point where H's fair-odds line meets the 45-degree line, giving wealth $W - \pi_H L$ in both states.</li>
+<li>The second contract $\alpha_L$ is the point on L's fair-odds line that just makes H indifferent between $\alpha_H$ and $\alpha_L$. Solve $u_H(\alpha_L) = u_H(\alpha_H)$ on L's fair-odds line. Geometrically, slide down L's fair-odds line from full insurance until you hit H's indifference curve through $\alpha_H$.</li>
+<li>Verify <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>: H weakly prefers $\alpha_H$ (binding by construction). L strictly prefers $\alpha_L$ to $\alpha_H$, because L's indifference curves are steeper, so L's curve through $\alpha_L$ lies above H's curve through $\alpha_L$ on the L-fair-odds line.</li>
+<li>Verify zero profit: each contract sits on the offering type's fair-odds line, so the insurer breaks even type by type.</li>
+<li>Verify no profitable deviation: any contract that attracts only L can be offered, but every such contract lies below $\alpha_L$ on L's fair-odds line and thus loses L's business. Any pooling contract that attracts both types must lie below the pooled fair-odds line and is cream-skimmed away by an entrant.</li>
+<li>For the existence question (2014 Q2 part e): a pooling contract on the pooled fair-odds line, weighted by $\lambda$, can attract both types if H prefers it to $\alpha_H$. The separating equilibrium exists when the share of L types $\lambda$ is high enough that the pooled fair-odds line is too unattractive for H to prefer pooling. If $\lambda$ is low (many H types, pooled rate close to H's rate), the pooling deviation succeeds and no separating equilibrium exists, giving the non-existence problem.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2014 Q2(a) (state-space diagram and explanation)</li>
+<li>2014 Q2(b) (H premium and compensation)</li>
+<li>2014 Q2(c) (H expected utility)</li>
+<li>2014 Q2(d) (two conditions on (P, C) for L contract, verify $C \approx 2$)</li>
+<li>2014 Q2(e) (existence as function of $\lambda$)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/rothschild-stiglitz-screening.html">Concepts/Rothschild-Stiglitz Screening</a>, <a class="wikilink" href="../concepts/state-space-insurance-diagram.html">Concepts/State-Space Insurance Diagram</a>, <a class="wikilink" href="../concepts/fair-odds-line.html">Concepts/Fair Odds Line</a>, <a class="wikilink" href="../concepts/single-crossing-property.html">Concepts/Single Crossing Property</a>, <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>, <a class="wikilink" href="../concepts/separating-vs-pooling.html">Concepts/Separating vs Pooling Equilibrium</a>, <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a>.</li>
+</ul>
+<h3>Sub-question Type A.9: Insurance under different regulatory regimes (observable vs unobservable type, common price rule)</h3>
+<ul>
+<li><strong>What it asks</strong>: Compare equilibrium premiums under three regimes: (i) types observable so each gets a type-specific fair premium, (ii) types unobservable but firms can offer menu of contracts, (iii) regulation forces a common price across types.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Regime (i) observable types: each type $j$ pays the <a class="wikilink" href="../concepts/fair-odds-line.html">Concepts/Fair Odds Line</a> premium $p_j = \pi_j$ per unit cover. Full insurance is offered to each type, since competition pushes contracts to the 45-degree line on each type's fair-odds line.</li>
+<li>Compute $p_L = \pi_L$ and $p_H = \pi_H$ and note that the H premium exceeds the L premium.</li>
+<li>Compare full insurance versus partial insurance: at fair premium, risk-averse agents always demand full insurance, so partial insurance is dominated.</li>
+<li>Regime (ii) common price (regulatory): the regulator forces a single price $p$ across both types. Firms break even if and only if $p = \lambda \pi_L + (1 - \lambda) \pi_H$, the pooled probability. Demand at price $p$: the H type wants more than fair coverage, the L type wants less.</li>
+<li>If the contract is full insurance at the pooled price: H is happy (pays below fair), L is overcharged.</li>
+<li>The break-even price for partial insurance under a common-price rule equals the pooled $\pi$ as long as both types still participate.</li>
+<li>Compare: under regime (i) the L type pays $\pi_L$ and the H type pays $\pi_H$, total surplus is at first best. Under regime (ii) the L type cross-subsidises the H type, the L type may underinsure or drop out. If L drops out, only H remains and the price rises to $\pi_H$ (unravelling).</li>
+<li>Conclude: the common-price rule creates <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a> within the regulated market, and may be welfare-reducing if it triggers L exit. It can still be defended on equity or solidarity grounds.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2022 Q4(a) (observable types: full vs partial insurance, find $p_L, p_H$)</li>
+<li>2022 Q4(b) (common price: full vs partial insurance break-even)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/fair-odds-line.html">Concepts/Fair Odds Line</a>, <a class="wikilink" href="../concepts/rothschild-stiglitz-screening.html">Concepts/Rothschild-Stiglitz Screening</a>, <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a>, <a class="wikilink" href="../concepts/state-space-insurance-diagram.html">Concepts/State-Space Insurance Diagram</a>.</li>
+</ul>
+<h3>Sub-question Type A.10: Screening with limited coverage at fair premium, comparing welfare to full coverage</h3>
+<ul>
+<li><strong>What it asks</strong>: A monopolist or competitive insurer offers a menu where the high type buys full insurance at a high premium and the low type is offered limited coverage at a fair-for-low premium. Compute coverages, premiums, expected utility, and compare welfare.</li>
+<li><strong>Step-by-step guide</strong>:</li>
+<li>Set up Cornelia with log utility $u(w) = \ln w$, wealth $W$, loss $L$, loss probability $\pi$. Optimal at fair premium $p = \pi$ is full coverage with consumption $W - \pi L$ in both states.</li>
+<li>At a non-fair price $p > \pi$, the optimum is partial coverage. The first-order condition is $\frac{u'(W_1)}{u'(W_2)} = \frac{p}{1 - p} \cdot \frac{1 - \pi}{\pi}$ where $W_1 = W - p q$ and $W_2 = W - L + q - p q$ and $q$ is coverage. With log utility, $W_2 / W_1 = (1 - p) \pi / (p (1 - \pi))$, then solve for $q$.</li>
+<li>At fair price $p = \pi$, the FOC collapses to $W_1 = W_2$, giving $q = L$ (full coverage). This is the <a class="wikilink" href="../concepts/individual-rationality.html">Concepts/Individual Rationality</a> benchmark.</li>
+<li>Under screening with limited coverage at a fair price, the insurer offers coverage $q^*$ less than $L$ at price $\pi$. This is incentive compatible against the H type if H prefers full insurance at a higher price to limited cover at the L fair price.</li>
+<li>Compute Cornelia's expected utility under each contract: full cover at price $1/2$, full cover at fair $1/3$, limited cover $q^*$ at fair $1/3$.</li>
+<li>Welfare comparison: a limited-coverage contract at a fair premium can dominate a full-coverage contract at an unfair premium for the L type. Conditional on being asked to compare to "the original" (typically the unfair-premium full insurance), the screening contract is superior for L.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2023 Q4(a) (optimal coverage at $p = 1/2$)</li>
+<li>2023 Q4(b) (coverage at fair price $p = 1/3$)</li>
+<li>2023 Q4(c) (competitive screening with limited coverage at fair premium)</li>
+<li>2023 Q4(d) (welfare comparison)</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/rothschild-stiglitz-screening.html">Concepts/Rothschild-Stiglitz Screening</a>, <a class="wikilink" href="../concepts/fair-odds-line.html">Concepts/Fair Odds Line</a>, <a class="wikilink" href="../concepts/individual-rationality.html">Concepts/Individual Rationality</a>, <a class="wikilink" href="../concepts/incentive-compatibility.html">Concepts/Incentive Compatibility</a>, <a class="wikilink" href="../concepts/state-space-insurance-diagram.html">Concepts/State-Space Insurance Diagram</a>.</li>
+</ul>
+<hr>
+<h2>Part B: essay-style questions</h2>
+<h3>Sub-question Type B.E.1: Are adverse selection and moral hazard equally relevant under asymmetric information and equally irrelevant under symmetric information?</h3>
+<ul>
+<li><strong>What it asks</strong>: Discuss whether the two information frictions are symmetric in importance, when each one binds, and what symmetric information implies for each.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: agree that both vanish under symmetric information by definition, but reject the equal-relevance claim. The two frictions differ in timing (before vs after contracting), in the variable hidden (type vs action), in the contractual remedies, and in welfare consequences. The relative importance depends on the application.</li>
+<li><strong>Define crisply</strong>: <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a> is hidden information before contracting, the uninformed party cannot tell types apart at offer time. <a class="wikilink" href="../concepts/moral-hazard.html">Concepts/Moral Hazard</a> is hidden action after contracting, the contract changes the informed party's incentives to take an unobserved action. Cite <a class="wikilink" href="../concepts/akerlof-lemons-market.html">Concepts/Akerlof Lemons Market</a> for AS and the principal agent model for MH.</li>
+<li><strong>Symmetric-information benchmark</strong>: under full observability, AS contracts are type-specific (Walrasian first-best), MH contracts pay for the observed action. Both frictions are absent and both deliver first-best. The claim's second half is correct.</li>
+<li><strong>Why AS bites</strong>: signal worse types out (lemons), full unravelling can destroy markets. Use the 2016 / 2025 used-goods examples. Remedies: signalling (Spence), screening (Rothschild Stiglitz), warranties / reimbursement, mandatory disclosure.</li>
+<li><strong>Why MH bites</strong>: principal must pay a risk-averse agent based on noisy output, generating an <a class="wikilink" href="../concepts/agency-cost.html">Concepts/Agency Cost</a> (the wedge between observed and unobserved effort surplus). Remedies: monitoring, performance pay, output-based contracts.</li>
+<li><strong>Asymmetry of relevance</strong>: AS dominates markets where heterogeneity in types matters and effort is fixed (health insurance, used cars). MH dominates where effort is variable and types are similar (managerial pay, sharecropping). Many real markets have both, e.g. insurance with risk types and care effort.</li>
+<li><strong>Welfare framings differ</strong>: AS welfare loss comes from missing trades and signalling waste. MH welfare loss is the agency cost paid in risk to the risk-averse agent. The two are not commensurable, so saying they are "equally relevant" is meaningless without context.</li>
+<li><strong>Symmetric info caveat</strong>: under symmetric information, AS truly vanishes (types are priced). MH technically also vanishes if the action is contractible. There is one subtle case: even with symmetric information, contracts may be incomplete (third-party non-verifiability), in which case MH-like distortions can remain. This nuances the claim's second half.</li>
+<li><strong>Conclusion</strong>: the claim is half right. Symmetric info kills both. Under asymmetric info, the two are distinct frictions with distinct remedies and distinct welfare costs, and their relative importance is empirical, not theoretical.</li>
+<li><strong>Appeared in</strong>:</li>
+<li>2024 Q9</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a>, <a class="wikilink" href="../concepts/moral-hazard.html">Concepts/Moral Hazard</a>, <a class="wikilink" href="../concepts/asymmetric-information.html">Concepts/Asymmetric Information</a>, <a class="wikilink" href="../concepts/akerlof-lemons-market.html">Concepts/Akerlof Lemons Market</a>, <a class="wikilink" href="../concepts/spence-signalling.html">Concepts/Spence Signalling</a>, <a class="wikilink" href="../concepts/rothschild-stiglitz-screening.html">Concepts/Rothschild-Stiglitz Screening</a>, <a class="wikilink" href="../concepts/agency-cost.html">Concepts/Agency Cost</a>.</li>
+</ul>
+<h3>Sub-question Type B.E.2 (anticipated): Evaluate Akerlof's contribution to information economics</h3>
+<ul>
+<li><strong>What it asks</strong>: A likely future prompt, not in the 2014 to 2025 set, asking how Akerlof's 1970 lemons paper changed the agenda.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: Akerlof showed that asymmetric information alone, with no other friction, can destroy a market that has positive gains from trade. This put information at the centre of microeconomics and triggered the signalling-screening literature.</li>
+<li><strong>The model</strong>: used cars, sellers know quality, buyers do not. Pool price equals expected quality. High-quality sellers exit. Iterate to the <a class="wikilink" href="../concepts/full-unravelling.html">Concepts/Full Unravelling</a> result.</li>
+<li><strong>Welfare consequence</strong>: the unique equilibrium is inefficient. This breaks the first welfare theorem assumption that all goods are tradable at a single price reflecting their value.</li>
+<li><strong>Mechanism design successors</strong>: signalling (Spence 1973) lets the informed side reveal type at a cost. Screening (Rothschild Stiglitz 1976) lets the uninformed side design menus.</li>
+<li><strong>Empirical relevance</strong>: insurance, credit, labour, healthcare. Briefly cite one stylised application.</li>
+<li><strong>Limits</strong>: full unravelling rarely seen in clean form because warranties, repeat purchase, certification, and regulation exist. The point is the threat, not the literal collapse.</li>
+<li><strong>Conclusion</strong>: Akerlof's contribution is the framework, not the precise market collapse story. Information economics is now load-bearing in IO, labour, and contract theory.</li>
+<li><strong>Appeared in</strong>: Not in 2014 to 2025 catalogue, flagged as likely future essay.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/akerlof-lemons-market.html">Concepts/Akerlof Lemons Market</a>, <a class="wikilink" href="../concepts/full-unravelling.html">Concepts/Full Unravelling</a>, <a class="wikilink" href="../concepts/spence-signalling.html">Concepts/Spence Signalling</a>, <a class="wikilink" href="../concepts/rothschild-stiglitz-screening.html">Concepts/Rothschild-Stiglitz Screening</a>, <a class="wikilink" href="../concepts/adverse-selection.html">Concepts/Adverse Selection</a>.</li>
+</ul>
+<h3>Sub-question Type B.E.3 (anticipated): Signalling versus screening, which is the better cure for adverse selection?</h3>
+<ul>
+<li><strong>What it asks</strong>: A likely future prompt comparing the two mechanism-design responses.</li>
+<li><strong>Step-by-step guide for a top essay</strong>:</li>
+<li><strong>Intro thesis</strong>: signalling and screening solve adverse selection from opposite sides, the informed side acts first in signalling, the uninformed side acts first in screening. They are dual and complementary, not substitutes.</li>
+<li><strong>Signalling (Spence)</strong>: informed types pay a costly signal whose marginal cost differs by type (<a class="wikilink" href="../concepts/single-crossing-property.html">Concepts/Single Crossing Property</a>). Separation requires the signal cost to lie between the productivity differential's bounds.</li>
+<li><strong>Screening (Rothschild Stiglitz)</strong>: uninformed firms offer a menu, types self-select. The H type gets the efficient bundle, the L type gets a distorted bundle just enough to deter H mimicry.</li>
+<li><strong>Welfare comparison</strong>: signalling can be wasteful if the signal has no productive value (education-as-signal critique). Screening is wasteful if the L type's bundle is distorted away from L's first best.</li>
+<li><strong>Existence</strong>: screening can fail to exist (Rothschild Stiglitz non-existence under low $\lambda$). Signalling equilibria are usually multiple and require a refinement like the <a class="wikilink" href="../concepts/intuitive-criterion.html">Concepts/Intuitive Criterion</a>.</li>
+<li><strong>Empirical</strong>: education signalling vs job-trial screening, life-insurance medicals vs employer-paid blood tests.</li>
+<li><strong>Conclusion</strong>: neither is universally better. Use signalling when the informed side can credibly burn resources, use screening when the uninformed side can credibly commit to a menu.</li>
+<li><strong>Appeared in</strong>: Not in 2014 to 2025 catalogue, flagged as likely future essay.</li>
+<li><strong>Relevant concepts</strong>: <a class="wikilink" href="../concepts/spence-signalling.html">Concepts/Spence Signalling</a>, <a class="wikilink" href="../concepts/rothschild-stiglitz-screening.html">Concepts/Rothschild-Stiglitz Screening</a>, <a class="wikilink" href="../concepts/single-crossing-property.html">Concepts/Single Crossing Property</a>, <a class="wikilink" href="../concepts/intuitive-criterion.html">Concepts/Intuitive Criterion</a>.</li>
+</ul>
+<hr>
+<h2>Part B: long-answer problems</h2>
+<p>No clear long-answer Part B question whose primary content is pure adverse selection appears in the 2014 to 2025 catalogue. The Information Economics long-answer slot in those years is taken by moral hazard problems (2014 Q11, 2017 Q10, 2024 Q10), which belong in <a class="wikilink">Question Types 6 - Moral Hazard</a>.</p>
+<p>The most likely future long-answer patterns, given lecture content, are:</p>
+<ol>
+<li><strong>Full Rothschild Stiglitz derivation with welfare comparison</strong>. Likely sub-parts: (a) draw the state-space diagram and explain the fair-odds construction, (b) derive the H full-insurance contract algebraically, (c) derive the L partial-insurance contract from H's binding IC, (d) verify zero profit on each contract, (e) verify no profitable pooling deviation as a function of $\lambda$, (f) discuss non-existence of equilibrium for low $\lambda$, (g) compare welfare to a regime with regulated common price.</li>
+<li><strong>Multi-type Spence signalling with three or more types</strong>. Likely sub-parts: (a) write down productivities and signal costs, (b) derive the least-cost separating signal levels using the binding IC chain (top type free, middle binds against bottom, etc.), (c) apply the <a class="wikilink" href="../concepts/intuitive-criterion.html">Concepts/Intuitive Criterion</a> to select among separating equilibria, (d) compute the social cost of signalling, (e) compare to pooling welfare, (f) discuss policy of banning the signal.</li>
+<li><strong>Akerlof market with continuous quality distribution</strong>. Likely sub-parts: (a) buyer willingness to pay as a function of the pool, (b) derive the equilibrium price as a fixed point, (c) characterise full unravelling and conditions for partial trade, (d) introduce a warranty or certification mechanism and show efficiency restoration.</li>
+</ul>
+<p>A strong Long Answer revision approach is to take the 2014 Q2 Rothschild Stiglitz question and answer all five parts at long-answer length, adding the welfare and non-existence discussion that would naturally extend a Part A into a Part B.</p>
+<hr>
+<h2>How to recognise the format on the day</h2>
+<ul>
+<li><strong>Lemons / used-good problems</strong> present a discrete list of qualities and buyer values. The giveaway is a parameter $k$ (gain from trade) and an instruction to find which types trade. Use <a class="wikilink" href="../concepts/full-unravelling.html">Concepts/Full Unravelling</a> iteration. See 2016 Q3, 2018 Q4, 2025 Q4.</li>
+<li><strong>Spence signalling</strong> problems give you two productivities and a signal cost for each type. The phrasing is "why would H workers want to acquire X" and "check whether the candidate is an equilibrium". Use the IC inequalities for H and L. See 2017 Q4, 2020 Q4.</li>
+<li><strong>Rothschild Stiglitz screening</strong> problems are framed in insurance language with two risk types $\pi_H > \pi_L$. They almost always ask for a state-space diagram. Use the <a class="wikilink" href="../concepts/fair-odds-line.html">Concepts/Fair Odds Line</a> construction. See 2014 Q2, 2022 Q4, 2023 Q4.</li>
+<li><strong>Reimbursement / warranty</strong> problems extend a lemons setup with a money-back guarantee triggered by realised quality. The question is always "does this restore efficiency?". See 2018 Q4(c).</li>
+<li><strong>Regulatory regime comparison</strong> problems give two or three pricing rules (type-specific, common price, no insurance) and ask for break-even premiums and welfare. See 2022 Q4.</li>
+<li><strong>Watch the wording</strong>: "before contracting" means adverse selection, "after contracting" means moral hazard. "Hidden type" means AS. "Hidden action" means MH. If the problem mentions an effort choice or a wage based on output, it is moral hazard, see <a class="wikilink">Question Types 6 - Moral Hazard</a>.</li>
+</ul>
+<h2>Applied procedures</h2>
+<p>1, 1A (vocabulary and rhythm checks), 6 economics domain, plus this file's local template.</p></article>
+</main>
+</div>
+<footer class="footer">
+  Core Micro Study Guide. Built from past papers 2014 to 2025, FHS lecture slides, and Micro2025 reading list.
+</footer>
+</body>
+</html>

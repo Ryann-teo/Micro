@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nash Reversion Strategy | Core Micro</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="../index.html">Core Micro</a>
+  <input id="search" class="search" type="text" placeholder="Search concepts..." autocomplete="off">
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#topics">Topics</a>
+    <a href="../index.html#concepts">Concepts</a>
+    <a href="../index.html#question-types">Question Types</a>
+  </nav>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-inner">
+<div class="sidebar-section"><a href="../index.html#question-types" class="sidebar-link">Question Types</a></div>
+<div class="sidebar-section">
+  <a href="../topics/1-general-equilibrium.html" class="sidebar-topic" data-topic-id="1">General Equilibrium</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/competitive-equilibrium.html" class="sidebar-concept" data-name="Competitive Equilibrium">Competitive Equilibrium</a></li>
+    <li><a href="../concepts/quasi-linear-utility.html" class="sidebar-concept" data-name="Quasi-linear Utility">Quasi-linear Utility</a></li>
+    <li><a href="../concepts/cobb-douglas-demand.html" class="sidebar-concept" data-name="Cobb-Douglas Demand">Cobb-Douglas Demand</a></li>
+    <li><a href="../concepts/edgeworth-box.html" class="sidebar-concept" data-name="Edgeworth Box">Edgeworth Box</a></li>
+    <li><a href="../concepts/excess-demand.html" class="sidebar-concept" data-name="Excess Demand">Excess Demand</a></li>
+    <li><a href="../concepts/ppf-and-mrt.html" class="sidebar-concept" data-name="PPF and MRT">PPF and MRT</a></li>
+    <li><a href="../concepts/ricardian-trade-model.html" class="sidebar-concept" data-name="Ricardian Trade Model">Ricardian Trade Model</a></li>
+    <li><a href="../concepts/walras-law.html" class="sidebar-concept" data-name="Walras Law">Walras Law</a></li>
+    <li><a href="../concepts/autarky.html" class="sidebar-concept" data-name="Autarky">Autarky</a></li>
+    <li><a href="../concepts/comparative-advantage.html" class="sidebar-concept" data-name="Comparative Advantage">Comparative Advantage</a></li>
+    <li><a href="../concepts/gross-substitutes.html" class="sidebar-concept" data-name="Gross Substitutes">Gross Substitutes</a></li>
+    <li><a href="../concepts/heckscher-ohlin-model.html" class="sidebar-concept" data-name="Heckscher-Ohlin Model">Heckscher-Ohlin Model</a></li>
+    <li><a href="../concepts/homogeneity-degree-zero.html" class="sidebar-concept" data-name="Homogeneity of Degree Zero">Homogeneity of Degree Zero</a></li>
+    <li><a href="../concepts/numeraire-good.html" class="sidebar-concept" data-name="Numeraire Good">Numeraire Good</a></li>
+    <li><a href="../concepts/robinson-crusoe-economy.html" class="sidebar-concept" data-name="Robinson Crusoe Economy">Robinson Crusoe Economy</a></li>
+    <li><a href="../concepts/rybczynski-theorem.html" class="sidebar-concept" data-name="Rybczynski Theorem">Rybczynski Theorem</a></li>
+    <li><a href="../concepts/stolper-samuelson.html" class="sidebar-concept" data-name="Stolper-Samuelson Theorem">Stolper-Samuelson Theorem</a></li>
+    <li><a href="../concepts/uniqueness-of-equilibrium.html" class="sidebar-concept" data-name="Uniqueness of Equilibrium">Uniqueness of Equilibrium</a></li>
+    <li><a href="../concepts/zero-profit-condition.html" class="sidebar-concept" data-name="Zero-Profit Condition">Zero-Profit Condition</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/2-welfare-and-social-choice.html" class="sidebar-topic" data-topic-id="2">Welfare and Social Choice</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pareto-criterion.html" class="sidebar-concept" data-name="Pareto Criterion">Pareto Criterion</a></li>
+    <li><a href="../concepts/pareto-efficiency.html" class="sidebar-concept" data-name="Pareto Efficiency">Pareto Efficiency</a></li>
+    <li><a href="../concepts/second-welfare-theorem.html" class="sidebar-concept" data-name="Second Welfare Theorem">Second Welfare Theorem</a></li>
+    <li><a href="../concepts/first-welfare-theorem.html" class="sidebar-concept" data-name="First Welfare Theorem">First Welfare Theorem</a></li>
+    <li><a href="../concepts/kaldor-hicks-compensation.html" class="sidebar-concept" data-name="Kaldor-Hicks Compensation">Kaldor-Hicks Compensation</a></li>
+    <li><a href="../concepts/social-welfare-functions.html" class="sidebar-concept" data-name="Social Welfare Functions">Social Welfare Functions</a></li>
+    <li><a href="../concepts/rawlsian-planner.html" class="sidebar-concept" data-name="Rawlsian Planner">Rawlsian Planner</a></li>
+    <li><a href="../concepts/utilitarian-planner.html" class="sidebar-concept" data-name="Utilitarian Planner">Utilitarian Planner</a></li>
+    <li><a href="../concepts/arrow-impossibility.html" class="sidebar-concept" data-name="Arrow&#x27;s Impossibility Theorem">Arrow&#x27;s Impossibility Theorem</a></li>
+    <li><a href="../concepts/borda-count.html" class="sidebar-concept" data-name="Borda Count">Borda Count</a></li>
+    <li><a href="../concepts/compensating-variation.html" class="sidebar-concept" data-name="Compensating Variation">Compensating Variation</a></li>
+    <li><a href="../concepts/condorcet-paradox.html" class="sidebar-concept" data-name="Condorcet Paradox">Condorcet Paradox</a></li>
+    <li><a href="../concepts/consumer-surplus.html" class="sidebar-concept" data-name="Consumer Surplus">Consumer Surplus</a></li>
+    <li><a href="../concepts/contingent-valuation.html" class="sidebar-concept" data-name="Contingent Valuation">Contingent Valuation</a></li>
+    <li><a href="../concepts/contract-curve.html" class="sidebar-concept" data-name="Contract Curve">Contract Curve</a></li>
+    <li><a href="../concepts/cost-benefit-analysis.html" class="sidebar-concept" data-name="Cost-Benefit Analysis">Cost-Benefit Analysis</a></li>
+    <li><a href="../concepts/deadweight-loss.html" class="sidebar-concept" data-name="Deadweight Loss">Deadweight Loss</a></li>
+    <li><a href="../concepts/equivalent-variation.html" class="sidebar-concept" data-name="Equivalent Variation">Equivalent Variation</a></li>
+    <li><a href="../concepts/expenditure-function.html" class="sidebar-concept" data-name="Expenditure Function">Expenditure Function</a></li>
+    <li><a href="../concepts/gibbard-satterthwaite.html" class="sidebar-concept" data-name="Gibbard-Satterthwaite Theorem">Gibbard-Satterthwaite Theorem</a></li>
+    <li><a href="../concepts/hedonic-pricing.html" class="sidebar-concept" data-name="Hedonic Pricing">Hedonic Pricing</a></li>
+    <li><a href="../concepts/hicksian-demand.html" class="sidebar-concept" data-name="Hicksian Demand">Hicksian Demand</a></li>
+    <li><a href="../concepts/majority-rule.html" class="sidebar-concept" data-name="Majority Rule">Majority Rule</a></li>
+    <li><a href="../concepts/marshallian-demand.html" class="sidebar-concept" data-name="Marshallian Demand">Marshallian Demand</a></li>
+    <li><a href="../concepts/median-voter-theorem.html" class="sidebar-concept" data-name="Median Voter Theorem">Median Voter Theorem</a></li>
+    <li><a href="../concepts/qaly.html" class="sidebar-concept" data-name="Quality-Adjusted Life Year (QALY)">Quality-Adjusted Life Year (QALY)</a></li>
+    <li><a href="../concepts/ramsey-equation.html" class="sidebar-concept" data-name="Ramsey Equation">Ramsey Equation</a></li>
+    <li><a href="../concepts/ramsey-taxation.html" class="sidebar-concept" data-name="Ramsey Taxation">Ramsey Taxation</a></li>
+    <li><a href="../concepts/single-peaked-preferences.html" class="sidebar-concept" data-name="Single-Peaked Preferences">Single-Peaked Preferences</a></li>
+    <li><a href="../concepts/social-discount-rate.html" class="sidebar-concept" data-name="Social Discount Rate">Social Discount Rate</a></li>
+    <li><a href="../concepts/strategy-proofness.html" class="sidebar-concept" data-name="Strategy-Proofness">Strategy-Proofness</a></li>
+    <li><a href="../concepts/travel-cost-method.html" class="sidebar-concept" data-name="Travel Cost Method">Travel Cost Method</a></li>
+    <li><a href="../concepts/utility-possibility-frontier.html" class="sidebar-concept" data-name="Utility Possibility Frontier">Utility Possibility Frontier</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/3-externalities-and-public-goods.html" class="sidebar-topic" data-topic-id="3">Externalities and Public Goods</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/pigouvian-tax.html" class="sidebar-concept" data-name="Pigouvian Tax">Pigouvian Tax</a></li>
+    <li><a href="../concepts/samuelson-condition.html" class="sidebar-concept" data-name="Samuelson Condition">Samuelson Condition</a></li>
+    <li><a href="../concepts/clarke-groves-mechanism.html" class="sidebar-concept" data-name="Clarke-Groves Mechanism">Clarke-Groves Mechanism</a></li>
+    <li><a href="../concepts/coase-theorem.html" class="sidebar-concept" data-name="Coase Theorem">Coase Theorem</a></li>
+    <li><a href="../concepts/externality-internalisation.html" class="sidebar-concept" data-name="Externality Internalisation">Externality Internalisation</a></li>
+    <li><a href="../concepts/free-rider-problem.html" class="sidebar-concept" data-name="Free Rider Problem">Free Rider Problem</a></li>
+    <li><a href="../concepts/lindahl-prices.html" class="sidebar-concept" data-name="Lindahl Prices">Lindahl Prices</a></li>
+    <li><a href="../concepts/marginal-private-vs-social-benefit.html" class="sidebar-concept" data-name="Marginal Private vs Social Benefit">Marginal Private vs Social Benefit</a></li>
+    <li><a href="../concepts/public-goods.html" class="sidebar-concept" data-name="Public Goods">Public Goods</a></li>
+    <li><a href="../concepts/tragedy-of-the-commons.html" class="sidebar-concept" data-name="Tragedy of the Commons">Tragedy of the Commons</a></li>
+    <li><a href="../concepts/voluntary-contribution-nash.html" class="sidebar-concept" data-name="Voluntary Contribution Nash Equilibrium">Voluntary Contribution Nash Equilibrium</a></li>
+    <li><a href="../concepts/weitzman-prices-vs-quantities.html" class="sidebar-concept" data-name="Weitzman Prices vs Quantities">Weitzman Prices vs Quantities</a></li>
+    <li><a href="../concepts/rivalry-and-excludability.html" class="sidebar-concept" data-name="Rivalry and Excludability">Rivalry and Excludability</a></li>
+    <li><a href="../concepts/tradeable-permits.html" class="sidebar-concept" data-name="Tradeable Permits">Tradeable Permits</a></li>
+    <li><a href="../concepts/cap-and-trade.html" class="sidebar-concept" data-name="Cap-and-Trade">Cap-and-Trade</a></li>
+    <li><a href="../concepts/clarke-tax.html" class="sidebar-concept" data-name="Clarke Tax (Pivotal Mechanism)">Clarke Tax (Pivotal Mechanism)</a></li>
+    <li><a href="../concepts/club-goods.html" class="sidebar-concept" data-name="Club Goods">Club Goods</a></li>
+    <li><a href="../concepts/coasean-bargaining.html" class="sidebar-concept" data-name="Coasean Bargaining">Coasean Bargaining</a></li>
+    <li><a href="../concepts/common-pool-resources.html" class="sidebar-concept" data-name="Common Pool Resources">Common Pool Resources</a></li>
+    <li><a href="../concepts/vickrey-auction.html" class="sidebar-concept" data-name="Vickrey (Second-Price) Auction">Vickrey (Second-Price) Auction</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/4-game-theory.html" class="sidebar-topic active" data-topic-id="4">Game Theory</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/best-response-functions.html" class="sidebar-concept" data-name="Best Response Functions">Best Response Functions</a></li>
+    <li><a href="../concepts/grim-trigger-strategy.html" class="sidebar-concept" data-name="Grim Trigger Strategy">Grim Trigger Strategy</a></li>
+    <li><a href="../concepts/nash-equilibrium.html" class="sidebar-concept" data-name="Nash Equilibrium">Nash Equilibrium</a></li>
+    <li><a href="../concepts/subgame-perfect-equilibrium.html" class="sidebar-concept" data-name="Subgame Perfect Equilibrium">Subgame Perfect Equilibrium</a></li>
+    <li><a href="../concepts/critical-discount-factor.html" class="sidebar-concept" data-name="Critical Discount Factor">Critical Discount Factor</a></li>
+    <li><a href="../concepts/dominance.html" class="sidebar-concept" data-name="Dominance">Dominance</a></li>
+    <li><a href="../concepts/infinitely-repeated-games.html" class="sidebar-concept" data-name="Infinitely Repeated Games">Infinitely Repeated Games</a></li>
+    <li><a href="../concepts/affine-utility-normalisation.html" class="sidebar-concept" data-name="Affine Utility Normalisation">Affine Utility Normalisation</a></li>
+    <li><a href="../concepts/backward-induction.html" class="sidebar-concept" data-name="Backward Induction">Backward Induction</a></li>
+    <li><a href="../concepts/folk-theorem.html" class="sidebar-concept" data-name="Folk Theorem">Folk Theorem</a></li>
+    <li><a href="../concepts/mixed-strategy-equilibrium.html" class="sidebar-concept" data-name="Mixed Strategy Equilibrium">Mixed Strategy Equilibrium</a></li>
+    <li><a href="../concepts/battle-of-the-sexes.html" class="sidebar-concept" data-name="Battle of the Sexes">Battle of the Sexes</a></li>
+    <li><a href="../concepts/credible-threat.html" class="sidebar-concept" data-name="Credible Threat">Credible Threat</a></li>
+    <li><a href="../concepts/extensive-form-game.html" class="sidebar-concept" data-name="Extensive Form Game">Extensive Form Game</a></li>
+    <li><a href="../concepts/first-mover-advantage.html" class="sidebar-concept" data-name="First-Mover Advantage">First-Mover Advantage</a></li>
+    <li><a href="../concepts/hawk-dove-game.html" class="sidebar-concept" data-name="Hawk-Dove (Chicken) Game">Hawk-Dove (Chicken) Game</a></li>
+    <li><a href="../concepts/information-set.html" class="sidebar-concept" data-name="Information Set">Information Set</a></li>
+    <li><a href="../concepts/iterated-elimination-strictly-dominated.html" class="sidebar-concept" data-name="Iterated Elimination of Strictly Dominated Strategies">Iterated Elimination of Strictly Dominated Strategies</a></li>
+    <li><a href="../concepts/matching-pennies.html" class="sidebar-concept" data-name="Matching Pennies">Matching Pennies</a></li>
+    <li><a href="../concepts/nash-existence-theorem.html" class="sidebar-concept" data-name="Nash Existence Theorem">Nash Existence Theorem</a></li>
+    <li><a href="../concepts/nash-reversion.html" class="sidebar-concept active" data-name="Nash Reversion Strategy">Nash Reversion Strategy</a></li>
+    <li><a href="../concepts/strategic-form-game.html" class="sidebar-concept" data-name="Strategic Form Game">Strategic Form Game</a></li>
+    <li><a href="../concepts/strategic-substitutes-complements.html" class="sidebar-concept" data-name="Strategic Substitutes vs Complements">Strategic Substitutes vs Complements</a></li>
+    <li><a href="../concepts/strict-vs-weak-dominance.html" class="sidebar-concept" data-name="Strict vs Weak Dominance">Strict vs Weak Dominance</a></li>
+    <li><a href="../concepts/tit-for-tat.html" class="sidebar-concept" data-name="Tit-for-Tat Strategy">Tit-for-Tat Strategy</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/5-industrial-organisation-and-competition-policy.html" class="sidebar-topic" data-topic-id="5">Industrial Organisation and Competition Policy</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/williamson-trade-off.html" class="sidebar-concept" data-name="Williamson Trade-off">Williamson Trade-off</a></li>
+    <li><a href="../concepts/bertrand-duopoly.html" class="sidebar-concept" data-name="Bertrand Duopoly">Bertrand Duopoly</a></li>
+    <li><a href="../concepts/cournot-duopoly.html" class="sidebar-concept" data-name="Cournot Duopoly">Cournot Duopoly</a></li>
+    <li><a href="../concepts/entry-deterrence.html" class="sidebar-concept" data-name="Entry Deterrence">Entry Deterrence</a></li>
+    <li><a href="../concepts/merger-analysis.html" class="sidebar-concept" data-name="Merger Analysis">Merger Analysis</a></li>
+    <li><a href="../concepts/differentiated-bertrand.html" class="sidebar-concept" data-name="Differentiated Bertrand">Differentiated Bertrand</a></li>
+    <li><a href="../concepts/collusion-sustainability.html" class="sidebar-concept" data-name="Collusion Sustainability">Collusion Sustainability</a></li>
+    <li><a href="../concepts/hhi-index.html" class="sidebar-concept" data-name="Herfindahl-Hirschman Index (HHI)">Herfindahl-Hirschman Index (HHI)</a></li>
+    <li><a href="../concepts/hotelling-linear-city.html" class="sidebar-concept" data-name="Hotelling Linear City">Hotelling Linear City</a></li>
+    <li><a href="../concepts/leniency-programme.html" class="sidebar-concept" data-name="Leniency Programme">Leniency Programme</a></li>
+    <li><a href="../concepts/price-discrimination.html" class="sidebar-concept" data-name="Price Discrimination">Price Discrimination</a></li>
+    <li><a href="../concepts/ssnip-test.html" class="sidebar-concept" data-name="SSNIP Test">SSNIP Test</a></li>
+    <li><a href="../concepts/stackelberg-leadership.html" class="sidebar-concept" data-name="Stackelberg Leadership">Stackelberg Leadership</a></li>
+    <li><a href="../concepts/two-part-tariff.html" class="sidebar-concept" data-name="Two-Part Tariff">Two-Part Tariff</a></li>
+    <li><a href="../concepts/uk-competition-act.html" class="sidebar-concept" data-name="UK Competition Act 1998 and EU Articles 101-102">UK Competition Act 1998 and EU Articles 101-102</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/6-decisions-under-risk.html" class="sidebar-topic" data-topic-id="6">Decisions under Risk</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/arrow-pratt-ara.html" class="sidebar-concept" data-name="Arrow-Pratt ARA">Arrow-Pratt ARA</a></li>
+    <li><a href="../concepts/cara-utility.html" class="sidebar-concept" data-name="CARA Utility">CARA Utility</a></li>
+    <li><a href="../concepts/crra-utility.html" class="sidebar-concept" data-name="CRRA Utility">CRRA Utility</a></li>
+    <li><a href="../concepts/dara-utility.html" class="sidebar-concept" data-name="DARA Utility">DARA Utility</a></li>
+    <li><a href="../concepts/expected-utility.html" class="sidebar-concept" data-name="Expected Utility">Expected Utility</a></li>
+    <li><a href="../concepts/certainty-equivalent.html" class="sidebar-concept" data-name="Certainty Equivalent">Certainty Equivalent</a></li>
+    <li><a href="../concepts/first-order-stochastic-dominance.html" class="sidebar-concept" data-name="First-Order Stochastic Dominance">First-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/independence-axiom.html" class="sidebar-concept" data-name="Independence Axiom">Independence Axiom</a></li>
+    <li><a href="../concepts/risk-aversion.html" class="sidebar-concept" data-name="Risk Aversion">Risk Aversion</a></li>
+    <li><a href="../concepts/second-order-stochastic-dominance.html" class="sidebar-concept" data-name="Second-Order Stochastic Dominance">Second-Order Stochastic Dominance</a></li>
+    <li><a href="../concepts/state-space-insurance-diagram.html" class="sidebar-concept" data-name="State-Space Insurance Diagram">State-Space Insurance Diagram</a></li>
+    <li><a href="../concepts/von-neumann-morgenstern-axioms.html" class="sidebar-concept" data-name="von Neumann Morgenstern Axioms">von Neumann Morgenstern Axioms</a></li>
+    <li><a href="../concepts/continuity-axiom.html" class="sidebar-concept" data-name="Continuity Axiom">Continuity Axiom</a></li>
+    <li><a href="../concepts/risk-premium.html" class="sidebar-concept" data-name="Risk Premium">Risk Premium</a></li>
+    <li><a href="../concepts/arrow-pratt-rra.html" class="sidebar-concept" data-name="Arrow-Pratt RRA">Arrow-Pratt RRA</a></li>
+    <li><a href="../concepts/fair-premium.html" class="sidebar-concept" data-name="Fair Premium">Fair Premium</a></li>
+    <li><a href="../concepts/reduction-of-compound-lotteries.html" class="sidebar-concept" data-name="Reduction of Compound Lotteries">Reduction of Compound Lotteries</a></li>
+    <li><a href="../concepts/risk-pooling.html" class="sidebar-concept" data-name="Risk Pooling">Risk Pooling</a></li>
+    <li><a href="../concepts/allais-paradox.html" class="sidebar-concept" data-name="Allais Paradox">Allais Paradox</a></li>
+    <li><a href="../concepts/dutch-book-argument.html" class="sidebar-concept" data-name="Dutch Book Argument">Dutch Book Argument</a></li>
+    <li><a href="../concepts/mean-preserving-spread.html" class="sidebar-concept" data-name="Mean-Preserving Spread">Mean-Preserving Spread</a></li>
+    <li><a href="../concepts/mean-variance-utility.html" class="sidebar-concept" data-name="Mean-Variance Utility">Mean-Variance Utility</a></li>
+    <li><a href="../concepts/st-petersburg-paradox.html" class="sidebar-concept" data-name="St Petersburg Paradox">St Petersburg Paradox</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/7-adverse-selection.html" class="sidebar-topic" data-topic-id="7">Adverse Selection</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/adverse-selection.html" class="sidebar-concept" data-name="Adverse Selection">Adverse Selection</a></li>
+    <li><a href="../concepts/akerlof-lemons-market.html" class="sidebar-concept" data-name="Akerlof Lemons Market">Akerlof Lemons Market</a></li>
+    <li><a href="../concepts/fair-odds-line.html" class="sidebar-concept" data-name="Fair Odds Line">Fair Odds Line</a></li>
+    <li><a href="../concepts/full-unravelling.html" class="sidebar-concept" data-name="Full Unravelling">Full Unravelling</a></li>
+    <li><a href="../concepts/intuitive-criterion.html" class="sidebar-concept" data-name="Intuitive Criterion">Intuitive Criterion</a></li>
+    <li><a href="../concepts/rothschild-stiglitz-screening.html" class="sidebar-concept" data-name="Rothschild-Stiglitz Screening">Rothschild-Stiglitz Screening</a></li>
+    <li><a href="../concepts/single-crossing-property.html" class="sidebar-concept" data-name="Single Crossing Property">Single Crossing Property</a></li>
+    <li><a href="../concepts/spence-signalling.html" class="sidebar-concept" data-name="Spence Signalling">Spence Signalling</a></li>
+    <li><a href="../concepts/state-space-rothschild-stiglitz.html" class="sidebar-concept" data-name="State-Space Diagram (Rothschild-Stiglitz)">State-Space Diagram (Rothschild-Stiglitz)</a></li>
+    <li><a href="../concepts/asymmetric-information.html" class="sidebar-concept" data-name="Asymmetric Information">Asymmetric Information</a></li>
+    <li><a href="../concepts/separating-vs-pooling.html" class="sidebar-concept" data-name="Separating vs Pooling Equilibrium">Separating vs Pooling Equilibrium</a></li>
+    <li><a href="../concepts/pooling-equilibrium.html" class="sidebar-concept" data-name="Pooling Equilibrium">Pooling Equilibrium</a></li>
+    <li><a href="../concepts/reimbursement-contracts.html" class="sidebar-concept" data-name="Reimbursement Contracts">Reimbursement Contracts</a></li>
+    <li><a href="../concepts/conspicuous-consumption.html" class="sidebar-concept" data-name="Conspicuous Consumption (Veblen Goods)">Conspicuous Consumption (Veblen Goods)</a></li>
+    <li><a href="../concepts/hidden-information-vs-hidden-action.html" class="sidebar-concept" data-name="Hidden Information vs Hidden Action">Hidden Information vs Hidden Action</a></li>
+    <li><a href="../concepts/multiple-equilibria-lemons.html" class="sidebar-concept" data-name="Multiple Equilibria in Lemons Markets">Multiple Equilibria in Lemons Markets</a></li>
+    <li><a href="../concepts/partial-unravelling.html" class="sidebar-concept" data-name="Partial Unravelling">Partial Unravelling</a></li>
+    <li><a href="../concepts/riley-outcome.html" class="sidebar-concept" data-name="Riley Outcome">Riley Outcome</a></li>
+    <li><a href="../concepts/wilson-refinement.html" class="sidebar-concept" data-name="Wilson Equilibrium Refinement">Wilson Equilibrium Refinement</a></li>
+    <li><a href="../concepts/winners-curse.html" class="sidebar-concept" data-name="Winner&#x27;s Curse">Winner&#x27;s Curse</a></li>
+  </ul>
+</div>
+<div class="sidebar-section">
+  <a href="../topics/8-moral-hazard.html" class="sidebar-topic" data-topic-id="8">Moral Hazard</a>
+  <ul class="sidebar-concepts">
+    <li><a href="../concepts/agency-cost.html" class="sidebar-concept" data-name="Agency Cost">Agency Cost</a></li>
+    <li><a href="../concepts/incentive-compatibility.html" class="sidebar-concept" data-name="Incentive Compatibility">Incentive Compatibility</a></li>
+    <li><a href="../concepts/individual-rationality.html" class="sidebar-concept" data-name="Individual Rationality">Individual Rationality</a></li>
+    <li><a href="../concepts/principal-agent-problem.html" class="sidebar-concept" data-name="Principal-Agent Problem">Principal-Agent Problem</a></li>
+    <li><a href="../concepts/first-best-contract.html" class="sidebar-concept" data-name="First-Best Contract">First-Best Contract</a></li>
+    <li><a href="../concepts/moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard">Moral Hazard</a></li>
+    <li><a href="../concepts/risk-vs-insurance-tradeoff.html" class="sidebar-concept" data-name="Risk vs Insurance Trade-off">Risk vs Insurance Trade-off</a></li>
+    <li><a href="../concepts/second-best-contract.html" class="sidebar-concept" data-name="Second-Best Contract">Second-Best Contract</a></li>
+    <li><a href="../concepts/linear-contracts.html" class="sidebar-concept" data-name="Linear Contracts">Linear Contracts</a></li>
+    <li><a href="../concepts/monotone-likelihood-ratio.html" class="sidebar-concept" data-name="Monotone Likelihood Ratio">Monotone Likelihood Ratio</a></li>
+    <li><a href="../concepts/peltzman-effect.html" class="sidebar-concept" data-name="Peltzman Effect">Peltzman Effect</a></li>
+    <li><a href="../concepts/revenue-sharing.html" class="sidebar-concept" data-name="Revenue Sharing">Revenue Sharing</a></li>
+    <li><a href="../concepts/wage-bounds-limited-liability.html" class="sidebar-concept" data-name="Wage Bounds Limited Liability">Wage Bounds Limited Liability</a></li>
+    <li><a href="../concepts/holmstrom-milgrom-model.html" class="sidebar-concept" data-name="Holmstrom-Milgrom Linear Contracts Model">Holmstrom-Milgrom Linear Contracts Model</a></li>
+    <li><a href="../concepts/insurance-moral-hazard.html" class="sidebar-concept" data-name="Moral Hazard in Insurance">Moral Hazard in Insurance</a></li>
+    <li><a href="../concepts/multitasking.html" class="sidebar-concept" data-name="Multitasking">Multitasking</a></li>
+    <li><a href="../concepts/repeated-moral-hazard.html" class="sidebar-concept" data-name="Repeated Moral Hazard">Repeated Moral Hazard</a></li>
+    <li><a href="../concepts/selling-the-firm.html" class="sidebar-concept" data-name="Selling the Firm to the Agent">Selling the Firm to the Agent</a></li>
+  </ul>
+</div>
+</div>
+</aside>
+<main class="content">
+<nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../topics/4-game-theory.html">Game Theory</a> / <span>Nash Reversion Strategy</span></nav>
+<div class="concept-header">
+  <h1 style="border-bottom: 3px solid #ef6c00; padding-bottom: 0.3em">Nash Reversion Strategy</h1>
+  <div class="chips">
+    <span class="chip topic-chip" style="background:#ef6c00">Game Theory</span>
+    <span class="chip tier-chip tier-s">From slides</span>
+  </div>
+</div>
+<section class="concept-section"><h2>1. Intuition</h2>
+<p>Punish a deviator by reverting permanently to one-shot Nash play. A milder punishment than minmax-then-revert, but easier to verify as an SPE because the punishment phase is itself a NE.</p>
+</section>
+<section class="concept-section todo-section"><h2>2. Formal mathematics</h2>
+<div class="todo-card">
+<p><strong>Coming in Phase 2.</strong> Will contain:</p>
+<ul>
+<li>Precise definition with notation matching the FHS slides.</li>
+<li>Derivation of the main result(s) the student is expected to reproduce.</li>
+<li>Reference to the relevant lecture slide deck and textbook section.</li>
+</ul>
+</div></section>
+<section class="concept-section todo-section"><h2>3. Graphical illustration and interactive widget</h2>
+<div class="todo-card">
+<p><strong>Coming in Phase 2.</strong> Will contain:</p>
+<ul>
+<li>SVG diagram illustrating the canonical case.</li>
+<li>Plotly-based interactive plot with sliders for parameters, where applicable.</li>
+</ul>
+</div></section>
+<section class="concept-section todo-section"><h2>4. Real-life examples and essay points</h2>
+<div class="todo-card">
+<p><strong>Coming in Phase 2.</strong> Will contain:</p>
+<ul>
+<li>Two to four real-world applications drawn from history, current policy, or empirics.</li>
+<li>Common evaluation moves Kate Doornik rewards in Part B essays.</li>
+<li>Standard limitations / counterexamples.</li>
+<li>Cross-references to related concepts.</li>
+</ul>
+</div></section>
+<section class="concept-section"><h2>Related concepts</h2><ul class="concept-list">
+<li><a href="../concepts/best-response-functions.html">Best Response Functions</a></li>
+<li><a href="../concepts/grim-trigger-strategy.html">Grim Trigger Strategy</a></li>
+<li><a href="../concepts/nash-equilibrium.html">Nash Equilibrium</a></li>
+<li><a href="../concepts/subgame-perfect-equilibrium.html">Subgame Perfect Equilibrium</a></li>
+<li><a href="../concepts/critical-discount-factor.html">Critical Discount Factor</a></li>
+<li><a href="../concepts/dominance.html">Dominance</a></li>
+<li><a href="../concepts/infinitely-repeated-games.html">Infinitely Repeated Games</a></li>
+<li><a href="../concepts/affine-utility-normalisation.html">Affine Utility Normalisation</a></li>
+</ul></section>
+</main>
+</div>
+<footer class="footer">
+  Core Micro Study Guide. Built from past papers 2014 to 2025, FHS lecture slides, and Micro2025 reading list.
+</footer>
+</body>
+</html>
